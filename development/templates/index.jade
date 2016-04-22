@@ -4,6 +4,8 @@ html
     title Главная
     include modules/head.jade
   body
+    //- Layout bg
+    .layout
     //- Modals
     div(class="modal fade" id="modal-consultation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
       div(class="modal-dialog" role="document")
@@ -19,36 +21,127 @@ html
             button(type="button" class="btn btn-primary") Save changes
 
     //- Fixed menu
-    nav.navbar.navbar-default.navbar-fixed-top
-      .container
-        .navbar-header
-          button(type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar").navbar-toggle.collapsed.pull-left
-            span.sr-only Toggle navigation
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          a(href="#").navbar-brand Gelios Park
-          .consultation
-            p.small-hidden Есть вопросы? Мы с радостью вам поможем!
-            button(type="button" class="btn" data-toggle="modal" data-target="#modal-consultation")
-              span.small-hidden Получите бесплатную консультацию
-              span.large-hidden Бесплатная консультация
-        #navbar.collapse.navbar-collapse
-          ul.nav.navbar-nav
-            li.active: a(href="#") Home
-            li: a(href="#") About
+
+    header.m_header
+      .container-fluid
+        .row
+          .col-xs-6.col-sm-6.col-md-5.col-lg-4
+            .menu-trigger
+              span
+              span
+              span
+            .logo
+              a(href="/")
+          .col-xs-6.col-sm-6.col-md-4.col-lg-3
+            .v-align-parent
+              .consultation.v-align-child
+                .title.visible-lg-block Есть вопросы? Мы с радостью вам поможем!
+                button(type="button" class="btn btn-sky" data-toggle="modal" data-target="#modal-consultation")
+                  span.hidden-xs Получите бесплатную консультацию
+                  span.visible-xs-block Бесплатная консультация
+          .col-lg-2.visible-lg-block
+            .v-align-parent
+              .locate.v-align-child
+                i.icon-locate
+                | Санкт-Петербург,<br/> ул. Композиторов, д.5
+          .col-md-3.col-lg-3.hidden-sm.hidden-xs
+            .v-align-parent
+              .contacts.text-right.v-align-child
+                .tel
+                  i.icon-tel
+                  | +7 (812) 313 55 75
+                .email: a(href="mailto:pool@geliospark.com") pool@geliospark.com
+
+    nav.m_main-nav
+      .container-fluid
+        ul(class="nav nav-pills nav-justified")
+          li
+            a(href="#")
+              span.title
+                | О компании
+                span.line
+          li
+            a(href="#")
+              span.title
+                | Услуги
+                span.line
+          li
+            a(href="#")
+              span.title
+                | Проекты
+                span.line
+          li
+            a(href="#")
+              span.title
+                | Оборудование
+                span.line
+          li
+            a(href="#")
+              span.title
+                | Контакты
+                span.line
+          li
+            a(href="#")
+              span.title
+                | Статьи
+                span.line
+          li
+            a(href="#")
+              span.title
+                | Вопрос-ответ
+                span.line
+        .mobile-contacts.visible-xs-block
+          .v-align-parent
+            .contacts.v-align-child
+              .tel
+                i.icon-tel
+                | +7 (812) 313 55 75
+              .email: a(href="mailto:pool@geliospark.com") pool@geliospark.com
+          .v-align-parent.text-right
+            .locate.v-align-child.text-left
+              i.icon-locate
+              | Санкт-Петербург,<br/> ул. Композиторов, д.5
+
+
+
+
     //- Begin content
-    .container text
 
     //- Footer
-    footer.footer
-      .container
+    footer.m_footer
+      .container-fluid
         .row
           .col-xs-6.col-sm-6.col-md-3
-            p © 2016 «Gelios Park»<br/>Все права защищены
-          .col-xs-6.col-sm-6.col-md-3 socials
-          .col-xs-12.col-sm-6.col-md-6 menu
-
+            .copy © 2016 «Gelios Park»<br/>Все права защищены
+          .col-xs-6.col-sm-6.col-md-3.visible-xs-block.visible-sm-block
+            .socials.pull-right
+              a(href="#").vk
+              a(href="#").fb
+              a(href="http://pikmedia.ru/").developed.pull-right
+          .col-xs-12.col-sm-12.col-md-6
+            .menu
+              .row
+                .col-xs-4.col-sm-6
+                  .title О компании
+                  ul
+                    li: a(href="#") О компании
+                    li: a(href="#") Статьи
+                    li: a(href="#") Вопрос-ответ
+                    li: a(href="#") Проекты
+                    li: a(href="#") Оборудование
+                    li: a(href="#") Контакты
+                .col-xs-8.col-sm-6
+                  .title Услуги
+                  ul
+                    li: a(href="#") Проектирование и строительство бассейнов
+                    li: a(href="#") Сервисное обслуживание бассейнов
+                    li: a(href="#") Строительство банных комплексов
+                    li: a(href="#") Ландшафтный дизайн
+          .col-md-3.visible-md-block.visible-lg-block
+            .socials.pull-right
+              a(href="#").vk
+              a(href="#").fb
+              a(href="http://pikmedia.ru/").developed.pull-right
     // JS
     script(src="../scripts/plugins.js")
     script(src="../scripts/app.js")

@@ -1,0 +1,130 @@
+.m_header
+  height 120px
+  position relative
+  z-index 50
+  background #fff
+  @media screen and (max-width: 430px)
+    > .container-fluid
+      > .row
+        > .col-xs-6
+          width 100%
+  @media screen and (min-width: 430px)
+    height 65px
+  @media screen and (min-width: 992px)
+    height 110px
+    .container-fluid, .row, .row > div
+      height 100%
+  @media screen and (min-width: 992px)
+    .col-lg-4
+      width 353px !important
+    .col-lg-4 + .col-lg-3
+      width 345px !important
+    .col-lg-3
+      width 260px !important
+    .col-lg-2
+      width 210px !important
+  .menu-trigger
+    width 32px
+    height 20px
+    margin 0
+    transform rotate(0deg)
+    transition .5s ease-in-out
+    cursor pointer
+    position absolute
+    left 15px
+    top 20px
+    @media screen and (min-width: 768px)
+      display none
+  .menu-trigger span
+    display block
+    position absolute
+    height 4px
+    width 100%
+    background $blue
+    border-radius 4px
+    opacity 1
+    left 0
+    transform rotate(0deg)
+    transition .25s ease-in-out
+  .menu-trigger span:nth-child(1)
+    top 0px
+  .menu-trigger span:nth-child(2)
+    top 8px
+  .menu-trigger span:nth-child(3)
+    top 16px
+  .menu-trigger.open span:nth-child(1)
+    top 10px
+    transform rotate(135deg)
+  .menu-trigger.open span:nth-child(2)
+    opacity 0
+    left -60px
+  .menu-trigger.open span:nth-child(3)
+    top 10px
+    transform rotate(-135deg)
+  .logo
+    a
+      display block
+      margin-left auto
+      margin-right auto
+      background-repeat no-repeat
+      background-image url('../images/sprite.png')
+      background-position 0 -304px
+      width 169px
+      height 28px
+      margin-top 16px
+      margin-bottom 16px
+      @media screen and (min-width: 431px)
+        margin-left 45px
+      @media screen and (min-width: 768px)
+        margin-left 0
+      @media screen and (min-width: 992px)
+        background-position 0 -166px
+        width 323px
+        height 52px
+        margin-top 29px
+        margin-bottom 29px
+        margin-left 0
+  .consultation
+    text-align center
+    height 45px
+    @media screen and (min-width: 431px)
+      padding-top 14px
+      text-align right
+    @media screen and (min-width: 992px)
+      padding-top 0
+      text-align center
+    button
+      transition background .15s linear
+      font-size 13px
+      padding 6px 10px
+      background $sky
+      color #fff
+      &:hover
+        background $blue
+      @media screen and (min-width: 1200px)
+        padding-left 20px
+        padding-right 20px
+    .title
+      font-size 13px
+      color $text-gray
+      margin-bottom 6px
+  .contacts
+    .tel, .email
+      a
+        color $blue
+        text-decoration none
+    .tel
+      fw700()
+      position relative
+      font-size 18px
+      display inline-block
+      @media screen and (min-width: 1200px)
+        font-size 24px
+    .email
+      fw300()
+      margin-top 5px
+      font-size 15px
+      a:hover
+        color $sky
+  .locate
+    position relative

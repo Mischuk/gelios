@@ -18,6 +18,7 @@ gulp.task('connect', function () {
 //Jade
 gulp.task('jade', function() {
   return gulp.src(['development/templates/**/*.jade'])
+    .pipe(plumber())
     .pipe(jade({
       pretty: true,
       cache: true

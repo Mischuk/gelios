@@ -1,0 +1,67 @@
+.m_footer
+  background url('../images/footer-pattern.png') 0 0
+  color #fff
+  padding-top 10px
+  &:before
+    content ''
+    height 19px
+    width 100%
+    background url("../images/footer-wave.png") -10px 0
+    position absolute
+    left 0
+    top -19px
+  a
+    display inline
+    color $blue
+    text-decoration none
+    border-bottom 1px solid $link-border
+    &:hover,
+    &:focus
+      text-decoration none
+      border-color transparent
+      border-color rgba(255, 255, 255, 0)
+  .copy
+    margin-bottom 35px
+    font-size 15px
+    line-height 1.4
+  @media screen and (max-width: 430px)
+    .socials .pull-right,
+    .socials
+      float none !important
+  .socials
+    .fb, .vk
+      display inline-block
+      vertical-align middle
+      width 30px
+      height 30px
+      background-repeat no-repeat
+      background-image url('../images/sprite.png')
+      border-bottom none
+    .vk
+      background-position 0 0
+    .fb
+      background-position -40px 0
+      margin-left 20px
+      margin-right 20px
+    .developed
+      display inline-block
+      vertical-align middle
+      background url('../images/sprite.png') no-repeat -80px 0
+      width 84px
+      height 22px
+      margin-top 4px
+  .menu
+    .title
+      text-transform uppercase
+      margin-bottom 15px
+      font-size 16px
+    li
+      margin-bottom 8px
+      line-height 1.4
+    a
+      font-size 15px
+      color #fff
+      border-color rgba(255, 255, 255, .3)
+      &:hover, &:focus
+        border-color transparent
+        border-color rgba(255, 255, 255, 0)

@@ -1,0 +1,142 @@
+.m_main-nav
+  background #fff
+  height 55px
+  border-top 1px solid $gray
+  li
+    position relative
+    height 100%
+    &:after
+      content ''
+      width 3px
+      height 3px
+      position absolute
+      background $sky
+      border-radius 50%
+      top 50%
+      right -1.5px
+    &:last-child
+      padding-left 25px
+      @media screen and (max-width: 1200px)
+        padding-left 15px
+      &:after
+        display none
+    a
+      anim()
+      fw300()
+      color #000
+      font-size 20px
+      font-size 20px
+      padding-left 10px
+      padding-right 10px
+      padding-top 12px
+      padding-bottom 0
+      text-decoration none
+      overflow hidden
+      @media screen and (max-width: 1200px)
+        font-size 16px
+        padding-top 16px
+      @media screen and (max-width: 992px)
+        font-size 14px
+        padding-left 0
+        padding-right 0
+        padding-top 20px
+      &:hover,
+      &:focus
+        background none
+        color $sky
+        .line
+          width 25%
+          opacity 0
+      .title
+        position relative
+        display inline-block
+        vertical-align middle
+        text-align center
+        height 36px
+      .line
+        anim()
+        display inline-block
+        vertical-align top
+        width 100%
+        height 1px
+        background rgba(0,0,0,.3)
+  @media screen and (max-width: 767px)
+    transition all .25s ease-in
+    transform translateY(-150%)
+    opacity 0
+    position absolute
+    left 0
+    top 65px
+    width 100%
+    padding-top 30px
+    height auto
+    z-index 20
+    background #fff
+    &.open
+      transition all .25s ease-out
+      transform translateY(0)
+      opacity 1
+    ul
+      border-bottom 1px solid $gray
+      padding-bottom 30px
+    li
+      &:after
+        display none
+      a
+        font-size 24px
+        padding-top 5px
+        padding-bottom 5px
+        margin-bottom 0
+    .mobile-contacts
+      clearfix()
+      padding-top 30px
+      padding-bottom 30px
+      .v-align-parent
+        width 50%
+        float left
+      .contacts
+        padding-left 23px
+        .tel, .email
+          a
+            color $blue
+            text-decoration none
+        .tel
+          fw700()
+          position relative
+          font-size 18px
+          display inline-block
+          @media screen and (min-width: 1200px)
+            font-size 24px
+        .email
+          fw300()
+          margin-top 5px
+          font-size 15px
+          a:hover
+            color $sky
+      .locate
+        fw300()
+        display inline-block
+        position relative
+        color $text-gray
+  @media screen and (max-width: 430px)
+    &.open
+      transform translateY(55px)
+    .mobile-contacts
+      padding-top 10px
+      padding-bottom 10px
+      .v-align-parent
+        width 100%
+        float none
+        text-align center
+        padding-top 10px
+        padding-bottom 10px
+      .v-align-child
+        width 220px
+        text-align left
+        margin-left auto
+        margin-right auto
+        display block
+        padding-left 25px
+        .icon-locate
+          left 0
+
