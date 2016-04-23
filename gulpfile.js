@@ -18,7 +18,6 @@ gulp.task('connect', function () {
 //Jade
 gulp.task('jade', function() {
   return gulp.src(['development/templates/**/*.jade'])
-    .pipe(plumber())
     .pipe(jade({
       pretty: true,
       cache: true
@@ -107,6 +106,8 @@ gulp.task('watch', function () {
   gulp.watch("development/images/**/*.jpg", ['jpg']);
   gulp.watch("development/images/**/*.png", ['png']);
   gulp.watch("development/scripts/*.js", ['js']);
+  gulp.watch("build/scripts/*.js", ['js']);
+  gulp.watch("build/templates/*.html", ['jade']);
 });
 
 // Watching project files

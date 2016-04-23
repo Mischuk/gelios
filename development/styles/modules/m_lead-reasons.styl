@@ -1,0 +1,68 @@
+.m_lead-reasons
+  background url("../images/backgrounds/reasons-small.jpg") no-repeat 0 0
+  background-size cover
+  gutter()
+  @media screen and (min-width: 992px)
+    background-image url("../images/backgrounds/reasons-large.jpg")
+  .col-1-of-5
+    display inline-block
+    vertical-align top
+    width 49%
+    margin-bottom 20px
+    padding-left 15px
+    padding-right 15px
+    &:last-child
+      margin-bottom 0
+    @media screen and (min-width: 768px)
+      width 32%
+    @media screen and (min-width: 992px)
+      width 19%
+    .icon
+      position relative
+      width 100px
+      height 100px
+      margin-bottom 20px
+      border-radius 50%
+      background #fff
+      &:after
+        content ""
+        position absolute
+        left 50%
+        top 50%
+        background-image url('../images/sprite.png')
+        background-repeat no-repeat
+      &.icon-1:after
+        background-position -243px -43px
+        width 33px
+        height 50px
+        margin-left -(@width/2)
+        margin-top -(@height/2)
+      &.icon-2:after
+        background-position -182px -43px
+        width 50px
+        height 39px
+        margin-left -(@width/2)
+        margin-top -(@height/2)
+      &.icon-3:after
+        background-position -118px -43px
+        width 53px
+        height 32px
+        margin-left -(@width/2)
+        margin-top -(@height/2)
+      &.icon-4:after
+        background-position -61px -43px
+        width 46px
+        height 46px
+        margin-left -(@width/2)
+        margin-top -(@height/2)
+      &.icon-5:after
+        background-position 0px -43px
+        width 50px
+        height 46px
+        margin-left -(@width/2)
+        margin-top -(@height/2)
+    .description
+      font-size 15px
+      color #fff
+      @media screen and (min-width: 768px)
+        font-size 18px

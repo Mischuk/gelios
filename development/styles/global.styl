@@ -19,11 +19,17 @@ font(fz, lh)
   font-size fz
   line-height lh
 
+gutter()
+  padding $base-mb-small 0
+  @media screen and (min-width: 1200px)
+    padding $base-mb 0
 //======================================//
 
 $min-width = 960px
 $footer-height = 100px
 $footer-margin-top = 50px
+$base-mb = 50px
+$base-mb-small = 35px
 
 base-fz = 16px
 base-lh = 1.2

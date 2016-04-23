@@ -1,0 +1,14 @@
+.m_lead-services
+  position relative
+  background $bg-gray
+  padding-top $base-mb-small
+  @media screen and (min-width: 1200px)
+    padding-top $base-mb
+  .row
+    .col-xs-12
+      display none
+      &:first-child,
+      &:first-child + .col-xs-12
+        display block
+      @media screen and (min-width: 768px)
+        display block

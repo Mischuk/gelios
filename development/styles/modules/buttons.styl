@@ -1,0 +1,43 @@
+.button-border
+  display inline-block
+  text-align center
+  border 1px solid #fff
+  border-radius 4px
+  font-size 15px
+  height 34px
+  line-height 32px
+  color #fff
+  width 138px
+  @media screen and (min-width: 768px)
+    font-size 18px
+  &:hover,
+  &:focus
+    background #fff
+    color $blue
+    text-decoration none
+  &.button-blue
+    border-color $blue
+    color $blue
+    &:hover, &:focus
+      background $blue
+      color #fff
+
+.button-sky
+  display inline-block
+  text-align center
+  border 1px solid $sky
+  border-radius 4px
+  font-size 15px
+  height 40px
+  line-height 38px
+  color #fff
+  padding-left 10px
+  padding-right 10px
+  background $sky
+  outline none
+  padding-top 0
+  padding-bottom 0
+  &:hover, &:focus
+    background $blue
+    border-color $blue
+    color #fff

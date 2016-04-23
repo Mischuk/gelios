@@ -1,0 +1,132 @@
+.m_lead-carousel
+  height 320px
+  @media screen and (min-width: 1199px)
+    height 500px
+  .container-fluid
+    height 100%
+  .slick-arrow
+    position absolute
+    top 50%
+    width 22px
+    height 40px
+    border none
+    margin-top -(@height/2)
+    text-indent -9999px
+    z-index 5
+  .slick-prev
+    left 10px
+    background url('../images/sprite.png') no-repeat 0 -113px
+    @media screen and (min-width: 1299px)
+      left 50%
+      margin-left -620px
+  .slick-next
+    right 10px
+    background url('../images/sprite.png') no-repeat -39px -113px
+    @media screen and (min-width: 1299px)
+      left 50%
+      margin-left 600px
+  .slick-dots
+    position absolute
+    left 0
+    bottom 20px
+    width 100%
+    height 12px
+    text-align center
+    li
+      display inline-block
+      width 12px
+      height 12px
+      border-radius 0
+      margin-left 5px
+      margin-right 5px
+      button
+        transition background .75s ease-in
+        display block
+        height 100%
+        width 100%
+        padding 0
+        border 2px solid #fff
+        border-radius 50%
+        background none
+        text-indent -9999px
+      &.slick-active button
+        background #fff
+  .slide
+    position relative
+    height 320px
+    text-align center
+    color #fff
+    padding 0 40px
+    box-shadow inset 0 0 0 0 rgba(0, 90, 125, 0)
+    @media screen and (min-width: 1199px)
+      height 500px
+      text-align left
+    &:before
+      content ''
+      background url("../images/carousel-shadow.png") no-repeat 50% 0
+      background-size cover
+      position absolute
+      left 0
+      top 0
+      width 100%
+      height 100%
+      opacity 1
+      transition opacity .3s ease-in
+      transition-delay 0s
+      @media screen and (min-width: 1199px)
+        background-position 0 0
+    .image
+      position absolute
+      left 0
+      top 0
+      width 100%
+      height 100%
+      background-repeat no-repeat
+      background-position 50% 50%
+      background-size cover
+      z-index -1
+    h2
+      fw500()
+      position relative
+      margin-bottom 40px
+      font-size 24px
+      @media screen and (min-width: 480px)
+        font-size 30px
+      @media screen and (min-width: 1199px)
+        font-size 36px
+        width 50%
+      &:after
+        content ""
+        position absolute
+        left 50%
+        bottom -20px
+        width 200px
+        height 3px
+        margin-left -(@width/2)
+        background $sky
+        @media screen and (min-width: 1199px)
+          left 0
+          margin-left 0
+    p
+      margin-top 0
+      margin-bottom 20px
+      font-size 16px
+      @media screen and (min-width: 480px)
+        font-size 18px
+      @media screen and (min-width: 1199px)
+        width 40%
+    .v-align-parent
+      transition opacity .15s ease-out
+      transition-delay 0s
+      opacity 0
+      position relative
+      z-index 3
+    &.slick-current
+      &:before
+        transition opacity .25s ease-in
+        transition-delay .3s
+        opacity 1
+      .v-align-parent
+        transition opacity 1s ease-in
+        transition-delay .5s
+        opacity 1

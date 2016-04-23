@@ -10,11 +10,13 @@ body
   line-height base-lh
   color base-color
   background base-bg
-  margin-bottom 185px
+  margin-bottom 140px
   @media screen and (min-width: 431px)
-    margin-bottom 355px
+    margin-bottom 310px
   @media screen and (min-width: 992px)
-    margin-bottom 305px
+    margin-bottom 260px
+.main
+  position relative
 .m_footer
   position absolute
   bottom 0
@@ -63,3 +65,10 @@ body
   display table-cell
   vertical-align middle
 
+.clearfix
+  &:before,
+  &:after
+    content " "
+    display table
+  &:after
+    clear both

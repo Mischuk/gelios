@@ -7,141 +7,197 @@ html
     //- Layout bg
     .layout
     //- Modals
-    div(class="modal fade" id="modal-consultation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
-      div(class="modal-dialog" role="document")
-        .modal-content
-          .modal-header
-            button(type="button" class="close" data-dismiss="modal" aria-label="Close")
-              span(aria-hidden="true") &times;
-            h4(class="modal-title" id="myModalLabel") Modal title
-
-          .modal-body modal body
-          .modal-footer
-            button(type="button" class="btn btn-default" data-dismiss="modal") Close
-            button(type="button" class="btn btn-primary") Save changes
-
-    //- Fixed menu
-
-    header.m_header
-      .container-fluid
-        .row
-          .col-xs-6.col-sm-6.col-md-5.col-lg-4
-            .menu-trigger
-              span
-              span
-              span
-            .logo
-              a(href="/")
-          .col-xs-6.col-sm-6.col-md-4.col-lg-3
+    include modules/modals.jade
+    //- Header
+    include modules/header.jade
+    //- Menu
+    include modules/m_main-nav.jade
+    //- MAIN PAGE WRAPPER
+    .main
+      //- Lead carousel
+      .m_loader
+        .loader
+      .m_lead-carousel
+        .slide
+          .container-fluid
+            .image(style="background-image: url('../images/content/carousel/1.jpg')")
             .v-align-parent
-              .consultation.v-align-child
-                .title.visible-lg-block Есть вопросы? Мы с радостью вам поможем!
-                button(type="button" class="btn btn-sky" data-toggle="modal" data-target="#modal-consultation")
-                  span.hidden-xs Получите бесплатную консультацию
-                  span.visible-xs-block Бесплатная консультация
-          .col-lg-2.visible-lg-block
+              .v-align-child
+                h2 Купели для бани — выбор практичных хозяев
+                p Установите композитные купели для бани и почувствуйте всю гармонию водных процедур
+                .detail: a(href="#" class="button-border") Подробнее
+        .slide
+          .container-fluid
+            .image(style="background-image: url('../images/content/carousel/2.jpg')")
             .v-align-parent
-              .locate.v-align-child
-                i.icon-locate
-                | Санкт-Петербург,<br/> ул. Композиторов, д.5
-          .col-md-3.col-lg-3.hidden-sm.hidden-xs
+              .v-align-child
+                h2 Второй заголовок
+                p Описание для второго слайда
+                .detail: a(href="#" class="button-border") Подробнее
+        .slide
+          .container-fluid
+            .image(style="background-image: url('../images/content/carousel/3.jpg')")
             .v-align-parent
-              .contacts.text-right.v-align-child
-                .tel
-                  i.icon-tel
-                  | +7 (812) 313 55 75
-                .email: a(href="mailto:pool@geliospark.com") pool@geliospark.com
-
-    nav.m_main-nav
-      .container-fluid
-        ul(class="nav nav-pills nav-justified")
-          li
-            a(href="#")
-              span.title
-                | О компании
-                span.line
-          li
-            a(href="#")
-              span.title
-                | Услуги
-                span.line
-          li
-            a(href="#")
-              span.title
-                | Проекты
-                span.line
-          li
-            a(href="#")
-              span.title
-                | Оборудование
-                span.line
-          li
-            a(href="#")
-              span.title
-                | Контакты
-                span.line
-          li
-            a(href="#")
-              span.title
-                | Статьи
-                span.line
-          li
-            a(href="#")
-              span.title
-                | Вопрос-ответ
-                span.line
-        .mobile-contacts.visible-xs-block
-          .v-align-parent
-            .contacts.v-align-child
-              .tel
-                i.icon-tel
-                | +7 (812) 313 55 75
-              .email: a(href="mailto:pool@geliospark.com") pool@geliospark.com
-          .v-align-parent.text-right
-            .locate.v-align-child.text-left
-              i.icon-locate
-              | Санкт-Петербург,<br/> ул. Композиторов, д.5
-
-
-
-
-    //- Begin content
-
-    //- Footer
-    footer.m_footer
-      .container-fluid
-        .row
-          .col-xs-6.col-sm-6.col-md-3
-            .copy © 2016 «Gelios Park»<br/>Все права защищены
-          .col-xs-6.col-sm-6.col-md-3.visible-xs-block.visible-sm-block
-            .socials.pull-right
-              a(href="#").vk
-              a(href="#").fb
-              a(href="http://pikmedia.ru/").developed.pull-right
-          .col-xs-12.col-sm-12.col-md-6
-            .menu
+              .v-align-child
+                h2 Третий заголовок
+                p Описание для третьего слайда
+                .detail: a(href="#" class="button-border") Подробнее
+        .slide
+          .container-fluid
+            .image(style="background-image: url('../images/content/carousel/4.jpg')")
+            .v-align-parent
+              .v-align-child
+                h2 Четвертый заголовок
+                p Описание для четвертого слайда
+                .detail: a(href="#" class="button-border") Подробнее
+      //- Lead services
+      .m_lead-services
+        .container-fluid
+          .headling
+            h2 Наши услуги
+          .row
+            .col-xs-12.col-sm-6.col-md-4
+              .m_service-item
+                .image
+                  a(href="#" style="background-image: url('../images/content/services/1.jpg')")
+                .title: a(href="#") Проектирование и строительство бассейнов
+                .description Мы сделаем индивидуальный дизайн-проект и построим бассейн, о котором вы мечтаете. Все ваши пожелания будут учтены при проектировании и строительстве бассейна.
+                .detail: a(href="#" class="button-border button-blue") Подробнее
+            .col-xs-12.col-sm-6.col-md-4
+              .m_service-item
+                .image
+                  a(href="#" style="background-image: url('../images/content/services/2.jpg')")
+                .title: a(href="#") Сервисное обслуживание бассейнов
+                .description Мы сделаем индивидуальный дизайн-проект и построим бассейн, о котором вы мечтаете. Все ваши пожелания будут учтены при проектировании и строительстве бассейна. Все ваши пожелания будут учтены при проектировании и строительстве бассейна.
+                .detail: a(href="#" class="button-border button-blue") Подробнее
+            .clearfix.visible-sm
+            .col-xs-12.col-sm-6.col-md-4
+              .m_service-item
+                .image
+                  a(href="#" style="background-image: url('../images/content/services/3.jpg')")
+                .title: a(href="#") Проектирование и строительство бассейнов проектирование и строительство бассейнов
+                .description Мы сделаем индивидуальный дизайн-проект и построим бассейн, о котором вы мечтаете.
+                .detail: a(href="#" class="button-border button-blue") Подробнее
+            .clearfix.visible-md.visible-lg
+            .col-xs-12.col-sm-6.col-md-4
+              .m_service-item
+                .image
+                  a(href="#" style="background-image: url('../images/content/services/4.jpg')")
+                .title: a(href="#") Сервисное обслуживание бассейнов
+                .description Мы сделаем индивидуальный дизайн-проект и построим бассейн, о котором вы мечтаете. Все ваши пожелания будут учтены при проектировании и строительстве бассейна.
+                .detail: a(href="#" class="button-border button-blue") Подробнее
+            .clearfix.visible-sm
+            .col-xs-12.col-sm-6.col-md-4
+              .m_service-item
+                .image
+                  a(href="#" style="background-image: url('../images/content/services/1.jpg')")
+                .title: a(href="#") Проектирование и строительство бассейнов
+                .description Мы сделаем индивидуальный дизайн-проект и построим бассейн, о котором вы мечтаете. Все ваши пожелания будут учтены при проектировании и строительстве бассейна.
+                .detail: a(href="#" class="button-border button-blue") Подробнее
+            .col-xs-12.col-sm-6.col-md-4
+              .m_free-brochure
+                .border
+                  .wrap
+                    .small-title Бесплатная брошюра
+                    .title 7 советов<br>при строительстве<br>бассейна
+                    button(type="button" class="btn button-sky" data-toggle="modal" data-target="#modal-free") Получите бесплатную брошуру
+      //- Lead projects
+      .m_lead-projects
+        .container-fluid
+          .headling.visible-xs
+            h2 Избранные проекты
+          .row
+            .col-sm-4.hidden-xs
+              .m_graphic-headling
+                .border
+                  .wrap
+                    .title Избранные<br>проекты
+            .col-sm-4.col-xs-12
+              .large: a(href="#" style="background-image: url('../images/content/projects/favorite-3.jpg')")
+            .col-sm-4.col-xs-12
               .row
-                .col-xs-4.col-sm-6
-                  .title О компании
-                  ul
-                    li: a(href="#") О компании
-                    li: a(href="#") Статьи
-                    li: a(href="#") Вопрос-ответ
-                    li: a(href="#") Проекты
-                    li: a(href="#") Оборудование
-                    li: a(href="#") Контакты
-                .col-xs-8.col-sm-6
-                  .title Услуги
-                  ul
-                    li: a(href="#") Проектирование и строительство бассейнов
-                    li: a(href="#") Сервисное обслуживание бассейнов
-                    li: a(href="#") Строительство банных комплексов
-                    li: a(href="#") Ландшафтный дизайн
-          .col-md-3.visible-md-block.visible-lg-block
-            .socials.pull-right
-              a(href="#").vk
-              a(href="#").fb
-              a(href="http://pikmedia.ru/").developed.pull-right
-    // JS
+                .col-sm-12.col-xs-12
+                  .small: a(href="#" style="background-image: url('../images/content/projects/favorite-1.jpg')")
+                .col-sm-12.col-xs-12
+                  .small: a(href="#" style="background-image: url('../images/content/projects/favorite-2.jpg')")
+      //- Lead reasons
+      .m_lead-reasons
+        .container-fluid
+          .headling.white
+            h2 Почему выбирают Гелиос Парк
+          .row
+            .col-1-of-5
+              .icon.icon-1
+              .description Высокая профессиональная репутация и опыт (более 12 лет на рынке)
+            .col-1-of-5
+              .icon.icon-2
+              .description Собственное строительное подразделение позволяет получать на выходе высокое качество бассейна и всей системы
+            .col-1-of-5
+              .icon.icon-3
+              .description Квалифицированные сотрудники, которые прошли сертификацию в Германии и имеют награды в области проектирования и дизайна
+            .col-1-of-5
+              .icon.icon-4
+              .description Собственное сервисное подразделение обеспечивает нашим клиентам надежную работу плавательных бассейнов и СПА-зон круглый год
+            .col-1-of-5
+              .icon.icon-5
+              .description Сотрудничество с ведущими поставщиками оборудования для бассейнов
+      //- Lead devices
+      .m_lead-devices
+        .container-fluid
+          .headling
+            h2 Оборудование для бассейнов
+          .row
+            .col-xs-12.col-sm-7.col-md-7
+              article
+                p.large Строительство бассейна «под ключ» включает в себя подбор и установку различного оборудования:
+                ul
+                  li Фильтры
+                  li Насосы
+                  li Нагреватели
+                  li Освещение
+                  li Аттракционы
+                  li Средств по уходу за бассейном
+                p Качественное оборудование и профессиональный монтаж – залог  стабильного и безопасного использования бассейнов и банных комплексов.
+                .detail: a(href="#" class="button-blue button-border") Подробнее
+            .col-xs-12.col-sm-5.col-md-5
+              .link-window
+                span.line-top
+                span.line-bottom
+                span.line-left
+                span.line-right
+                a(href="https://vimeo.com/83888649" data-remote="http://player.vimeo.com/video/83888649" data-width="1200" data-toggle="lightbox")
+                  img(src="../images/content/video-index.jpg")
+      //- Lead news
+      .m_lead-news
+        .container-fluid
+          .headling
+            h2 Новости
+          .row
+            .col-xs-6.col-sm-3
+              .m_news-item
+                .date 23.04.2016
+                .title: a(href="#") С 8 МАРТА!!! Дарим скидку!
+                .description В предверии Международного женского дня 8 Марта, мы дарим скидку на композитные бассейны 10%!!!
+            .col-xs-6.col-sm-3
+              .m_news-item
+                .date 23.04.2016
+                .title: a(href="#") С Днем защитника Отечества!
+                .description Поздравляем вас с днем защитника Отечества! С 23 февраля! И желаем вам всех благ в работе и в семейных делах, трудолюбия в достижении целей!
+            .clearfix.visible-xs
+            .col-xs-6.col-sm-3
+              .m_news-item
+                .date 23.04.2016
+                .title: a(href="#") С НОВЫМ ГОДОМ!!!
+                .description В предверии Международного женского дня 8 Марта, мы дарим скидку на композитные бассейны 10%!!!
+            .col-xs-6.col-sm-3
+              .m_news-item
+                .date 23.04.2016
+                .title: a(href="#") Консервация бассейна до заморозков увеличивает срок эксплуатации
+                .description Компания «Гелиос Парк» напоминает всем владельцам бассейнов о необходимости консервации бассейнов на зимний период. Причем сделать консервацию нужно до наступления заморозков.
+    //- Footer
+    include modules/footer.jade
+
+
+    //- JS
     script(src="../scripts/plugins.js")
     script(src="../scripts/app.js")

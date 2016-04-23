@@ -1,0 +1,17 @@
+.m_lead-news
+  background $bg-gray
+  gutter()
+  .col-xs-6
+    display none
+    padding-top 20px
+    &:first-child,
+    &:first-child + .col-xs-6
+      display block
+    &:first-child
+      padding-top 0
+    @media screen and (max-width: 430px)
+      width 100%
+    @media screen and (min-width: 431px)
+      padding-top 0
+    @media screen and (min-width: 768px)
+      display block

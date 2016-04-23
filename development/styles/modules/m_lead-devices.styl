@@ -1,0 +1,52 @@
+.m_lead-devices
+  gutter()
+  .link-window
+    width 100%
+    a
+      display block
+      width 100%
+      height auto
+      img
+        width 100%
+        height auto
+    @media screen and (min-width: 992px)
+      position relative
+      // width 300px
+      height 360px
+      display table
+      a
+        position relative
+        z-index 2
+        display table-cell
+        vertical-align middle
+        img
+          max-width 400px
+          margin-left auto
+          margin-right auto
+          display block
+      .line-top,
+      .line-bottom
+        position absolute
+        left 50%
+        height 10px
+        width 300px
+        margin-left -(@width/2)
+        background $sky
+      .line-top
+        top 0
+      .line-bottom
+        bottom 0
+      .line-left,
+      .line-right
+        position absolute
+        top 0
+        height 360px
+        width 10px
+        background $sky
+      .line-left
+        left 50%
+        margin-left -155px
+      .line-right
+        left 50%
+        margin-left 150px
+        z-index 3
