@@ -4,7 +4,6 @@ $(document).ready(function() {
   });
 
   // Mobile menu
-  mobileMenu();
   function mobileMenu() {
     $('.menu-trigger').click(function(){
       $(this).toggleClass('open');
@@ -15,12 +14,12 @@ $(document).ready(function() {
       $('.m_main-nav, .menu-trigger').removeClass('open');
     });
   };
+  mobileMenu();
   // end Mobile menu
 
   // Lead carousel
   var $leadCarousel = $('.m_lead-carousel');
   if ( $leadCarousel.length ) {
-    leadCarousel();
     function leadCarousel() {
       $leadCarousel.on('init', function(event, slick, direction){
         $('.m_loader').fadeIn(0).delay(2000).fadeOut(400);
@@ -30,11 +29,11 @@ $(document).ready(function() {
         responsive: [ { breakpoint: 768, settings: { dots: false } } ]
       });
     };
+    leadCarousel();
   };
   // end Lead carousel
 
   // Video modal player
-  videoModal();
   function videoModal() {
     $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
         event.preventDefault();
@@ -49,5 +48,6 @@ $(document).ready(function() {
         });
     });
   };
+  videoModal();
   // end Video modal player
 });

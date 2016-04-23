@@ -1,9 +1,10 @@
 .m_lead-projects
-  padding $base-mb-small 0
-  @media screen and (min-width: 1200px)
-    padding $base-mb 0
+  gutter()
+  background #fff
   .large, .small
     margin-bottom 20px
+    @media screen and (min-width: 768px)
+      margin-bottom 0
     a
       display block
       width 100%
@@ -18,4 +19,7 @@
       margin-bottom 39px
     a
       height 160px
+  @media screen and (min-width: 768px)
+    .col-sm-4:last-child .col-sm-12:last-child .small
+      margin-bottom 0
 

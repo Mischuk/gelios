@@ -69,7 +69,7 @@ gulp.task('app:styl', function() {
     .pipe(stylus())
     .pipe(autoprefixer({
       browsers: [
-        'last 2 versions'
+        '> 1%', 'safari 5', 'ie 8', 'ie 9', 'ios 6', 'android 4'
       ]
     }))
     .pipe(sourcemaps.write())
