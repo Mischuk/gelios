@@ -1,0 +1,31 @@
+.m_faq
+  .panel-default
+    border-color transparent
+    box-shadow none
+  .panel-body
+    padding-left 30px
+  .panel-heading
+    position relative
+    background none
+    border-color transparent
+    padding-left 30px
+    &:before
+      content ''
+      width 12px
+      height 1px
+      background $sky
+      position absolute
+      left 0
+      top 30px
+    a
+      color $sky
+      font-size 16px
+      @media screen and (min-width: 768px)
+        font-size 20px
+      &.collapsed
+        border-bottom 1px solid $link-border
+        color $blue
+      &:hover
+        border-color transparent
+  .panel-default > .panel-heading + .panel-collapse > .panel-body
+    border-top-color transparent

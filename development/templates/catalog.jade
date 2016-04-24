@@ -1,0 +1,146 @@
+doctype html
+html
+  head
+    title Оборудование для нагрева воды
+    include modules/head.jade
+  body
+    //- Layout bg
+    .layout
+    //- Modals
+    include modules/modals.jade
+    //- Header
+    include modules/header.jade
+    //- Menu
+    include modules/m_main-nav-current.jade
+    //- Breadcrumbs
+    .m_breadcrumbs
+      .container-fluid
+        .row
+          .col-xs-12
+            ul.normal.hidden-xs.hidden-sm
+              li: a(href="#") Главная
+              li: span Оборудование для нагрева воды
+            ul.mobile.visible-xs.visible-sm
+              li: a(href="#") Оборудование для нагрева воды
+    //- MAIN PAGE WRAPPER
+    .main
+      .container-fluid
+        .row
+          .col-xs-12.col-sm-4.col-md-3.col-lg-3
+            .m_sidebar
+              .m_catalog_menu
+                .head Каталог оборудования
+                ul
+                  li: a(href="#").icon-1 <span class="link">Бассейны</span> <span class="total">89</span>
+                  li: a(href="#").icon-2 <span class="link">Обработка и уход за водой</span> <span class="total">89</span>
+                  li: a(href="#").icon-3 <span class="link">Гидроизоляция и материалы для ремонта бассейнов</span> <span class="total">89</span>
+                  li: a(href="#").icon-4 <span class="link">Автоматические подводные очистители/пылесосы</span> <span class="total">89</span>
+                  li: a(href="#").icon-5 <span class="link">Фильтровальное оборудование</span> <span class="total">89</span>
+                  li: a(href="#").icon-6 <span class="link">Оборудование для отдыха и развлечения</span> <span class="total">89</span>
+                  li: a(href="#").icon-7 <span class="link">Насосное оборудование</span> <span class="total">89</span>
+                  li.current: a(href="#").icon-8 <span class="link">Оборудование для нагрева воды</span> <span class="total">89</span>
+                  li: a(href="#").icon-9 <span class="link">Подача и слив воды</span> <span class="total">89</span>
+                  li: a(href="#").icon-10 <span class="link">Освещение</span> <span class="total">89</span>
+                  li: a(href="#").icon-11 <span class="link">Лестницы, поручни, души</span> <span class="total">89</span>
+          .col-xs-12.col-sm-8.col-md-9.col-lg-9
+            .m_content
+              .headling
+                h2 Оборудование для нагрева воды
+              .m_projects-list
+                .row
+                  .col-xs-6.col-sm-6.col-md-4
+                    .m_product-item
+                      .image
+                        a(href="#" style="background-image: url('../images/content/catalog/1.jpg')")
+                      .title: a(href="#") Бассейны
+                      .description Бассейны бывают разные. По своему назначению они делятся на две группы: бассейны для индивидуального пользования (их еще называют - частные) и бассейны общественные.
+                      .detail: a(href="#" class="button-border button-blue") Подробнее
+                  .col-xs-6.col-sm-6.col-md-4
+                    .m_product-item
+                      .image
+                        a(href="#" style="background-image: url('../images/content/catalog/2.jpg')")
+                      .title: a(href="#") Обработка и уход за водой
+                      .description Важно помнить, что любой, даже самый маленький бассейн, требует постоянного внимания и ухода.
+                      .detail: a(href="#" class="button-border button-blue") Подробнее
+                  .clearfix.visible-xs.visible-sm
+                  .col-xs-6.col-sm-6.col-md-4
+                    .m_product-item
+                      .image
+                        a(href="#"): img(src="../images/content/catalog/3.jpg" alt="")
+                      .title: a(href="#") Гидроизоляция и материалы для ремонта бассейнов
+                      .description Надёжность бассейна зависит от многих показателей и один из них – это гидроизоляция.
+                      .detail: a(href="#" class="button-border button-blue") Подробнее
+                  .clearfix.hidden-xs.hidden-sm
+                  .col-xs-6.col-sm-6.col-md-4
+                    .m_product-item
+                      .image
+                        a(href="#"): img(src="../images/content/catalog/4.jpg" alt="")
+                      .title: a(href="#") Автоматические подводные очистители/пылесосы
+                      .description Приятный и полноценный отдых возможен только в чистом бассейне, поэтому за состоянием собственного водного объекта нужно следить. Для уборки загрязнений, осевших на дне и стенках бассейна, применяются специальные подводные пылесосы.
+                      .detail: a(href="#" class="button-border button-blue") Подробнее
+                  .clearfix.visible-xs.visible-sm
+                  .col-xs-6.col-sm-6.col-md-4
+                    .m_product-item
+                      .image
+                        a(href="#"): img(src="../images/content/catalog/5.jpg" alt="")
+                      .title: a(href="#") Фильтровальное оборудование
+                      .description Фильтровальное оборудование для бассейнов - это комплект из песочного фильтра, насоса, шестипозиционного клапана, манометра.
+                      .detail: a(href="#" class="button-border button-blue") Подробнее
+                  .col-xs-6.col-sm-6.col-md-4
+                    .m_product-item
+                      .image
+                        a(href="#"): img(src="../images/content/catalog/6.jpg" alt="")
+                      .title: a(href="#") Оборудование для отдыха и развлечения
+                      .description Оборудование для отдыхаи развлечения
+                      .detail: a(href="#" class="button-border button-blue") Подробнее
+                  .clearfix.hidden-xs.hidden-sm
+                  .clearfix.visible-xs.visible-sm
+                  .col-xs-6.col-sm-6.col-md-4
+                    .m_product-item
+                      .image
+                        a(href="#"): img(src="../images/content/catalog/7.jpg" alt="")
+                      .title: a(href="#") Насосное оборудование
+                      .description Насосное оборудование
+                      .detail: a(href="#" class="button-border button-blue") Подробнее
+                  .col-xs-6.col-sm-6.col-md-4
+                    .m_product-item
+                      .image
+                        a(href="#"): img(src="../images/content/catalog/8.jpg" alt="")
+                      .title: a(href="#") Оборудование для нагрева воды
+                      .description Оборудование для нагрева воды
+                      .detail: a(href="#" class="button-border button-blue") Подробнее
+                  .clearfix.visible-xs.visible-sm
+                  .col-xs-6.col-sm-6.col-md-4
+                    .m_product-item
+                      .image
+                        a(href="#"): img(src="../images/content/catalog/9.jpg" alt="")
+                      .title: a(href="#") Подача и слив воды
+                      .description Подача и слив воды
+                      .detail: a(href="#" class="button-border button-blue") Подробнее
+                  .clearfix.hidden-xs.hidden-sm
+                  .col-xs-6.col-sm-6.col-md-4
+                    .m_product-item
+                      .image
+                        a(href="#" style="background-image: url('../images/content/catalog/10.jpg')")
+                      .title: a(href="#") Освещение
+                      .description Освещение
+                      .detail: a(href="#" class="button-border button-blue") Подробнее
+                  .clearfix.visible-xs.visible-sm
+                  .col-xs-6.col-sm-6.col-md-4
+                    .m_product-item
+                      .image
+                        a(href="#" style="background-image: url('../images/content/catalog/11.jpg')")
+                      .title: a(href="#") Лестницы, поручни, души
+                      .description Лестницы, поручни, души
+                      .detail: a(href="#" class="button-border button-blue") Подробнее
+
+
+
+
+    //- Footer
+    include modules/footer.jade
+
+
+    //- JS
+    script(src="../scripts/plugins.js")
+    script(src="../scripts/app.js")

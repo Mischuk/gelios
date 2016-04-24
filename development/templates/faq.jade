@@ -1,0 +1,176 @@
+doctype html
+html
+  head
+    title Вопросы
+    include modules/head.jade
+  body
+    //- Layout bg
+    .layout
+    //- Modals
+    include modules/modals.jade
+    //- Header
+    include modules/header.jade
+    //- Menu
+    include modules/m_main-nav-current.jade
+    //- Breadcrumbs
+    .m_breadcrumbs
+      .container-fluid
+        .row
+          .col-xs-12
+            ul.normal.hidden-xs
+              li: a(href="#") Главная
+              li: span Вопрос-ответ
+            ul.mobile.visible-xs
+              li: a(href="#") Вопрос-ответ
+    //- MAIN PAGE WRAPPER
+    .main
+      .container-fluid
+        .row
+          .col-xs-12.col-sm-12.col-lg-9
+            .m_content
+              .headling
+                h2 Вопрос-ответ
+              .m_faq
+                #accordion.panel-group(role='tablist', aria-multiselectable='true')
+                  // Question #1
+                  .panel.panel-default
+                    #heading-1.panel-heading(role='tab')
+                      h4.panel-title: a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapse-1', aria-expanded='false', aria-controls='collapse-1') Какую глубину бассейна сделать?
+                    #collapse-1.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-1')
+                      .panel-body Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  // Question #2
+                  .panel.panel-default
+                    #heading-2.panel-heading(role='tab')
+                      h4.panel-title: a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapse-2', aria-expanded='false', aria-controls='collapse-2') Не нанесет ли вред почве участка строительство бассейна?
+                    #collapse-2.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-2')
+                      .panel-body Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  // Question #3
+                  .panel.panel-default
+                    #heading-3.panel-heading(role='tab')
+                      h4.panel-title: a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapse-3', aria-expanded='false', aria-controls='collapse-3') Планирую купить или сделать самостоятельно бассейн на даче из бетона или композитных материалов. Расскажите о них, пожалуйста?
+                    #collapse-3.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-3')
+                      .panel-body Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  // Question #4
+                  .panel.panel-default
+                    #heading-4.panel-heading(role='tab')
+                      h4.panel-title: a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapse-4', aria-expanded='false', aria-controls='collapse-4') Как защитить открытый бассейн зимой?
+                    #collapse-4.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-4')
+                      .panel-body Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  // Question #5
+                  .panel.panel-default
+                    #heading-5.panel-heading(role='tab')
+                      h4.panel-title: a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapse-5', aria-expanded='false', aria-controls='collapse-5') Как рассчитать дозу срaедства для обработки воды в бассейне?
+                    #collapse-5.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-5')
+                      .panel-body Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  // Question #6
+                  .panel.panel-default
+                    #heading-6.panel-heading(role='tab')
+                      h4.panel-title: a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapse-6', aria-expanded='false', aria-controls='collapse-6') Почему вода в бассейне мутная, несмотря на регулярный уход?
+                    #collapse-6.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-6')
+                      .panel-body Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                  // Question #7
+                  .panel.panel-default
+                    #heading-7.panel-heading(role='tab')
+                      h4.panel-title: a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapse-7', aria-expanded='false', aria-controls='collapse-7') Как выбрать плитку для бассейна?
+                    #collapse-7.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-7')
+                      .panel-body Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                  // Question #8
+                  .panel.panel-default
+                    #heading-8.panel-heading(role='tab')
+                      h4.panel-title: a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapse-8', aria-expanded='false', aria-controls='collapse-8') Какая сталь пригодна для производства бассейнов?
+                    #collapse-8.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-8')
+                      .panel-body Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                  // Question #9
+                  .panel.panel-default
+                    #heading-9.panel-heading(role='tab')
+                      h4.panel-title: a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapse-9', aria-expanded='false', aria-controls='collapse-9') Как сделать бассейн с подогревом?
+                    #collapse-9.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-9')
+                      .panel-body Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                  // Question #10
+                  .panel.panel-default
+                    #heading-10.panel-heading(role='tab')
+                      h4.panel-title: a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapse-10', aria-expanded='false', aria-controls='collapse-10') Что входит в стоимость строительства бассейна?
+                    #collapse-10.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-10')
+                      .panel-body Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                  // Question #11
+                  .panel.panel-default
+                    #heading-11.panel-heading(role='tab')
+                      h4.panel-title: a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapse-11', aria-expanded='false', aria-controls='collapse-11') Как часто необходимо менять воду в бассейне?
+                    #collapse-11.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-11')
+                      .panel-body Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                  // Question #12
+                  .panel.panel-default
+                    #heading-12.panel-heading(role='tab')
+                      h4.panel-title: a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapse-12', aria-expanded='false', aria-controls='collapse-12') Сколько электроэнергии тратится на содержание бассейна?
+                    #collapse-12.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-12')
+                      .panel-body Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                  // Question #13
+                  .panel.panel-default
+                    #heading-13.panel-heading(role='tab')
+                      h4.panel-title: a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapse-13', aria-expanded='false', aria-controls='collapse-13') Какой бассейн выбрать?
+                    #collapse-13.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-13')
+                      .panel-body Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                  // Question #14
+                  .panel.panel-default
+                    #heading-14.panel-heading(role='tab')
+                      h4.panel-title: a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapse-14', aria-expanded='false', aria-controls='collapse-14') Где можно устанавливать бассейн?
+                    #collapse-14.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-14')
+                      .panel-body Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                  // Question #15
+                  .panel.panel-default
+                    #heading-15.panel-heading(role='tab')
+                      h4.panel-title: a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapse-15', aria-expanded='false', aria-controls='collapse-15') Как ухаживать за бассейном?
+                    #collapse-15.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-15')
+                      .panel-body Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                  // Question #16
+                  .panel.panel-default
+                    #heading-16.panel-heading(role='tab')
+                      h4.panel-title: a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapse-16', aria-expanded='false', aria-controls='collapse-16') Как выбрать место для строительства бассейна?
+                    #collapse-16.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-16')
+                      .panel-body Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                  // Question #17
+                  .panel.panel-default
+                    #heading-17.panel-heading(role='tab')
+                      h4.panel-title: a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapse-17', aria-expanded='false', aria-controls='collapse-17') Какую глубину бассейна сделать?
+                    #collapse-17.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-17')
+                      .panel-body Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                  // Question #18
+                  .panel.panel-default
+                    #heading-18.panel-heading(role='tab')
+                      h4.panel-title: a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapse-18', aria-expanded='false', aria-controls='collapse-18') Что делать, если в бассейне появилась ржавчина?
+                    #collapse-18.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-18')
+                      .panel-body Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                  // Question #19
+                  .panel.panel-default
+                    #heading-19.panel-heading(role='tab')
+                      h4.panel-title: a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapse-19', aria-expanded='false', aria-controls='collapse-19') Что такое профилактика бассейна, и как часто ее нужно осуществлять?
+                    #collapse-19.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-19')
+                      .panel-body Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+          .col-xs-12.visible-lg.col-lg-3
+            .m_sidebar
+              .m_graphic-border
+                .border
+                  .wrap
+                    .small-title Бесплатная брошюра
+                    .title: a(href="#") 7 советов<br>при строительстве<br>бассейна
+                    button(type="button" class="btn button-sky" data-toggle="modal" data-target="#modal-free") Получите бесплатную брошуру
+              .m_graphic-border
+                .border
+                  .wrap
+                    .small-title Пришлите запрос
+                    .title: a(href="#") На бесплатный<br>расчет стоимости<br>бассейна
+                    button(type="button" class="btn button-sky" data-toggle="modal" data-target="#modal-free") Рассчитать стоимость
+              .m_graphic-border
+                .border
+                  .wrap
+                    .image(style="background-image:url('../images/content/services/services-3.jpg')")
+                      .links
+                        .title: a(href="#") Купели для бани
+                        a.button-border(href="#") Узнайте больше
+    //- Footer
+    include modules/footer.jade
+
+
+    //- JS
+    script(src="../scripts/plugins.js")
+    script(src="../scripts/app.js")

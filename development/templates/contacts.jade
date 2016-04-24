@@ -1,0 +1,69 @@
+doctype html
+html
+  head
+    title Контакты
+    include modules/head.jade
+  body
+    //- Layout bg
+    .layout
+    //- Modals
+    include modules/modals.jade
+    //- Header
+    include modules/header.jade
+    //- Menu
+    include modules/m_main-nav-current.jade
+    //- Breadcrumbs
+    .m_breadcrumbs
+      .container-fluid
+        .row
+          .col-xs-12
+            ul.normal.hidden-xs
+              li: a(href="#") Главная
+              li: span Контакты
+            ul.mobile.visible-xs
+              li: a(href="#") Контакты
+    //- MAIN PAGE WRAPPER
+    .main
+      .container-fluid
+        .row
+          .col-xs-12.col-sm-12
+            .m_content
+              .headling
+                h2 Контакты
+              .row
+                .col-xs-12.col-sm-6
+                  h4 Офис продаж
+                  ul.contacts-list
+                    li
+                      i.icon-locate
+                      span Адрес: 194356, Санкт-Петербург, улица Композиторов, дом 5
+                    li
+                      i.icon-tel
+                      span Телефон: <b>+7 (812) 313-55-75</b>
+                    li
+                      i.icon-email
+                      span E-mail: <a href="#">pool@geliospark.com</a>
+                .col-xs-12.col-sm-6
+                  h4 Главный офис / Офис продаж
+                  ul.contacts-list
+                    li
+                      i.icon-locate
+                      span Адрес: 197374, Санкт-Петербург, улица Савушкина, дом 140
+                    li
+                      i.icon-clock
+                      span Время работы: с 10:00 до 18:00 (Выходные: Сб, Вс)
+                    li
+                      i.icon-tel
+                      span Телефон: <b>+7 (812) 313-55-75, доб.204</b>
+              .row
+                .col-xs-12.col-sm-12
+                  script(src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+                  #map
+
+    //- Footer
+    include modules/footer.jade
+
+
+    //- JS
+    script(src="../scripts/plugins.js")
+    script(src="../scripts/app.js")

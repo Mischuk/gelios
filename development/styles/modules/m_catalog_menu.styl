@@ -1,0 +1,52 @@
+.m_catalog_menu
+  margin-bottom 25px
+  @media screen and (min-width: 768px)
+    margin-bottom 0
+  .head
+    fw700()
+    background $blue
+    color #fff
+    font-size 18px
+    padding-bottom 10px
+    padding-top 10px
+    padding-left 15px
+    padding-right 15px
+    border-radius 4px 4px 0 0
+  ul
+    border 1px solid $gray
+    border-top none
+    border-radius 0 0 4px 4px
+  li
+    display block
+    a
+      display block
+      padding-bottom 10px
+      padding-top 10px
+      padding-left 45px
+      padding-right 10px
+      font-size 15px
+      .total
+        color $text-gray
+        display inline-block
+        vertical-align middle
+        &:after
+          content ')'
+        &:before
+            content '('
+
+      .link
+        display inline
+        color $blue
+        border-bottom 1px solid $link-border
+        &:hover, &:focus
+          border-color transparent
+    &.current
+      cursor default
+      a
+        background $sky
+        cursor default
+        .link
+          color #fff
+          border-color transparent
+        .total
+          color #fff

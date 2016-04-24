@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>О компании</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../styles/app.css" rel="stylesheet" media="all">
+    <link href="../styles/styles.css" rel="stylesheet" media="all">
+  </head>
+  <body>
+    <div class="layout"></div>
+    <div id="modal-consultation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade">
+      <div role="document" class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+            <div class="headling">
+              <h2>Отправить запрос на консультацию</h2>
+            </div>
+          </div>
+          <div class="modal-body">
+            <form class="modal-form">
+              <div class="form-row">
+                <label for="c-name">Имя:*</label>
+                <input id="c-name" type="text" placeholder="" required class="text">
+              </div>
+              <div class="form-row">
+                <label for="c-tel">Телефон:*</label>
+                <input id="c-tel" type="tel" placeholder="" required class="text">
+              </div>
+              <div class="form-row">
+                <label for="c-email">Эл. Почта:*</label>
+                <input id="c-email" type="email" placeholder="" required class="text">
+              </div>
+              <div class="form-row area">
+                <label for="c-question">Вопрос:*</label>
+                <textarea id="c-question" placeholder="" required class="textarea"></textarea>
+              </div>
+              <div class="form-row captcha">
+                <label for="c-captcha">Введите текст на картинке:*</label>
+                <input id="c-captcha" type="email" placeholder="" required class="text captcha">
+                <div class="image">IMAGE</div>
+              </div>
+              <div class="form-row">
+                <input type="submit" value="Отправить заявку" class="submit button-sky">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-free" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade">
+      <div role="document" class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+            <div class="headling">
+              <h2>Получить бесплатную брошюру</h2>
+            </div>
+          </div>
+          <div class="modal-body">
+            <form class="modal-form">
+              <div class="form-row">
+                <label for="f-name">Имя:*</label>
+                <input id="f-name" type="text" placeholder="" required class="text">
+              </div>
+              <div class="form-row">
+                <label for="f-tel">Телефон:*</label>
+                <input id="f-tel" type="tel" placeholder="" required class="text">
+              </div>
+              <div class="form-row">
+                <label for="f-email">Эл. Почта:*</label>
+                <input id="f-email" type="email" placeholder="" required class="text">
+              </div>
+              <div class="form-row captcha">
+                <label for="f-captcha">Введите текст на картинке:*</label>
+                <input id="f-captcha" type="email" placeholder="" required class="text captcha">
+                <div class="image">IMAGE</div>
+              </div>
+              <div class="form-row">
+                <input type="submit" value="Отправить заявку" class="submit button-sky">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header class="m_header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-5 col-lg-4">
+            <div class="menu-trigger"><span></span><span></span><span></span></div>
+            <div class="logo"><a href="/"></a></div>
+          </div>
+          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+            <div class="v-align-parent">
+              <div class="consultation v-align-child">
+                <div class="title visible-lg-block">Есть вопросы? Мы с радостью вам поможем!</div>
+                <button type="button" data-toggle="modal" data-target="#modal-consultation" class="btn btn-sky"><span class="hidden-xs">Получите бесплатную консультацию</span><span class="visible-xs-block">Бесплатная консультация</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 visible-lg-block">
+            <div class="v-align-parent">
+              <div class="locate v-align-child">
+                <div class="helper"><i class="icon-locate"></i>Санкт-Петербург,<br/> ул. Композиторов, д.5</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-lg-3 hidden-sm hidden-xs">
+            <div class="v-align-parent">
+              <div class="contacts text-right v-align-child">
+                <div class="tel"><i class="icon-tel"></i>+7 (812) 313 55 75</div>
+                <div class="email"><a href="mailto:pool@geliospark.com">pool@geliospark.com</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav class="m_main-nav">
+      <div class="container-fluid">
+        <ul class="nav nav-pills">
+          <li><a href="#"><span class="title">О компании<span class="line"></span></span></a></li>
+          <li class="current"><a href="#"><span class="title">Услуги<span class="line"></span></span></a></li>
+          <li><a href="#"><span class="title">Проекты<span class="line"></span></span></a></li>
+          <li><a href="#"><span class="title">Оборудование<span class="line"></span></span></a></li>
+          <li><a href="#"><span class="title">Контакты<span class="line"></span></span></a></li>
+          <li><a href="#"><span class="title">Статьи<span class="line"></span></span></a></li>
+          <li><a href="#"><span class="title">Вопрос-ответ<span class="line"></span></span></a></li>
+        </ul>
+        <div class="mobile-contacts visible-xs-block">
+          <div class="v-align-parent">
+            <div class="contacts v-align-child">
+              <div class="tel"><i class="icon-tel"></i>+7 (812) 313 55 75</div>
+              <div class="email"><a href="mailto:pool@geliospark.com">pool@geliospark.com</a></div>
+            </div>
+          </div>
+          <div class="v-align-parent text-right">
+            <div class="locate v-align-child text-left"><i class="icon-locate"></i>Санкт-Петербург,<br/> ул. Композиторов, д.5</div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="m_breadcrumbs">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12">
+            <ul class="normal hidden-xs">
+              <li><a href="#">Главная</a></li>
+              <li><span>О компании</span></li>
+            </ul>
+            <ul class="mobile visible-xs">
+              <li><a href="#">О компании</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-lg-9">
+            <div class="m_content">
+              <div class="headling">
+                <h2>О компании</h2>
+              </div>
+              <article>
+                <p>Компания «Гелиос-Парк» специализируется на строительстве бассейнов, банных комплексов и ландшафтном оформлении.</p>
+                <p>Консалтинговое сопровождение строительства бассейна на всех этапах обеспечивает нашим клиентам комфорт, надежную защиту от возможных ошибок и минимизирует временные и финансовые затраты.</p>
+                <p class="large">Вы также можете посетить наши розничные магазины и проконсультироваться по всем вопросам строительства и эксплуатации бассейнов:</p>
+                <ul>
+                  <li>ул. Композиторов, д. 5</li>
+                  <li>ул. Савушкина, д. 140</li>
+                </ul>
+                <p class="large">Единый справочный телефон: +7 (812) 313-55-75</p>
+                <div style="background-image: url('../images/content/company.jpg')" class="full-image"></div>
+                <p class="large">Наши преимущества:</p>
+                <ul>
+                  <li>Высокая профессиональная репутация и опыт (более 12 лет на рынке)</li>
+                  <li>Собственное строительное подразделение – гарантия  высокого качества строительства бассейна и ландшафтного оформления</li>
+                  <li>Квалифицированные сотрудники, которые прошли сертификацию в Германии и имеют награды в области проектирования и дизайна</li>
+                  <li>Собственное сервисное подразделение обеспечивает нашим клиентам надежную работу бассейнов и СПА-зон круглый год</li>
+                  <li>Сотрудничество с ведущими поставщиками оборудования и материалов для строительства и эксплуатации бассейнов</li>
+                </ul>
+                <p class="large">Всю нашу работу мы строим на таких базовых принципах как:</p>
+                <ul>
+                  <li>Профессиональный подход и особое внимание к деталям</li>
+                  <li>Высокое качество строительства и сервисных работ</li>
+                  <li>Соблюдение сроков по взятым обязательствам</li>
+                  <li>Разумные цены</li>
+                </ul>
+                <p>Мы ценим наших клиентов, вкладывая душу в каждый проект.</p>
+              </article>
+            </div>
+          </div>
+          <div class="col-xs-12 visible-lg col-lg-3">
+            <div class="m_sidebar">
+              <div class="m_graphic-border">
+                <div class="border">
+                  <div class="wrap">
+                    <div class="small-title">Бесплатная брошюра</div>
+                    <div class="title"><a href="#">7 советов<br>при строительстве<br>бассейна</a></div>
+                    <button type="button" data-toggle="modal" data-target="#modal-free" class="btn button-sky">Получите бесплатную брошуру</button>
+                  </div>
+                </div>
+              </div>
+              <div class="m_graphic-border">
+                <div class="border">
+                  <div class="wrap">
+                    <div class="small-title">Пришлите запрос</div>
+                    <div class="title"><a href="#">На бесплатный<br>расчет стоимости<br>бассейна</a></div>
+                    <button type="button" data-toggle="modal" data-target="#modal-free" class="btn button-sky">Рассчитать стоимость</button>
+                  </div>
+                </div>
+              </div>
+              <div class="m_graphic-border">
+                <div class="border">
+                  <div class="wrap">
+                    <div style="background-image:url('../images/content/services/services-3.jpg')" class="image">
+                      <div class="links">
+                        <div class="title"><a href="#">Купели для бани</a></div><a href="#" class="button-border">Узнайте больше</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="m_clients">
+        <div class="container-fluid">
+          <div class="headling">
+            <h2>Отзывы наших клиентов</h2>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12">
+              <div class="clients-carousel">
+                <div class="slide">
+                  <div class="image"><a href="#" style="background-image: url('../images/content/clients/1.jpg')"></a></div>
+                  <div class="name">ООО «Буревестник»</div>
+                  <div class="message">В результате работ, проведенных ООО «Гелиос-Парк» с использованием новейших методов и технологий, помещение приобрело тот индивидуальный архитектурный облик, который был заложен в проект.</div>
+                  <div class="from"><span>О. Б. Чевдарь</span> Начальник детского оздоровительного комплекса «Буревестник» ФГУП «ГУССТ №3 при Спецстрое России»</div>
+                </div>
+                <div class="slide">
+                  <div class="image"><a href="#" style="background-image: url('../images/content/clients/2.jpg')"></a></div>
+                  <div class="name">ООО «Вотчина»</div>
+                  <div class="message">Выражаем благодарность коллективу ООО «Гелиос-Парк» за помощь в оформлении искусственного водоема на «Вотчине Деда Мороза» в г. Великий Устюг. Приятно иметь дело с организацией, которую отличает слаженная и четкая работа всех специалистов.</div>
+                  <div class="from"><span>А. Н. Деревестников</span> Директор ООО «Вотчина»</div>
+                </div>
+                <div class="slide">
+                  <div class="image"><a href="#" style="background-image: url('../images/content/clients/3.jpg')"></a></div>
+                  <div class="name">ФГУК ГМЗ «Петергоф»</div>
+                  <div class="message">ООО «Гелиос-Парк» зарекомендовал себя как квалифицированная, высокоорганизованная команда профессионалов, качественно и своеверменно выполняющая работы по благоустройству на территории ценнейших исторических парковых ансамблей.</div>
+                  <div class="from"><span>И. Н. Бирюкова</span> Начальник отдела реставрации и реконструкции Государственного музея-заповедника «Петергоф»</div>
+                </div>
+                <div class="slide">
+                  <div class="image"><a href="#" style="background-image: url('../images/content/clients/1.jpg')"></a></div>
+                  <div class="name">ООО «Буревестник»</div>
+                  <div class="message">В результате работ, проведенных ООО «Гелиос-Парк» с использованием новейших методов и технологий, помещение приобрело тот индивидуальный архитектурный облик, который был заложен в проект.</div>
+                  <div class="from"><span>О. Б. Чевдарь</span> Начальник детского оздоровительного комплекса «Буревестник» ФГУП «ГУССТ №3 при Спецстрое России»</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="m_footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-3">
+            <div class="copy">© 2016 «Gelios Park»<br/>Все права защищены</div>
+          </div>
+          <div class="col-xs-6 col-sm-6 col-md-3 visible-xs-block visible-sm-block">
+            <div class="socials pull-right"><a href="#" class="vk"></a><a href="#" class="fb"></a><a href="http://pikmedia.ru/" class="developed pull-right"></a></div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="menu">
+              <div class="row">
+                <div class="col-xs-4 col-sm-6">
+                  <div class="title">О компании</div>
+                  <ul>
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Статьи</a></li>
+                    <li><a href="#">Вопрос-ответ</a></li>
+                    <li><a href="#">Проекты</a></li>
+                    <li><a href="#">Оборудование</a></li>
+                    <li><a href="#">Контакты</a></li>
+                  </ul>
+                </div>
+                <div class="col-xs-8 col-sm-6">
+                  <div class="title">Услуги</div>
+                  <ul>
+                    <li><a href="#">Проектирование и строительство бассейнов</a></li>
+                    <li><a href="#">Сервисное обслуживание бассейнов</a></li>
+                    <li><a href="#">Строительство банных комплексов</a></li>
+                    <li><a href="#">Ландшафтный дизайн</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 visible-md-block visible-lg-block">
+            <div class="socials pull-right"><a href="#" class="vk"></a><a href="#" class="fb"></a><a href="http://pikmedia.ru/" class="developed pull-right"></a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../scripts/plugins.js"></script>
+    <script src="../scripts/app.js"></script>
+  </body>
+</html>

@@ -8,12 +8,17 @@
     border-right 10px solid $blue
     &:after,
     &:before
+      anim()
       content ''
       position absolute
       left 0
       width 10px
       height 40px
       background $blue
+    &.hover
+      &:after,
+      &:before
+        height 0
     &:before
       top -1px
     &:after

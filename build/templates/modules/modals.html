@@ -4,12 +4,73 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
-        <h4 id="myModalLabel" class="modal-title">Modal title</h4>
+        <div class="headling">
+          <h2>Отправить запрос на консультацию</h2>
+        </div>
       </div>
-      <div class="modal-body">modal body</div>
-      <div class="modal-footer">
-        <button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+      <div class="modal-body">
+        <form class="modal-form">
+          <div class="form-row">
+            <label for="c-name">Имя:*</label>
+            <input id="c-name" type="text" placeholder="" required="required" class="text"/>
+          </div>
+          <div class="form-row">
+            <label for="c-tel">Телефон:*</label>
+            <input id="c-tel" type="tel" placeholder="" required="required" class="text"/>
+          </div>
+          <div class="form-row">
+            <label for="c-email">Эл. Почта:*</label>
+            <input id="c-email" type="email" placeholder="" required="required" class="text"/>
+          </div>
+          <div class="form-row area">
+            <label for="c-question">Вопрос:*</label>
+            <textarea id="c-question" placeholder="" required="required" class="textarea"></textarea>
+          </div>
+          <div class="form-row captcha">
+            <label for="c-captcha">Введите текст на картинке:*</label>
+            <input id="c-captcha" type="email" placeholder="" required="required" class="text captcha"/>
+            <div class="image">IMAGE</div>
+          </div>
+          <div class="form-row">
+            <input type="submit" value="Отправить заявку" class="submit button-sky"/>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="modal-free" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade">
+  <div role="document" class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+        <div class="headling">
+          <h2>Получить бесплатную брошюру</h2>
+        </div>
+      </div>
+      <div class="modal-body">
+        <form class="modal-form">
+          <div class="form-row">
+            <label for="f-name">Имя:*</label>
+            <input id="f-name" type="text" placeholder="" required="required" class="text"/>
+          </div>
+          <div class="form-row">
+            <label for="f-tel">Телефон:*</label>
+            <input id="f-tel" type="tel" placeholder="" required="required" class="text"/>
+          </div>
+          <div class="form-row">
+            <label for="f-email">Эл. Почта:*</label>
+            <input id="f-email" type="email" placeholder="" required="required" class="text"/>
+          </div>
+          <div class="form-row captcha">
+            <label for="f-captcha">Введите текст на картинке:*</label>
+            <input id="f-captcha" type="email" placeholder="" required="required" class="text captcha"/>
+            <div class="image">IMAGE</div>
+          </div>
+          <div class="form-row">
+            <input type="submit" value="Отправить заявку" class="submit button-sky"/>
+          </div>
+        </form>
       </div>
     </div>
   </div>

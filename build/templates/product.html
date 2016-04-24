@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Подводный пылесос-автомат Zodiac Vortex 4</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../styles/app.css" rel="stylesheet" media="all">
+    <link href="../styles/styles.css" rel="stylesheet" media="all">
+  </head>
+  <body>
+    <div class="layout"></div>
+    <div id="modal-consultation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade">
+      <div role="document" class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+            <div class="headling">
+              <h2>Отправить запрос на консультацию</h2>
+            </div>
+          </div>
+          <div class="modal-body">
+            <form class="modal-form">
+              <div class="form-row">
+                <label for="c-name">Имя:*</label>
+                <input id="c-name" type="text" placeholder="" required class="text">
+              </div>
+              <div class="form-row">
+                <label for="c-tel">Телефон:*</label>
+                <input id="c-tel" type="tel" placeholder="" required class="text">
+              </div>
+              <div class="form-row">
+                <label for="c-email">Эл. Почта:*</label>
+                <input id="c-email" type="email" placeholder="" required class="text">
+              </div>
+              <div class="form-row area">
+                <label for="c-question">Вопрос:*</label>
+                <textarea id="c-question" placeholder="" required class="textarea"></textarea>
+              </div>
+              <div class="form-row captcha">
+                <label for="c-captcha">Введите текст на картинке:*</label>
+                <input id="c-captcha" type="email" placeholder="" required class="text captcha">
+                <div class="image">IMAGE</div>
+              </div>
+              <div class="form-row">
+                <input type="submit" value="Отправить заявку" class="submit button-sky">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-free" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade">
+      <div role="document" class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+            <div class="headling">
+              <h2>Получить бесплатную брошюру</h2>
+            </div>
+          </div>
+          <div class="modal-body">
+            <form class="modal-form">
+              <div class="form-row">
+                <label for="f-name">Имя:*</label>
+                <input id="f-name" type="text" placeholder="" required class="text">
+              </div>
+              <div class="form-row">
+                <label for="f-tel">Телефон:*</label>
+                <input id="f-tel" type="tel" placeholder="" required class="text">
+              </div>
+              <div class="form-row">
+                <label for="f-email">Эл. Почта:*</label>
+                <input id="f-email" type="email" placeholder="" required class="text">
+              </div>
+              <div class="form-row captcha">
+                <label for="f-captcha">Введите текст на картинке:*</label>
+                <input id="f-captcha" type="email" placeholder="" required class="text captcha">
+                <div class="image">IMAGE</div>
+              </div>
+              <div class="form-row">
+                <input type="submit" value="Отправить заявку" class="submit button-sky">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header class="m_header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-5 col-lg-4">
+            <div class="menu-trigger"><span></span><span></span><span></span></div>
+            <div class="logo"><a href="/"></a></div>
+          </div>
+          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+            <div class="v-align-parent">
+              <div class="consultation v-align-child">
+                <div class="title visible-lg-block">Есть вопросы? Мы с радостью вам поможем!</div>
+                <button type="button" data-toggle="modal" data-target="#modal-consultation" class="btn btn-sky"><span class="hidden-xs">Получите бесплатную консультацию</span><span class="visible-xs-block">Бесплатная консультация</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 visible-lg-block">
+            <div class="v-align-parent">
+              <div class="locate v-align-child">
+                <div class="helper"><i class="icon-locate"></i>Санкт-Петербург,<br/> ул. Композиторов, д.5</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-lg-3 hidden-sm hidden-xs">
+            <div class="v-align-parent">
+              <div class="contacts text-right v-align-child">
+                <div class="tel"><i class="icon-tel"></i>+7 (812) 313 55 75</div>
+                <div class="email"><a href="mailto:pool@geliospark.com">pool@geliospark.com</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav class="m_main-nav">
+      <div class="container-fluid">
+        <ul class="nav nav-pills">
+          <li><a href="#"><span class="title">О компании<span class="line"></span></span></a></li>
+          <li class="current"><a href="#"><span class="title">Услуги<span class="line"></span></span></a></li>
+          <li><a href="#"><span class="title">Проекты<span class="line"></span></span></a></li>
+          <li><a href="#"><span class="title">Оборудование<span class="line"></span></span></a></li>
+          <li><a href="#"><span class="title">Контакты<span class="line"></span></span></a></li>
+          <li><a href="#"><span class="title">Статьи<span class="line"></span></span></a></li>
+          <li><a href="#"><span class="title">Вопрос-ответ<span class="line"></span></span></a></li>
+        </ul>
+        <div class="mobile-contacts visible-xs-block">
+          <div class="v-align-parent">
+            <div class="contacts v-align-child">
+              <div class="tel"><i class="icon-tel"></i>+7 (812) 313 55 75</div>
+              <div class="email"><a href="mailto:pool@geliospark.com">pool@geliospark.com</a></div>
+            </div>
+          </div>
+          <div class="v-align-parent text-right">
+            <div class="locate v-align-child text-left"><i class="icon-locate"></i>Санкт-Петербург,<br/> ул. Композиторов, д.5</div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="m_breadcrumbs">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12">
+            <ul class="normal hidden-xs hidden-sm">
+              <li><a href="#">Главная</a></li>
+              <li><span>Подводный пылесос-автомат Zodiac Vortex 4</span></li>
+            </ul>
+            <ul class="mobile visible-xs visible-sm">
+              <li><a href="#">Подводный пылесос-автомат Zodiac Vortex 4</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+            <div class="m_sidebar">
+              <div class="m_catalog_menu">
+                <div class="head">Каталог оборудования</div>
+                <ul>
+                  <li><a href="#" class="icon-1"><span class="link">Бассейны</span> <span class="total">89</span></a></li>
+                  <li><a href="#" class="icon-2"><span class="link">Обработка и уход за водой</span> <span class="total">89</span></a></li>
+                  <li><a href="#" class="icon-3"><span class="link">Гидроизоляция и материалы для ремонта бассейнов</span> <span class="total">89</span></a></li>
+                  <li><a href="#" class="icon-4"><span class="link">Автоматические подводные очистители/пылесосы</span> <span class="total">89</span></a></li>
+                  <li><a href="#" class="icon-5"><span class="link">Фильтровальное оборудование</span> <span class="total">89</span></a></li>
+                  <li><a href="#" class="icon-6"><span class="link">Оборудование для отдыха и развлечения</span> <span class="total">89</span></a></li>
+                  <li><a href="#" class="icon-7"><span class="link">Насосное оборудование</span> <span class="total">89</span></a></li>
+                  <li class="current"><a href="#" class="icon-8"><span class="link">Оборудование для нагрева воды</span> <span class="total">89</span></a></li>
+                  <li><a href="#" class="icon-9"><span class="link">Подача и слив воды</span> <span class="total">89</span></a></li>
+                  <li><a href="#" class="icon-10"><span class="link">Освещение</span> <span class="total">89</span></a></li>
+                  <li><a href="#" class="icon-11"><span class="link">Лестницы, поручни, души</span> <span class="total">89</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
+            <div class="m_content">
+              <div class="headling">
+                <h2>Подводный пылесос-автомат Zodiac Vortex 4</h2>
+              </div>
+              <div class="m_product">
+                <ul id="imageGallery">
+                  <li data-thumb="../images/content/product/1.jpg" data-src="../images/content/product/1.jpg"><img src="../images/content/product/1.jpg"></li>
+                  <li data-thumb="../images/content/product/2.jpg" data-src="../images/content/product/2.jpg"><img src="../images/content/product/2.jpg"></li>
+                  <li data-thumb="../images/content/product/3.jpg" data-src="../images/content/product/3.jpg"><img src="../images/content/product/3.jpg"></li>
+                  <li data-thumb="../images/content/product/4.jpg" data-src="../images/content/product/4.jpg"><img src="../images/content/product/4.jpg"></li>
+                  <li data-thumb="../images/content/product/5.jpg" data-src="../images/content/product/5.jpg"><img src="../images/content/product/5.jpg"></li>
+                  <li data-thumb="../images/content/product/6.jpg" data-src="../images/content/product/6.jpg"><img src="../images/content/product/6.jpg"></li>
+                  <li data-thumb="../images/content/product/7.jpg" data-src="../images/content/product/7.jpg"><img src="../images/content/product/7.jpg"></li>
+                  <li data-thumb="../images/content/product/8.jpg" data-src="../images/content/product/8.jpg"><img src="../images/content/product/8.jpg"></li>
+                </ul>
+                <div class="description">
+                  <article>
+                    <p class="large">Автоматический подводный пылесос, использующий технологию очистки Vortex, обеспечивает сильное и постоянное всасывание в течение всего цикла очистки.</p>
+                    <p>Используется для очистки дна, стен и ватерлинии бассейнов размером до 15 х 7 м со следующими характеристиками:</p>
+                    <ul>
+                      <li>любая форма: прямоугольная, круглая, овальная, произвольная</li>
+                      <li>любая геометрия дна: плоское, с уклоном, многоуровневое</li>
+                      <li>все типы поверхности/отделки: плитка, пленка, стекловолокно, ПВХ, окрашенный бетон</li>
+                    </ul>
+                    <p class="large">В комплектацию входит:</p>
+                    <ul>
+                      <li>контейнер для сбора грязи</li>
+                      <li>дистанционное управление</li>
+                      <li>трансформатор</li>
+                      <li>транспортная тележка</li>
+                    </ul>
+                    <p>Расположенный под углом всасывающий насос создает сверхмощное завихрение потока внутри корпуса пылесоса (запатентованная технология Vortex). При этом попавший внутрь мусор находится во взвешенном состоянии, предотвращая загрязнение фильтрующей сетки. Два режима очистки: 1 - только дно/ 1 час 30 мин.; 2 - дно, стены и ватерлиния/ 2 часа 30 мин.</p>
+                    <div class="m_product-price">
+                      <div class="price">1950 <span class="val">y.e.</span></div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="m_footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-3">
+            <div class="copy">© 2016 «Gelios Park»<br/>Все права защищены</div>
+          </div>
+          <div class="col-xs-6 col-sm-6 col-md-3 visible-xs-block visible-sm-block">
+            <div class="socials pull-right"><a href="#" class="vk"></a><a href="#" class="fb"></a><a href="http://pikmedia.ru/" class="developed pull-right"></a></div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="menu">
+              <div class="row">
+                <div class="col-xs-4 col-sm-6">
+                  <div class="title">О компании</div>
+                  <ul>
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Статьи</a></li>
+                    <li><a href="#">Вопрос-ответ</a></li>
+                    <li><a href="#">Проекты</a></li>
+                    <li><a href="#">Оборудование</a></li>
+                    <li><a href="#">Контакты</a></li>
+                  </ul>
+                </div>
+                <div class="col-xs-8 col-sm-6">
+                  <div class="title">Услуги</div>
+                  <ul>
+                    <li><a href="#">Проектирование и строительство бассейнов</a></li>
+                    <li><a href="#">Сервисное обслуживание бассейнов</a></li>
+                    <li><a href="#">Строительство банных комплексов</a></li>
+                    <li><a href="#">Ландшафтный дизайн</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 visible-md-block visible-lg-block">
+            <div class="socials pull-right"><a href="#" class="vk"></a><a href="#" class="fb"></a><a href="http://pikmedia.ru/" class="developed pull-right"></a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../scripts/plugins.js"></script>
+    <script src="../scripts/app.js"></script>
+  </body>
+</html>

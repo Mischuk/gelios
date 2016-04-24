@@ -4,9 +4,51 @@ div(class="modal fade" id="modal-consultation" tabindex="-1" role="dialog" aria-
       .modal-header
         button(type="button" class="close" data-dismiss="modal" aria-label="Close")
           span(aria-hidden="true") &times;
-        h4(class="modal-title" id="myModalLabel") Modal title
+        .headling
+          h2 Отправить запрос на консультацию
+      .modal-body
+        form.modal-form
+          .form-row
+            label(for="c-name") Имя:*
+            input.text(id="c-name" type="text" placeholder="" required)
+          .form-row
+            label(for="c-tel") Телефон:*
+            input.text(id="c-tel" type="tel" placeholder="" required)
+          .form-row
+            label(for="c-email") Эл. Почта:*
+            input.text(id="c-email" type="email" placeholder="" required)
+          .form-row.area
+            label(for="c-question") Вопрос:*
+            textarea.textarea(id="c-question" placeholder="" required)
+          .form-row.captcha
+            label(for="c-captcha") Введите текст на картинке:*
+            input.text.captcha(id="c-captcha" type="email" placeholder="" required)
+            .image IMAGE
+          .form-row
+            input.submit.button-sky(type="submit" value="Отправить заявку")
 
-      .modal-body modal body
-      .modal-footer
-        button(type="button" class="btn btn-default" data-dismiss="modal") Close
-        button(type="button" class="btn btn-primary") Save changes
+div(class="modal fade" id="modal-free" tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
+  div(class="modal-dialog" role="document")
+    .modal-content
+      .modal-header
+        button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+          span(aria-hidden="true") &times;
+        .headling
+          h2 Получить бесплатную брошюру
+      .modal-body
+        form.modal-form
+          .form-row
+            label(for="f-name") Имя:*
+            input.text(id="f-name" type="text" placeholder="" required)
+          .form-row
+            label(for="f-tel") Телефон:*
+            input.text(id="f-tel" type="tel" placeholder="" required)
+          .form-row
+            label(for="f-email") Эл. Почта:*
+            input.text(id="f-email" type="email" placeholder="" required)
+          .form-row.captcha
+            label(for="f-captcha") Введите текст на картинке:*
+            input.text.captcha(id="f-captcha" type="email" placeholder="" required)
+            .image IMAGE
+          .form-row
+            input.submit.button-sky(type="submit" value="Отправить заявку")

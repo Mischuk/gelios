@@ -3,6 +3,8 @@
   margin-bottom 35px
   background url("../images/backgrounds/reasons-large.jpg") no-repeat 25% 0
   color #fff
+  &.compact
+    height auto
   ul
     height 50px
     line-height 50px
@@ -36,13 +38,16 @@
       &:hover
         border-color transparent
   ul.mobile
-    height 50px
+    height auto
+    li
+      height auto
+      line-height 20px
     a
       position relative
       display inline-block
       font-size 20px
       padding-left 20px
-      height 50px
+      height auto
       &:before
         content ''
         position absolute
@@ -52,5 +57,6 @@
         width 10px
         height 16px
         margin-top -(@height/2)
+
 
 
