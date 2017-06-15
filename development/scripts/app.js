@@ -196,16 +196,19 @@ $(document).ready(function() {
     }, 500);
   });
 
-   var nav_top = $('#s1').offset().top;
-  $(window).scroll(function(){
-      if ($(this).scrollTop() > nav_top + 200) {
-          $('.kp-nav').addClass('stick');
-          $('.kp-nav-blank').height($('.kp-nav').outerHeight());
-      } else {
-          $('.kp-nav').removeClass('stick');
-          $('.kp-nav-blank').height(0);
-      }
-  });
+  if ( $('#s1').length ) {
+    var nav_top = $('#s1').offset().top;
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > nav_top + 200) {
+            $('.kp-nav').addClass('stick');
+            $('.kp-nav-blank').height($('.kp-nav').outerHeight());
+        } else {
+            $('.kp-nav').removeClass('stick');
+            $('.kp-nav-blank').height(0);
+        }
+    });
+  }
+  
 
   var spacenav = $('.kp-nav.stick').height();
   $('.kp-nav a[href*="#"]')
@@ -263,13 +266,47 @@ $(document).ready(function() {
         $('#sticky').removeClass('show');        
       }
   }
+  if ( $('#s1').length ) { 
+    $(function() {
+        $(window).scroll(sticky_relocate);
+        sticky_relocate();
+    });
+  }
+  
 
-  $(function() {
-      $(window).scroll(sticky_relocate);
-      sticky_relocate();
-  });
+  if ( $('.m_sidebar .project').length ) {
+    var sidebar_top = $('.m_sidebar .project').offset().top;
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > sidebar_top) {
+            $('.m_graphic-border.project').addClass('stick');
+        } else {
+            $('.m_graphic-border.project').removeClass('stick');
+        }
+
+        var wpos = $(window).scrollTop();
+        var spos = $('.m_similar-articles').offset().top;
+        var wh = $(window).height();
+        var elh = $('.m_sidebar .project').height();
+        console.log(spos - elh - 50);
+        if ( wpos > spos - elh - 50 ) {
+          $('.m_graphic-border.project').addClass('abs');
+          $('.m_graphic-border.project').css({'top': wpos - elh - 50});
+        } else {
+          $('.m_graphic-border.project').removeClass('abs');
+          $('.m_graphic-border.project').css({'top': 0});
+        }
+    });
 
 
+    var window_top = $(window).scrollTop();
+    var similar = $('.m_similar-articles').offset().top;
+    var windheight = $(window).height();
+    if (window_top > similar - windheight) {
+        
+    } else {
+        console.log('else');
+    }
+  }
   
  
  
