@@ -176,9 +176,25 @@
       &.stick
         position static
         transform translateY(0px)
+  .kp-nav-blank
+    background #f5f2eb
   .kp-nav
+    transition top .5s ease-in
     background url("../images/backgrounds/reasons-large.jpg") no-repeat 50%
     background-size cover
+    top -100%
+    &.stick
+      @media screen and (min-width: 1200px)
+        position fixed
+        left 0
+        top 0
+        width 100%
+        z-index 1000
+        padding-top 5px
+        padding-bottom 10px
+        border-bottom none
+        .section-title
+          display none
     .section-title
       h2
         color #fff

@@ -94,6 +94,31 @@
       padding-bottom 0
     .m_product-item
       background #fff
+      @media screen and (min-width: 768px)
+        height 400px
+        position relative
+      @media screen and (min-width: 1200px)
+        height 420px
+      .title
+        a
+          @media screen and (min-width: 1200px)
+            font-size 16px
+      .description
+        @media screen and (min-width: 768px)
+          overflow hidden
+          max-height 75px
+        @media screen and (min-width: 1200px)
+          max-height none
+      .detail
+        @media screen and (min-width: 768px)
+          position absolute
+          left 0
+          bottom 0
+          width 100%
+          background #fff
+          margin-bottom 0
+          padding-bottom 15px
+          box-shadow 0 -20px 15px white
   .details-table
     background #f5f2eb
     border-radius 5px

@@ -196,6 +196,18 @@ $(document).ready(function() {
     }, 500);
   });
 
+   var nav_top = $('#s1').offset().top;
+  $(window).scroll(function(){
+      if ($(this).scrollTop() > nav_top + 200) {
+          $('.kp-nav').addClass('stick');
+          $('.kp-nav-blank').height($('.kp-nav').outerHeight());
+      } else {
+          $('.kp-nav').removeClass('stick');
+          $('.kp-nav-blank').height(0);
+      }
+  });
+
+  var spacenav = $('.kp-nav.stick').height();
   $('.kp-nav a[href*="#"]')
   // Remove links that don't actually link to anything
   .not('[href="#"]')
@@ -215,7 +227,7 @@ $(document).ready(function() {
         // Only prevent default if animation is actually gonna happen
         event.preventDefault();
         $('html, body').animate({
-          scrollTop: target.offset().top
+          scrollTop: target.offset().top - 125
         }, 500, function() {
           // Callback after animation
           // Must change focus!
@@ -244,7 +256,7 @@ $(document).ready(function() {
           $('#sticky-anchor').height($('#sticky').outerHeight());
       }
 
-      var summaryshow = $('.m_kp .lead').height() + $('.m_kp .intro').height() + $('.m_kp .kp-nav').height();
+      var summaryshow = $('.m_kp .lead').height();
       if ( window_top > summaryshow) {
         $('#sticky').addClass('show');
       } else {
@@ -257,6 +269,10 @@ $(document).ready(function() {
       sticky_relocate();
   });
 
+
+  
+ 
+ 
 
 
   var $breadcrumbs = $('.m_breadcrumbs');
