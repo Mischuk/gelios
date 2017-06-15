@@ -1,0 +1,136 @@
+.m_cases
+  .top
+    position relative
+  .cases-tabs
+    margin-bottom 15px
+    @media screen and (min-width: 480px)
+      position absolute
+      right 0
+      top -5px
+    @media screen and (min-width: 992px)
+      right auto
+      left 270px
+    a
+      color $blue
+      border 1px solid $blue
+      background none
+      @media screen and (min-width: 768px)
+        padding-left 40px
+        padding-right 40px
+      &:hover
+        background $blue
+        color #fff
+      &.current
+        color #fff
+        background $sky
+        border-color $sky
+      & + a
+        margin-left 15px
+  .cases-list
+    .item
+      anim()
+      clearfix()
+      border 1px solid #dcdcdc
+      margin-bottom 15px
+      @media screen and (min-width: 568px)
+        height 200px
+      @media screen and (min-width: 992px)
+        height 250px
+        margin-bottom 30px
+        overflow hidden
+      &:hover
+        border-color $blue
+      &.large
+        @media screen and (min-width: 568px)
+          height auto
+        @media screen and (min-width: 992px)
+          height 530px
+        .image
+          @media screen and (min-width: 568px)
+            float none
+            width 100%
+          @media screen and (min-width: 768px)
+            height 300px
+          @media screen and (min-width: 992px)
+            height 350px
+        .details
+          @media screen and (min-width: 568px)
+            float none
+            width 100%
+            display block
+            height auto
+          @media screen and (min-width: 992px)
+            height 160px
+            padding 15px
+            overflow hidden
+            box-shadow inset 0 -20px 0 rgba(255,255,255,.9)
+          .title a
+            @media screen and (min-width: 992px)
+              font-size 26px
+      .vertical
+        @media screen and (min-width: 568px)
+          display table-cell
+          vertical-align middle
+      .image
+        height 200px
+        @media screen and (min-width: 568px)
+          height 200px
+          float left
+          width 40%
+        @media screen and (min-width: 992px)
+          height 100%
+        @media screen and (min-width: 1200px)
+          width 47.5%
+        a
+          position relative
+          display block
+          width 100%
+          height 100%
+          background-repeat no-repeat
+          background-size cover
+          background-position 50%
+          &:after
+            anim()
+            content ''
+            position absolute
+            left 0
+            top 0
+            width 100%
+            height 100%
+            background #005b7f
+            opacity .1
+          &:hover
+            &:after
+              opacity .5
+      .details
+        padding 10px
+        @media screen and (min-width: 568px)
+          padding 15px
+          float left
+          width 60%
+          height 100%
+          display table
+        @media screen and (min-width: 992px)
+          padding 15px
+        @media screen and (min-width: 1200px)
+          width 52.5%
+
+        .title
+          margin-bottom 15px
+          a
+            fw700()
+            anim()
+            color $blue
+            border-bottom: 1px solid rgba(0,90,125,0.3)
+            font-size 21px
+            @media screen and (min-width: 768px)
+              font-size 26px
+            @media screen and (min-width: 992px)
+              font-size 20px
+            &:hover
+              color #000
+              border-color transparent
+        .desc
+          color #646464
+          font-size 15px
+          line-height 22px

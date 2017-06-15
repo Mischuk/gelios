@@ -1,0 +1,1057 @@
+doctype html
+html
+  head
+    title Коммерческое предложение
+    include modules/head.jade
+  body
+    //- Layout bg
+    .layout
+    //- Modals
+    include modules/modals.jade
+    //- Header
+    include modules/header.jade
+    //- Menu
+    include modules/m_main-nav.jade
+    //- MAIN PAGE WRAPPER
+    .main
+      .m_kp
+        .lead
+          .image(style="background-image: url('../images/kp/bg.jpg')")
+          .wrapper
+            .vertical
+              .title Коммерческое предложение
+              .date 17 апреля 2017 года
+              .mouse
+        section.intro#s0
+          .wrapper
+            .section-title
+              h2.border Уважаемый Владислав!
+            p Компания «Гелиос Парк» предлагает Вам комплекс услуг по строительству композитного бассейна «под ключ». Как это принято, позвольте кратко представить нашу компанию.
+            .list
+              .item
+                .icon: img(src="../images/kp/icon-1.png" alt="")
+                p «Гелиос Парк» строит бассейны уже 13 лет. За это время мы заслужили репутацию надежной и профессиональной компании.
+              .item
+                .icon: img(src="../images/kp/icon-2.png" alt="")
+                p Выполняем все работы «под ключ» - от дизайна до строительства бассейна и ландшафтных работ.
+              .item
+                .icon: img(src="../images/kp/icon-3.png" alt="")
+                p Создаем проекты любого уровня сложности – от профессионального спортивного бассейна до небольшого СПА-комлекса.
+              .item
+                .icon: img(src="../images/kp/icon-4.png" alt="")
+                p Собственное строительное подразделение – гарантия высокого качества работ на всех этапах (от проекта до монтажа)
+              .item
+                .icon: img(src="../images/kp/icon-5.png" alt="")
+                p Наши сотрудники прошли стажировку в Германии и получают награды в области проектирования и дизайна.
+              .item
+                .icon: img(src="../images/kp/icon-6.png" alt="")
+                p Собственное сервисное подразделение обеспечивает беспребойное и быстрое обслуживание бассейнов и СПА комплексов.
+              .item
+                .icon: img(src="../images/kp/icon-7.png" alt="")
+                p Предлагаем широкий выбор бассейнов, оборудования и сопутствующей продукции. Мы подбираем самую качественную и технологичную продукцию ведущих производителей.
+        section.kp-nav
+          .wrapper
+            .section-title
+              h2 Предварительная смета
+            ul
+              li: a(href="#s1") Пример бассейна
+              li: a(href="#s2") Параметры бассейна
+              li: a(href="#s3") Смета на работы с чашей бассейна
+              li: a(href="#s4") Смета на Оборудование и монтаж<br>Вариант №1
+              li: a(href="#s5") Смета на Оборудование и монтаж<br>Вариант №2
+        section.expamle-work#s1
+          .wrapper
+            .section-title
+              h2 Пример бассейна
+            .m_product
+              ul#imageGallery
+                li(data-thumb="../images/content/build/1.jpg" data-src="../images/content/build/1.jpg")
+                  img(src="../images/content/build/1.jpg")
+                li(data-thumb="../images/content/build/2.jpg" data-src="../images/content/build/2.jpg")
+                  img(src="../images/content/build/2.jpg")
+                li(data-thumb="../images/content/build/3.jpg" data-src="../images/content/build/3.jpg")
+                  img(src="../images/content/build/3.jpg")
+                li(data-thumb="../images/content/build/4.jpg" data-src="../images/content/build/4.jpg")
+                  img(src="../images/content/build/4.jpg")
+                li(data-thumb="../images/content/build/5.jpg" data-src="../images/content/build/5.jpg")
+                  img(src="../images/content/build/5.jpg")
+                li(data-thumb="../images/content/build/6.jpg" data-src="../images/content/build/6.jpg")
+                  img(src="../images/content/build/6.jpg")
+                li(data-thumb="../images/content/build/7.jpg" data-src="../images/content/build/7.jpg")
+                  img(src="../images/content/build/7.jpg")
+                li(data-thumb="../images/content/build/8.jpg" data-src="../images/content/build/8.jpg")
+                  img(src="../images/content/build/8.jpg")
+                li(data-thumb="../images/content/build/9.jpg" data-src="../images/content/build/9.jpg")
+                  img(src="../images/content/build/9.jpg")
+                li(data-thumb="../images/content/build/6.jpg" data-src="../images/content/build/6.jpg")
+                  img(src="../images/content/build/6.jpg")
+                li(data-thumb="../images/content/build/7.jpg" data-src="../images/content/build/7.jpg")
+                  img(src="../images/content/build/7.jpg")
+                li(data-thumb="../images/content/build/8.jpg" data-src="../images/content/build/8.jpg")
+                  img(src="../images/content/build/8.jpg")
+                li(data-thumb="../images/content/build/9.jpg" data-src="../images/content/build/9.jpg")
+                  img(src="../images/content/build/9.jpg")
+            .details#s2
+              .title Параметры бассейна
+              ul
+                li
+                  span.d-label Предназначение:
+                  span.d-value Для использования всей семьей
+                li
+                  span.d-label Тип:
+                  span.d-value Скиммерный
+                li
+                  span.d-label Вид:
+                  span.d-value Закрытый
+                li
+                  span.d-label Форма:
+                  span.d-value Прямоугольная l – 8 м, b – 4 м, H – 1.2 – 1.7
+                li
+                  span.d-label Вид отделки:
+                  span.d-value Мозайка
+                li
+                  span.d-label Тип воды:
+                  span.d-value Пресная
+                li
+                  span.d-label Обеззараживание воды:
+                  span.d-value Автоматическое (Ph-Rx)
+                li
+                  span.d-label Аттракционы:
+                  span.d-value Противоток
+        section#s3
+          .wrapper
+            .section-title
+              h2.border Смета на штукатырные гидроизоляционные работы чаши бассейна
+              .responsive-table
+                table
+                  tr
+                    th(rowspan="2") #
+                    th(rowspan="2") Наименование
+                    th(rowspan="2") Ед. изм.
+                    th(rowspan="2") Кол-во
+                    th(colspan="2") Стоимость работ
+                    th(colspan="2") Стоимость мат-лов
+                    th(rowspan="2") Общая<br> стоимость<br> раздела
+                  tr
+                    th Стоим. у.е.
+                    th Сумма у.е.
+                    th Стоим. у.е.
+                    th Сумма у.е.
+                  tr.table-section
+                    th(colspan="9") Штукатурные работы
+                  tr
+                    td 1
+                    td(colspan="8") На стенку бетонного бассейна пристреливается оцинкованная сетка и обрабатывается (наносится жесткой кистью) страто 4900, разбавленной водой и цементом в пропорции 1:1:1, при штукатурке бассейна применяется, эластичные добавки для улучшения свойств штукатурной смеси.
+                  tr
+                    td 2
+                    td: b Расчистка поверхности подготовка основания
+                    td кв. м.
+                    td 68
+                    td 0.00
+                    td 0.00
+                    td
+                    td
+                    td 0.00
+                  tr
+                    td 3
+                    td: b Монтаж сетки на стену
+                    td кв. м.
+                    td 68
+                    td 2.73
+                    td 185.16
+                    td
+                    td
+                    td 185.16
+                  tr
+                    td 4
+                    td: b Обработка страто 4900
+                    td кв. м.
+                    td 68
+                    td 2.60
+                    td 176.80
+                    td
+                    td
+                    td 176.80
+                  tr
+                    td 5
+                    td: b Штукатурка с гидро добавками
+                    td кв. м.
+                    td 68
+                    td 11.70
+                    td 795.60
+                    td
+                    td
+                    td 795.60
+                  tr
+                    td 6
+                    td: b Выравнивание бортика скимерного бассейна
+                    td м. п.
+                    td 24
+                    td 0.00
+                    td 0.00
+                    td
+                    td
+                    td 0.00
+                  tr
+                    td 7
+                    td Сетка оцинкованная
+                    td кв. м.
+                    td 75
+                    td
+                    td
+                    td 10.78
+                    td 806.34
+                    td 806.34
+                  tr
+                    td 8
+                    td Смесь штукатруная
+                    td меш.
+                    td 116
+                    td
+                    td
+                    td 5.00
+                    td 578.00
+                    td 578.00
+                  tr
+                    td 9
+                    td Латексная добавка Planikrit, канистра  25 кг
+                    td шт.
+                    td 2
+                    td
+                    td
+                    td 200.00
+                    td 400.00
+                    td 400.00
+                  tr
+                    td 10
+                    td Крепеж
+                    td компл.
+                    td 1
+                    td
+                    td
+                    td 70.00
+                    td 70.00
+                    td 70.00
+                  tr
+                    td 11
+                    td Гидростяжка Topcem Pronto
+                    td меш.
+                    td 146
+                    td
+                    td
+                    td 6.35
+                    td 927.10
+                    td 927.10
+                  tr
+                    td 12
+                    td Фиброволокно
+                    td уп.
+                    td 12
+                    td
+                    td
+                    td 4.20
+                    td 51.41
+                    td 51.41
+                  tr
+                    td 13
+                    td Страто 4900
+                    td кг.
+                    td 20
+                    td
+                    td
+                    td 6.20
+                    td 126.48
+                    td 126.48
+                  tr
+                    td 14
+                    td(colspan="7") Итого по разделу
+                    td: b 4 111.37
+                  tr
+                    td 15
+                    td(colspan="7") Итого по работам
+                    td: b 1 155.23
+                  tr
+                    td 16
+                    td(colspan="7") Итого по материалам
+                    td: b 2 233.23
+                  tr.table-section
+                    th(colspan="9") Работы по гидроизоляции стен и потолка
+                  tr
+                    td 1
+                    td(colspan="8") На стенку бетонного бассейна пристреливается оцинкованная сетка и обрабатывается (наносится жесткой кистью) страто 4900, разбавленной водой и цементом в пропорции 1:1:1, при штукатурке бассейна применяется, эластичные добавки для улучшения свойств штукатурной смеси.
+                  tr
+                    td 2
+                    td: b Расчистка поверхности подготовка основания
+                    td кв. м.
+                    td 68
+                    td 0.00
+                    td 0.00
+                    td
+                    td
+                    td 0.00
+                  tr
+                    td 3
+                    td: b Монтаж сетки на стену
+                    td кв. м.
+                    td 68
+                    td 2.73
+                    td 185.16
+                    td
+                    td
+                    td 185.16
+                  tr
+                    td 4
+                    td: b Обработка страто 4900
+                    td кв. м.
+                    td 68
+                    td 2.60
+                    td 176.80
+                    td
+                    td
+                    td 176.80
+                  tr
+                    td 5
+                    td: b Штукатурка с гидро добавками
+                    td кв. м.
+                    td 68
+                    td 11.70
+                    td 795.60
+                    td
+                    td
+                    td 795.60
+                  tr
+                    td 6
+                    td: b Выравнивание бортика скимерного бассейна
+                    td м. п.
+                    td 24
+                    td 0.00
+                    td 0.00
+                    td
+                    td
+                    td 0.00
+                  tr
+                    td 7
+                    td Сетка оцинкованная
+                    td кв. м.
+                    td 75
+                    td
+                    td
+                    td 10.78
+                    td 806.34
+                    td 806.34
+                  tr
+                    td 8
+                    td Смесь штукатруная
+                    td меш.
+                    td 116
+                    td
+                    td
+                    td 5.00
+                    td 578.00
+                    td 578.00
+                  tr
+                    td 9
+                    td Латексная добавка Planikrit, канистра  25 кг
+                    td шт.
+                    td 2
+                    td
+                    td
+                    td 200.00
+                    td 400.00
+                    td 400.00
+                  tr
+                    td 10
+                    td Крепеж
+                    td компл.
+                    td 1
+                    td
+                    td
+                    td 70.00
+                    td 70.00
+                    td 70.00
+                  tr
+                    td 11
+                    td Гидростяжка Topcem Pronto
+                    td меш.
+                    td 146
+                    td
+                    td
+                    td 6.35
+                    td 927.10
+                    td 927.10
+                  tr
+                    td 12
+                    td Фиброволокно
+                    td уп.
+                    td 12
+                    td
+                    td
+                    td 4.20
+                    td 51.41
+                    td 51.41
+                  tr
+                    td 13
+                    td Страто 4900
+                    td кг.
+                    td 20
+                    td
+                    td
+                    td 6.20
+                    td 126.48
+                    td 126.48
+                  tr
+                    td 14
+                    td(colspan="7") Итого по разделу
+                    td: b 4 111.37
+                  tr
+                    td 15
+                    td(colspan="7") Итого по работам
+                    td: b 1 155.23
+                  tr
+                    td 16
+                    td(colspan="7") Итого по материалам
+                    td: b 2 233.23
+                  tr.table-section
+                    th(colspan="9") Поклейка мозаики
+                  tr
+                    td 1
+                    td(colspan="8") На стенку бетонного бассейна пристреливается оцинкованная сетка и обрабатывается (наносится жесткой кистью) страто 4900, разбавленной водой и цементом в пропорции 1:1:1, при штукатурке бассейна применяется, эластичные добавки для улучшения свойств штукатурной смеси.
+                  tr
+                    td 2
+                    td: b Расчистка поверхности подготовка основания
+                    td кв. м.
+                    td 68
+                    td 0.00
+                    td 0.00
+                    td
+                    td
+                    td 0.00
+                  tr
+                    td 3
+                    td: b Монтаж сетки на стену
+                    td кв. м.
+                    td 68
+                    td 2.73
+                    td 185.16
+                    td
+                    td
+                    td 185.16
+                  tr
+                    td 4
+                    td: b Обработка страто 4900
+                    td кв. м.
+                    td 68
+                    td 2.60
+                    td 176.80
+                    td
+                    td
+                    td 176.80
+                  tr
+                    td 5
+                    td: b Штукатурка с гидро добавками
+                    td кв. м.
+                    td 68
+                    td 11.70
+                    td 795.60
+                    td
+                    td
+                    td 795.60
+                  tr
+                    td 6
+                    td: b Выравнивание бортика скимерного бассейна
+                    td м. п.
+                    td 24
+                    td 0.00
+                    td 0.00
+                    td
+                    td
+                    td 0.00
+                  tr
+                    td 7
+                    td Сетка оцинкованная
+                    td кв. м.
+                    td 75
+                    td
+                    td
+                    td 10.78
+                    td 806.34
+                    td 806.34
+                  tr
+                    td 8
+                    td Смесь штукатруная
+                    td меш.
+                    td 116
+                    td
+                    td
+                    td 5.00
+                    td 578.00
+                    td 578.00
+                  tr
+                    td 9
+                    td Латексная добавка Planikrit, канистра  25 кг
+                    td шт.
+                    td 2
+                    td
+                    td
+                    td 200.00
+                    td 400.00
+                    td 400.00
+                  tr
+                    td 14
+                    td(colspan="7") Итого по разделу
+                    td: b 4 111.37
+                  tr
+                    td 15
+                    td(colspan="7") Итого по работам
+                    td: b 1 155.23
+                  tr
+                    td 16
+                    td(colspan="7") Итого по материалам
+                    td: b 2 233.23
+                  tr.table-section
+                    th(colspan="9") Общий итог
+                  tr
+                    td 1
+                    td Итого по смете
+                    td
+                    td
+                    td
+                    td
+                    td
+                    td
+                    td 4 117.37
+                  tr
+                    td 2
+                    td Из них работа
+                    td
+                    td
+                    td
+                    td
+                    td
+                    td
+                    td 1 157.33
+                  tr
+                    td 3
+                    td Из них материалы
+                    td
+                    td
+                    td
+                    td
+                    td
+                    td
+                    td 2 966.23
+                  tr
+                    td 4
+                    td Транспортные расходы
+                    td
+                    td
+                    td
+                    td
+                    td
+                    td
+                    td 4 117.21
+                  tr
+                    td 5
+                    td Накладные раскоды
+                    td
+                    td
+                    td
+                    td
+                    td
+                    td
+                    td 1 158.00
+                  tr
+                    td 6
+                    td Непредвиденные расходы
+                    td
+                    td
+                    td
+                    td
+                    td
+                    td
+                    td 2959.22
+                  tr
+                    td 7
+                    td Уборка за собой на территории
+                    td
+                    td
+                    td
+                    td
+                    td
+                    td
+                    td 2 765.21
+                  tr
+                    td 8
+                    td Всего по смете
+                    td
+                    td
+                    td
+                    td
+                    td
+                    td
+                    td 33 233.25
+        section#s4
+          .wrapper
+            .section-title
+              h2.border Смета на оборудование и монтаж<br>Вариант №1
+            .tables
+              h3 Фильтровальное оборудование
+              .devices-table
+                table
+                  tr
+                    td
+                      a(href="#"): img(src="../images/content/product/5.jpg" alt="")
+                    td: a(href="#") Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978
+                    td
+                      .t-label Кол-во
+                      .t-value 2
+                    td
+                      .t-label Цена
+                      .t-value 2 000 EUR
+                    td
+                      .t-label Итого
+                      .t-value 4 000 EUR
+                  tr
+                    td
+                      a(href="#"): img(src="../images/content/product/6.jpg" alt="")
+                    td: a(href="#") Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978
+                    td
+                      .t-label Кол-во
+                      .t-value 2
+                    td
+                      .t-label Цена
+                      .t-value 2 000 EUR
+                    td
+                      .t-label Итого
+                      .t-value 4 000 EUR
+                  tr
+                    td
+                      a(href="#"): img(src="../images/content/product/4.jpg" alt="")
+                    td: a(href="#") Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978
+                    td
+                      .t-label Кол-во
+                      .t-value 2
+                    td
+                      .t-label Цена
+                      .t-value 2 000 EUR
+                    td
+                      .t-label Итого
+                      .t-value 4 000 EUR
+                  tr
+                    td
+                      a(href="#"): img(src="../images/content/product/7.jpg" alt="")
+                    td: a(href="#") Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978
+                    td
+                      .t-label Кол-во
+                      .t-value 2
+                    td
+                      .t-label Цена
+                      .t-value 2 000 EUR
+                    td
+                      .t-label Итого
+                      .t-value 4 000 EUR
+              h3 Нагрев воды
+              .devices-table
+                table
+                  tr
+                    td
+                      a(href="#"): img(src="../images/content/product/5.jpg" alt="")
+                    td: a(href="#") Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978
+                    td
+                      .t-label Кол-во
+                      .t-value 2
+                    td
+                      .t-label Цена
+                      .t-value 2 000 EUR
+                    td
+                      .t-label Итого
+                      .t-value 4 000 EUR
+                  tr
+                    td
+                      a(href="#"): img(src="../images/content/product/6.jpg" alt="")
+                    td: a(href="#") Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978
+                    td
+                      .t-label Кол-во
+                      .t-value 2
+                    td
+                      .t-label Цена
+                      .t-value 2 000 EUR
+                    td
+                      .t-label Итого
+                      .t-value 4 000 EUR
+                  tr
+                    td
+                      a(href="#"): img(src="../images/content/product/4.jpg" alt="")
+                    td: a(href="#") Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978
+                    td
+                      .t-label Кол-во
+                      .t-value 2
+                    td
+                      .t-label Цена
+                      .t-value 2 000 EUR
+                    td
+                      .t-label Итого
+                      .t-value 4 000 EUR
+                  tr
+                    td
+                      a(href="#"): img(src="../images/content/product/7.jpg" alt="")
+                    td: a(href="#") Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978
+                    td
+                      .t-label Кол-во
+                      .t-value 2
+                    td
+                      .t-label Цена
+                      .t-value 2 000 EUR
+                    td
+                      .t-label Итого
+                      .t-value 4 000 EUR
+              h3 Подача и слив воды
+              .devices-table
+                table
+                  tr
+                    td
+                      a(href="#"): img(src="../images/content/product/5.jpg" alt="")
+                    td: a(href="#") Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978
+                    td
+                      .t-label Кол-во
+                      .t-value 2
+                    td
+                      .t-label Цена
+                      .t-value 2 000 EUR
+                    td
+                      .t-label Итого
+                      .t-value 4 000 EUR
+                  tr
+                    td
+                      a(href="#"): img(src="../images/content/product/6.jpg" alt="")
+                    td: a(href="#") Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978
+                    td
+                      .t-label Кол-во
+                      .t-value 2
+                    td
+                      .t-label Цена
+                      .t-value 2 000 EUR
+                    td
+                      .t-label Итого
+                      .t-value 4 000 EUR
+                  tr
+                    td
+                      a(href="#"): img(src="../images/content/product/4.jpg" alt="")
+                    td: a(href="#") Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978
+                    td
+                      .t-label Кол-во
+                      .t-value 2
+                    td
+                      .t-label Цена
+                      .t-value 2 000 EUR
+                    td
+                      .t-label Итого
+                      .t-value 4 000 EUR
+                  tr
+                    td
+                      a(href="#"): img(src="../images/content/product/7.jpg" alt="")
+                    td: a(href="#") Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978
+                    td
+                      .t-label Кол-во
+                      .t-value 2
+                    td
+                      .t-label Цена
+                      .t-value 2 000 EUR
+                    td
+                      .t-label Итого
+                      .t-value 4 000 EUR
+              h3 Прочее
+              .devices-table
+                table
+                  tr
+                    td
+                      a(href="#"): img(src="../images/content/product/5.jpg" alt="")
+                    td: a(href="#") Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978
+                    td
+                      .t-label Кол-во
+                      .t-value 2
+                    td
+                      .t-label Цена
+                      .t-value 2 000 EUR
+                    td
+                      .t-label Итого
+                      .t-value 4 000 EUR
+                  tr
+                    td
+                      a(href="#"): img(src="../images/content/product/6.jpg" alt="")
+                    td: a(href="#") Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978
+                    td
+                      .t-label Кол-во
+                      .t-value 2
+                    td
+                      .t-label Цена
+                      .t-value 2 000 EUR
+                    td
+                      .t-label Итого
+                      .t-value 4 000 EUR
+                  tr
+                    td
+                      a(href="#"): img(src="../images/content/product/4.jpg" alt="")
+                    td: a(href="#") Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978
+                    td
+                      .t-label Кол-во
+                      .t-value 2
+                    td
+                      .t-label Цена
+                      .t-value 2 000 EUR
+                    td
+                      .t-label Итого
+                      .t-value 4 000 EUR
+                  tr
+                    td
+                      a(href="#"): img(src="../images/content/product/7.jpg" alt="")
+                    td: a(href="#") Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978
+                    td
+                      .t-label Кол-во
+                      .t-value 2
+                    td
+                      .t-label Цена
+                      .t-value 2 000 EUR
+                    td
+                      .t-label Итого
+                      .t-value 4 000 EUR
+              .devices-total Итого 23 025 EUR
+        section#s5
+          .wrapper
+            .section-title
+              h2.border Смета на оборудование и монтаж<br>Вариант №2
+            .tables
+              h3 Фильтровальное оборудование
+              .devices-table
+                table
+                  tr
+                    td
+                      a(href="#"): img(src="../images/content/product/5.jpg" alt="")
+                    td: a(href="#") Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978
+                    td
+                      .t-label Кол-во
+                      .t-value 2
+                    td
+                      .t-label Цена
+                      .t-value 2 000 EUR
+                    td
+                      .t-label Итого
+                      .t-value 4 000 EUR
+                  tr
+                    td
+                      a(href="#"): img(src="../images/content/product/6.jpg" alt="")
+                    td: a(href="#") Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978
+                    td
+                      .t-label Кол-во
+                      .t-value 2
+                    td
+                      .t-label Цена
+                      .t-value 2 000 EUR
+                    td
+                      .t-label Итого
+                      .t-value 4 000 EUR
+                  tr
+                    td
+                      a(href="#"): img(src="../images/content/product/4.jpg" alt="")
+                    td: a(href="#") Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978
+                    td
+                      .t-label Кол-во
+                      .t-value 2
+                    td
+                      .t-label Цена
+                      .t-value 2 000 EUR
+                    td
+                      .t-label Итого
+                      .t-value 4 000 EUR
+                  tr
+                    td
+                      a(href="#"): img(src="../images/content/product/7.jpg" alt="")
+                    td: a(href="#") Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978
+                    td
+                      .t-label Кол-во
+                      .t-value 2
+                    td
+                      .t-label Цена
+                      .t-value 2 000 EUR
+                    td
+                      .t-label Итого
+                      .t-value 4 000 EUR
+              h3 Нагрев воды
+              .devices-table
+                table
+                  tr
+                    td
+                      a(href="#"): img(src="../images/content/product/5.jpg" alt="")
+                    td: a(href="#") Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978
+                    td
+                      .t-label Кол-во
+                      .t-value 2
+                    td
+                      .t-label Цена
+                      .t-value 2 000 EUR
+                    td
+                      .t-label Итого
+                      .t-value 4 000 EUR
+                  tr
+                    td
+                      a(href="#"): img(src="../images/content/product/6.jpg" alt="")
+                    td: a(href="#") Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978
+                    td
+                      .t-label Кол-во
+                      .t-value 2
+                    td
+                      .t-label Цена
+                      .t-value 2 000 EUR
+                    td
+                      .t-label Итого
+                      .t-value 4 000 EUR
+                  tr
+                    td
+                      a(href="#"): img(src="../images/content/product/4.jpg" alt="")
+                    td: a(href="#") Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978
+                    td
+                      .t-label Кол-во
+                      .t-value 2
+                    td
+                      .t-label Цена
+                      .t-value 2 000 EUR
+                    td
+                      .t-label Итого
+                      .t-value 4 000 EUR
+                  tr
+                    td
+                      a(href="#"): img(src="../images/content/product/7.jpg" alt="")
+                    td: a(href="#") Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978
+                    td
+                      .t-label Кол-во
+                      .t-value 2
+                    td
+                      .t-label Цена
+                      .t-value 2 000 EUR
+                    td
+                      .t-label Итого
+                      .t-value 4 000 EUR
+              h3 Подача и слив воды
+              .devices-table
+                table
+                  tr
+                    td
+                      a(href="#"): img(src="../images/content/product/5.jpg" alt="")
+                    td: a(href="#") Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978
+                    td
+                      .t-label Кол-во
+                      .t-value 2
+                    td
+                      .t-label Цена
+                      .t-value 2 000 EUR
+                    td
+                      .t-label Итого
+                      .t-value 4 000 EUR
+                  tr
+                    td
+                      a(href="#"): img(src="../images/content/product/6.jpg" alt="")
+                    td: a(href="#") Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978
+                    td
+                      .t-label Кол-во
+                      .t-value 2
+                    td
+                      .t-label Цена
+                      .t-value 2 000 EUR
+                    td
+                      .t-label Итого
+                      .t-value 4 000 EUR
+                  tr
+                    td
+                      a(href="#"): img(src="../images/content/product/4.jpg" alt="")
+                    td: a(href="#") Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978
+                    td
+                      .t-label Кол-во
+                      .t-value 2
+                    td
+                      .t-label Цена
+                      .t-value 2 000 EUR
+                    td
+                      .t-label Итого
+                      .t-value 4 000 EUR
+                  tr
+                    td
+                      a(href="#"): img(src="../images/content/product/7.jpg" alt="")
+                    td: a(href="#") Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978
+                    td
+                      .t-label Кол-во
+                      .t-value 2
+                    td
+                      .t-label Цена
+                      .t-value 2 000 EUR
+                    td
+                      .t-label Итого
+                      .t-value 4 000 EUR
+              h3 Прочее
+              .devices-table
+                table
+                  tr
+                    td
+                      a(href="#"): img(src="../images/content/product/5.jpg" alt="")
+                    td: a(href="#") Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978
+                    td
+                      .t-label Кол-во
+                      .t-value 2
+                    td
+                      .t-label Цена
+                      .t-value 2 000 EUR
+                    td
+                      .t-label Итого
+                      .t-value 4 000 EUR
+                  tr
+                    td
+                      a(href="#"): img(src="../images/content/product/6.jpg" alt="")
+                    td: a(href="#") Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978
+                    td
+                      .t-label Кол-во
+                      .t-value 2
+                    td
+                      .t-label Цена
+                      .t-value 2 000 EUR
+                    td
+                      .t-label Итого
+                      .t-value 4 000 EUR
+                  tr
+                    td
+                      a(href="#"): img(src="../images/content/product/4.jpg" alt="")
+                    td: a(href="#") Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978
+                    td
+                      .t-label Кол-во
+                      .t-value 2
+                    td
+                      .t-label Цена
+                      .t-value 2 000 EUR
+                    td
+                      .t-label Итого
+                      .t-value 4 000 EUR
+                  tr
+                    td
+                      a(href="#"): img(src="../images/content/product/7.jpg" alt="")
+                    td: a(href="#") Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978
+                    td
+                      .t-label Кол-во
+                      .t-value 2
+                    td
+                      .t-label Цена
+                      .t-value 2 000 EUR
+                    td
+                      .t-label Итого
+                      .t-value 4 000 EUR
+              .devices-total Итого 23 025 EUR
+          .kp-options
+            .wrapper
+              #sticky-anchor
+              #sticky.buttons
+                a(class="button-sky" href="#") Распечатать
+                a(class="button-sky" href="#") Сохранить в PDF
+    //- Footer
+    include modules/footer.jade
+
+
+    //- JS
+    script(src="../scripts/plugins.js")
+    script(src="../scripts/app.js")

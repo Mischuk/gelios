@@ -3,10 +3,10 @@ var connect      = require('gulp-connect');
 var stylus       = require('gulp-stylus');
 var jade         = require('gulp-jade');
 var sourcemaps   = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
+// var autoprefixer = require('gulp-autoprefixer');
 var plumber      = require('gulp-plumber');
 var rigger       = require('gulp-rigger');
-var notify       = require('gulp-notify');
+// var notify       = require('gulp-notify');
 // Local server
 gulp.task('connect', function () {
   connect.server({
@@ -53,42 +53,22 @@ gulp.task('js', function() {
 });
 
 // Stylus
-gulp.task('app:styl', function() {
-  var onError = function(err) {
-    notify.onError({
-      title:    "Styles",
-      subtitle: "Failure!",
-      message:  "Error: <%= error.message %>"
-    })(err);
-    this.emit('end');
-  };
+gulp.task('app:styl', function() {  
 
   return gulp.src("development/styles/app.styl")
-    .pipe(plumber({ errorHandler: onError }))
+    .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(stylus())
-    .pipe(autoprefixer({
-      browsers: [
-        '> 1%', 'safari 5', 'ie 8', 'ie 9', 'ios 6', 'android 4'
-      ]
-    }))
+    // .pipe(autoprefixer())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest("build/styles"))
     .pipe(connect.reload());
 });
 
 // Fast styles
-gulp.task('styles:styl', function() {
-  var onError = function(err) {
-    notify.onError({
-      title:    "Styles",
-      subtitle: "Failure!",
-      message:  "Error: <%= error.message %>"
-    })(err);
-    this.emit('end');
-  };
+gulp.task('styles:styl', function() {  
   return gulp.src("development/styles/styles.styl")
-    .pipe(plumber({ errorHandler: onError }))
+    .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(stylus())
     .pipe(sourcemaps.write())

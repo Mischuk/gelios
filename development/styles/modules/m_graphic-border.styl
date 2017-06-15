@@ -82,4 +82,30 @@
         padding-right 15px
         &:hover, &:focus
           color $blue
-
+  &.project
+    .border
+      border-color #ff8a00
+      &:before,
+      &:after
+        background-color #ff8a00
+    .title
+      a
+        font-size 20px
+        color #000
+        &:hover
+          color $blue
+    .wrap > button
+      background $blue
+      border-color $blue
+      &:hover
+        border-color $sky
+        background $sky
+    .contacts
+      padding-top 10px
+      span
+        font-size 14px
+        color #646464
+        padding-bottom 5px
+      .tel
+        font-size 20px
+        fw900()

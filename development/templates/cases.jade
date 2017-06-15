@@ -1,0 +1,86 @@
+doctype html
+html
+  head
+    title Кейсы
+    include modules/head.jade
+  body
+    //- Layout bg
+    .layout
+    //- Modals
+    include modules/modals.jade
+    //- Header
+    include modules/header.jade
+    //- Menu
+    include modules/m_main-nav-current.jade
+    //- Breadcrumbs
+    .m_breadcrumbs
+      .container-fluid
+        .row
+          .col-xs-12
+            ul.normal.hidden-xs
+              li: a(href="#") Главная
+              li: span Услуги
+            ul.mobile.visible-xs
+              li: a(href="#") Услуги
+    //- MAIN PAGE WRAPPER
+    .main
+      .container-fluid
+        .row
+          .col-xs-12.col-sm-12
+            .m_content
+              .m_cases
+                .top
+                  .headling
+                    h2 Кейсы
+                  .cases-tabs
+                    a(class="current button-sky" href="#") Бассейны
+                    a(class="button-sky" href="#") Дома
+                .cases-list
+                  .row
+                    .col-xs-12.col-sm-12.col-md-6
+                      .item.large
+                        .image: a(href="#" style="background-image: url('../images/content/projects/3.jpg')")
+                        .details
+                          .title: a(href="#") Бассейн в европейских традициях
+                          .desc Композитные бассейны из стеклопластика давно завоевали лидирующие позиции у владельцев частных бассейнов в Европе. В России строительство композитных бассейнов в последние годы также набирает обороты.
+                    .col-xs-12.col-sm-12.col-md-6
+                      .item
+                        .image: a(href="#" style="background-image: url('../images/content/projects/1.jpg')")
+                        .details
+                          .vertical
+                            .title: a(href="#") Отдых на лоне природы
+                            .desc В оформлении облицовки бассейна использовалась итальянская мозаичная плитка. Основным декоративным элементом данного бассейна является мозаичное панно авторской работы.
+                      .item
+                        .image: a(href="#" style="background-image: url('../images/content/projects/2.jpg')")
+                        .details
+                          .vertical
+                            .title: a(href="#") Итальянская ривьера
+                            .desc Интерьер бассейна обыгрывает тему оазиса для отдыха в жарких странах на морском побережье с вечнозелеными субтропическими растениями и южным солнцем.
+                  .row
+                    .col-xs-12.col-sm-12.col-md-6
+                      .item
+                        .image: a(href="#" style="background-image: url('../images/content/projects/4.jpg')")
+                        .details
+                          .vertical
+                            .title: a(href="#") Отдых на лоне природы
+                            .desc В оформлении облицовки бассейна использовалась итальянская мозаичная плитка. Основным декоративным элементом данного бассейна является мозаичное панно авторской работы.
+                      .item
+                        .image: a(href="#" style="background-image: url('../images/content/projects/5.jpg')")
+                        .details
+                          .vertical
+                            .title: a(href="#") Итальянская ривьера
+                            .desc Интерьер бассейна обыгрывает тему оазиса для отдыха в жарких странах на морском побережье с вечнозелеными субтропическими растениями и южным солнцем.
+                    .col-xs-12.col-sm-12.col-md-6
+                      .item.large
+                        .image: a(href="#" style="background-image: url('../images/content/projects/7.jpg')")
+                        .details
+                          .title: a(href="#") Бассейн в европейских традициях
+                          .desc Композитные бассейны из стеклопластика давно завоевали лидирующие позиции у владельцев частных бассейнов в Европе. В России строительство композитных бассейнов в последние годы также набирает обороты.
+
+    //- Footer
+    include modules/footer.jade
+
+
+    //- JS
+    script(src="../scripts/plugins.js")
+    script(src="../scripts/app.js")

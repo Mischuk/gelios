@@ -52,3 +52,34 @@ div(class="modal fade" id="modal-free" tabindex="-1" role="dialog" aria-labelled
             .image IMAGE
           .form-row
             input.submit.button-sky(type="submit" value="Отправить заявку")
+
+
+div(class="modal fade" id="modal-project" tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
+  div(class="modal-dialog" role="document")
+    .modal-content
+      .modal-header
+        button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+          span(aria-hidden="true") &times;
+        .headling
+          h2 Запрос на стоимость проекта
+      .modal-body
+        .project-details
+          .image: a(href="#"): img(src="../images/content/projects/1.jpg" alt="")
+          .desc
+            span Название проекта
+            .title: a(href="#") Итальянская ривьера
+        form.modal-form
+          .form-row
+            label(for="p-name") Имя:*
+            input.text(id="p-name" type="text" placeholder="" required)
+          .form-row
+            label(for="p-tel") Телефон:*
+            input.text(id="p-tel" type="tel" placeholder="" required)
+          .form-row
+            label(for="p-email") Эл. Почта:*
+            input.text(id="p-email" type="email" placeholder="" required)
+          .form-row.area
+            label(for="p-question") Дополнительная информация
+            textarea.textarea(id="p-question" placeholder="")
+          .form-row
+            input.submit.button-sky(type="submit" value="Отправить заявку")

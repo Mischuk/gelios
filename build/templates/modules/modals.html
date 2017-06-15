@@ -75,3 +75,44 @@
     </div>
   </div>
 </div>
+<div id="modal-project" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade">
+  <div role="document" class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+        <div class="headling">
+          <h2>Запрос на стоимость проекта</h2>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="project-details">
+          <div class="image"><a href="#"><img src="../images/content/projects/1.jpg" alt=""/></a></div>
+          <div class="desc"><span>Название проекта</span>
+            <div class="title"><a href="#">Итальянская ривьера</a></div>
+          </div>
+        </div>
+        <form class="modal-form">
+          <div class="form-row">
+            <label for="p-name">Имя:*</label>
+            <input id="p-name" type="text" placeholder="" required="required" class="text"/>
+          </div>
+          <div class="form-row">
+            <label for="p-tel">Телефон:*</label>
+            <input id="p-tel" type="tel" placeholder="" required="required" class="text"/>
+          </div>
+          <div class="form-row">
+            <label for="p-email">Эл. Почта:*</label>
+            <input id="p-email" type="email" placeholder="" required="required" class="text"/>
+          </div>
+          <div class="form-row area">
+            <label for="p-question">Дополнительная информация</label>
+            <textarea id="p-question" placeholder="" class="textarea"></textarea>
+          </div>
+          <div class="form-row">
+            <input type="submit" value="Отправить заявку" class="submit button-sky"/>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

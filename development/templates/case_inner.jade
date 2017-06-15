@@ -1,0 +1,221 @@
+doctype html
+html
+  head
+    title Кейс
+    include modules/head.jade
+  body
+    //- Layout bg
+    .layout
+    //- Modals
+    include modules/modals.jade
+    //- Header
+    include modules/header.jade
+    //- Menu
+    include modules/m_main-nav-current.jade
+    //- Breadcrumbs
+    .m_breadcrumbs
+      .container-fluid
+        .row
+          .col-xs-12
+            ul.normal.hidden-xs
+              li: a(href="#") Главная
+              li: span Услуги
+            ul.mobile.visible-xs
+              li: a(href="#") Услуги
+    //- MAIN PAGE WRAPPER
+    .main
+      .container-fluid
+        .row
+          .col-xs-12.col-sm-12.col-lg-9
+            .m_content
+              .headling
+                h2 Бассейн в европейских традициях
+
+              article.m_cases-inner
+                img(src="../images/content/carousel/2.jpg" alt="")
+                .lead-paragraph
+                  p Краткий подзаголовок раскрывающий суть кейса. Он же автоматически отображается в анонсе. Может содержать несколько абзацев текста.
+                  p Отдельно стоящее здание бассейна построено в р.Карелия. Интерьер бассейна обыгрывает тему оазиса для отдыха в жарких странах на морском побережье с вечнозелеными субтропическими растениями и южным солнцем.
+                .details-table
+                  h3 Общая информация
+                  ul.list
+                    li <span>Место:</span> <span class="value">р. Карелия</span>
+                    li <span>Тип дома:</span> <span class="value">Коттедж</span>
+                    li <span>Метраж:</span> <span class="value">49 кв. м.</span>
+                    li <span>Комнаты:</span> <span class="value">2</span>
+                    li <span>Стиль:</span> <span class="value">Восточный</span>
+                    li <span>Высота потолков:</span> <span class="value">3.9 метра</span>
+                    li <span>Хозяева:</span> <span class="value">молодой человек</span>
+                    li <span>Дизайн:</span> <span class="value">Иван Юнаков</span>
+                h3 Задача:
+                p Структура кейса. Сперва идет вводная часть — краткий заголовок раскрывающий суть описываемого проекта. Далее идет общая информация, без привязки к конкретному заказчику (обезличенная).
+                p Затем идет блок описывающий задачу, которая стояла перед компанией. Дальше мы все больше погружаем пользователя в особенности проекта.
+                p Даем ему больше деталей. Так же мы можем выводить блок содержащий превью карточек оборудования. Оборудование, которое использовалось в проекте. Затем мы вновь погружаем пользователя в детали, обобенности проекта, позволяем ему ознакомиться с фотогалереей изображений — в виде слайдера.
+                p И на последок выводим заключительный абзац текста  — вывод по проекту. К примеру: В результате произведенных работ получилось то то и то то.
+                h3 Особенности
+                p Интерьер бассейна обыгрывает тему оазиса для отдыха в жарких странах на морском побережье с вечнозелеными субтропическими растениями и южным солнцем.
+                p Здание бассейна предназначено для приема гостей, отдыха и развлечений. Здесь можно не только проводить оздоровительные процедуры, чередуя плавание с посещением горячей парной, но и заниматься спортом, просто отдыхать.
+                img(src="../images/content/carousel/4.jpg" alt="")
+                p Полная последовательность операций ,совершаемых при реконструкции, это своего рода, возвращение к стадиям строительства бассейна. Первым делом мы "сбили" старый облицовочный материал до бетона, далее произвели штукатурные и гидроизоляционные работы. Заменили износившееся оборудование на более технологичное. И облицевали чашу бассейна немецкой плиткой.
+                h3 Установленное оборудование
+                p Оборудование, установленное в переливном бассейне, отвечает современным стандартам. Бассейн оснащен противотоком Jet Swim 2000, с потоком 1300 л/мин, позволяющим значительно улучшить физическую подготовку и технику плавания. Установлен трамплин для прыжков. Смонтирован водопад "Кобра", поток воды которого позволяет массировать шею и плечи.
+                .case-items
+                  .row
+                    .col-xs-12.col-sm-6.col-md-4
+                      .m_product-item
+                        .image
+                          a(href="#"): img(src="../images/content/catalog/5.jpg" alt="")
+                        .title: a(href="#") Бассейны
+                        .description Бассейны бывают разные. По своему назначению они делятся на две группы: бассейны для индивидуального пользования (их еще называют - частные) и бассейны общественные.
+                        .detail: a(href="#" class="button-border button-blue") Подробнее
+                    .col-xs-12.col-sm-6.col-md-4
+                      .m_product-item
+                        .image
+                          a(href="#"): img(src="../images/content/catalog/5.jpg" alt="")
+                        .title: a(href="#") Обработка и уход за водой
+                        .description Важно помнить, что любой, даже самый маленький бассейн, требует постоянного внимания и ухода.
+                        .detail: a(href="#" class="button-border button-blue") Подробнее
+                    .clearfix.visible-xs.visible-sm
+                    .col-xs-12.col-sm-6.col-md-4
+                      .m_product-item
+                        .image
+                          a(href="#"): img(src="../images/content/catalog/5.jpg" alt="")
+                        .title: a(href="#") Гидроизоляция и материалы для ремонта бассейнов
+                        .description Надёжность бассейна зависит от многих показателей и один из них – это гидроизоляция.
+                        .detail: a(href="#" class="button-border button-blue") Подробнее
+                    .clearfix.hidden-xs.hidden-sm
+                    .col-xs-12.col-sm-6.col-md-4
+                      .m_product-item
+                        .image
+                          a(href="#"): img(src="../images/content/catalog/6.jpg" alt="")
+                        .title: a(href="#") Автоматические подводные очистители/пылесосы
+                        .description Приятный и полноценный отдых возможен только в чистом бассейне, поэтому за состоянием собственного водного объекта нужно следить. Для уборки загрязнений, осевших на дне и стенках бассейна, применяются специальные подводные пылесосы.
+                        .detail: a(href="#" class="button-border button-blue") Подробнее
+                    .clearfix.visible-xs.visible-sm
+                    .col-xs-12.col-sm-6.col-md-4
+                      .m_product-item
+                        .image
+                          a(href="#"): img(src="../images/content/catalog/3.jpg" alt="")
+                        .title: a(href="#") Фильтровальное оборудование
+                        .description Фильтровальное оборудование для бассейнов - это комплект из песочного фильтра, насоса, шестипозиционного клапана, манометра.
+                        .detail: a(href="#" class="button-border button-blue") Подробнее
+                    .col-xs-12.col-sm-6.col-md-4
+                      .m_product-item
+                        .image
+                          a(href="#"): img(src="../images/content/catalog/1.jpg" alt="")
+                        .title: a(href="#") Оборудование для отдыха и развлечения
+                        .description Оборудование для отдыхаи развлечения
+                        .detail: a(href="#" class="button-border button-blue") Подробнее
+
+                p В оформлении облицовки бассейна использовалась итальянская мозаичная плитка. Основным декоративным элементом данного бассейна является мозаичное панно авторской работы. Идея по созданию панно "Золотая маска Италии" принадлежит владельцу бассейна.
+                p Также проведена кропотливая работа в оформлении "барных столиков" в welleness-зоне, выполненных из мозайки темно-голубого цвета.
+                p Оборудование, установленное в бассейне, отвечает современным стандартам. Бассейн оснащен противотоком Jet Swim 2000, с потоком 1300 л/мин, позволяющим значительно улучшить физическую подготовку и технику плавания. В зоне отдыха смонтирована подводная аэромассажная лежанка.
+                .m_product
+                  ul#imageGallery
+                    li(data-thumb="../images/content/build/1.jpg" data-src="../images/content/build/1.jpg")
+                      img(src="../images/content/build/1.jpg")
+                    li(data-thumb="../images/content/build/2.jpg" data-src="../images/content/build/2.jpg")
+                      img(src="../images/content/build/2.jpg")
+                    li(data-thumb="../images/content/build/3.jpg" data-src="../images/content/build/3.jpg")
+                      img(src="../images/content/build/3.jpg")
+                    li(data-thumb="../images/content/build/4.jpg" data-src="../images/content/build/4.jpg")
+                      img(src="../images/content/build/4.jpg")
+                    li(data-thumb="../images/content/build/5.jpg" data-src="../images/content/build/5.jpg")
+                      img(src="../images/content/build/5.jpg")
+                    li(data-thumb="../images/content/build/6.jpg" data-src="../images/content/build/6.jpg")
+                      img(src="../images/content/build/6.jpg")
+                    li(data-thumb="../images/content/build/7.jpg" data-src="../images/content/build/7.jpg")
+                      img(src="../images/content/build/7.jpg")
+                    li(data-thumb="../images/content/build/8.jpg" data-src="../images/content/build/8.jpg")
+                      img(src="../images/content/build/8.jpg")
+                    li(data-thumb="../images/content/build/9.jpg" data-src="../images/content/build/9.jpg")
+                      img(src="../images/content/build/9.jpg")
+                    li(data-thumb="../images/content/build/6.jpg" data-src="../images/content/build/6.jpg")
+                      img(src="../images/content/build/6.jpg")
+                    li(data-thumb="../images/content/build/7.jpg" data-src="../images/content/build/7.jpg")
+                      img(src="../images/content/build/7.jpg")
+                    li(data-thumb="../images/content/build/8.jpg" data-src="../images/content/build/8.jpg")
+                      img(src="../images/content/build/8.jpg")
+                    li(data-thumb="../images/content/build/9.jpg" data-src="../images/content/build/9.jpg")
+                      img(src="../images/content/build/9.jpg")
+                p Однако этот вид очень вариативен – форма, глубина и дизайн зависят полностью от предпочтений заказчика. В относительно глубокий «взрослый» бассейн можно включить мелкую детскую зону с условным либо четким разделением.
+                p При наличии серьезных средств можно оборудовать стационарный бассейн на нулевом этаже дома. В помещении без окон едва ли кому-то захочется жить, а вот зона отдыха с бассейном, сауной и шезлонгами будет здесь как нельзя кстати.
+                p Сегодня мы предлагаем вам познакомиться с прекрасной каменной усадьбой, впитавшей в себя дух истории по-настоящему необыкновенного города на острове Испании Лас Пальмас де Гран Канария.
+                p Лас Пальмас де Гран Канария – крупнейший остров во всем Канарском архипелаге, основанный испанцами в далеком 1478 году.
+                p Сегодня это современный межнациональный город.
+                p Кстати, спустя почти четверть века после основания город Лас Пальмас де Гран Канария посещал сам Христофор Колумб! В это время он совершал плавание к берегам Нового Света и останавливался на несколько дней в бывшей резиденции губернатора города. Впоследствии резиденцию переименовали в честь знаменитого путешественника.
+                .hook-form
+                  .text
+                    .vertical
+                      span Вы можете запросить стоимость подобного проекта через форму запроса
+                  .action
+                    a(class="button-sky" href="#" data-toggle="modal" data-target="#modal-project") Запросить стоимость
+                    .details
+                      span или связаться с нами по телефону:
+                      .tel +7 (812) 313 55 75
+                .shared
+                  .title Рекомендовать друзьям:
+                  .yandex
+                    //- <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+                    //- <script src="//yastatic.net/share2/share.js"></script>
+                    //- <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki" data-counter=""></div>
+          .col-xs-12.visible-lg.col-lg-3
+            .m_sidebar
+              .m_graphic-border
+                .border
+                  .wrap
+                    .small-title Бесплатная брошюра
+                    .title: a(href="#") 7 советов<br>при строительстве<br>бассейна
+                    button(type="button" class="btn button-sky" data-toggle="modal" data-target="#modal-free") Получите бесплатную брошуру
+              .m_graphic-border.project
+                .border
+                  .wrap
+                    .small-title Узнать стоимость проект
+                    .title: a(href="#") Вы можете запросить<br> стоимость подобного<br> проекта через форму
+                    button(type="button" class="btn button-sky" data-toggle="modal" data-target="#modal-project") Запросить стоимость
+                    .contacts
+                      span или связаться с нами по телефону:
+                      .tel +7 (812) 313 55 75
+      .m_similar-articles
+        .container-fluid
+          .headling
+            h2 Читайте также
+          .row
+            .col-xs-12.col-sm-12
+              .similar-carousel
+                .slide
+                  .image: a(href="#" style="background-image: url('../images/content/projects/1.jpg')")
+                  .desc
+                    .title: a(href="#") Бассейн в европейских традициях
+                .slide
+                  .image: a(href="#" style="background-image: url('../images/content/projects/1.jpg')")
+                  .desc
+                    .title: a(href="#") Бассейн в европейских традициях
+                .slide
+                  .image: a(href="#" style="background-image: url('../images/content/projects/2.jpg')")
+                  .desc
+                    .title: a(href="#") Бассейн в европейских традициях
+                .slide
+                  .image: a(href="#" style="background-image: url('../images/content/projects/3.jpg')")
+                  .desc
+                    .title: a(href="#") Бассейн в европейских традициях
+                .slide
+                  .image: a(href="#" style="background-image: url('../images/content/projects/4.jpg')")
+                  .desc
+                    .title: a(href="#") Бассейн в европейских традициях
+                .slide
+                  .image: a(href="#" style="background-image: url('../images/content/projects/5.jpg')")
+                  .desc
+                    .title: a(href="#") Бассейн в европейских традициях
+                .slide
+                  .image: a(href="#" style="background-image: url('../images/content/projects/6.jpg')")
+                  .desc
+                    .title: a(href="#") Бассейн в европейских традициях
+
+    //- Footer
+    include modules/footer.jade
+
+
+    //- JS
+    script(src="../scripts/plugins.js")
+    script(src="../scripts/app.js")

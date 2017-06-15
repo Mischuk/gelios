@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Кейс</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../styles/app.css" rel="stylesheet" media="all">
+    <link href="../styles/styles.css" rel="stylesheet" media="all">
+  </head>
+  <body>
+    <div class="layout"></div>
+    <div id="modal-consultation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade">
+      <div role="document" class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+            <div class="headling">
+              <h2>Отправить запрос на консультацию</h2>
+            </div>
+          </div>
+          <div class="modal-body">
+            <form class="modal-form">
+              <div class="form-row">
+                <label for="c-name">Имя:*</label>
+                <input id="c-name" type="text" placeholder="" required class="text">
+              </div>
+              <div class="form-row">
+                <label for="c-tel">Телефон:*</label>
+                <input id="c-tel" type="tel" placeholder="" required class="text">
+              </div>
+              <div class="form-row">
+                <label for="c-email">Эл. Почта:*</label>
+                <input id="c-email" type="email" placeholder="" required class="text">
+              </div>
+              <div class="form-row area">
+                <label for="c-question">Вопрос:*</label>
+                <textarea id="c-question" placeholder="" required class="textarea"></textarea>
+              </div>
+              <div class="form-row captcha">
+                <label for="c-captcha">Введите текст на картинке:*</label>
+                <input id="c-captcha" type="email" placeholder="" required class="text captcha">
+                <div class="image">IMAGE</div>
+              </div>
+              <div class="form-row">
+                <input type="submit" value="Отправить заявку" class="submit button-sky">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-free" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade">
+      <div role="document" class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+            <div class="headling">
+              <h2>Получить бесплатную брошюру</h2>
+            </div>
+          </div>
+          <div class="modal-body">
+            <form class="modal-form">
+              <div class="form-row">
+                <label for="f-name">Имя:*</label>
+                <input id="f-name" type="text" placeholder="" required class="text">
+              </div>
+              <div class="form-row">
+                <label for="f-tel">Телефон:*</label>
+                <input id="f-tel" type="tel" placeholder="" required class="text">
+              </div>
+              <div class="form-row">
+                <label for="f-email">Эл. Почта:*</label>
+                <input id="f-email" type="email" placeholder="" required class="text">
+              </div>
+              <div class="form-row captcha">
+                <label for="f-captcha">Введите текст на картинке:*</label>
+                <input id="f-captcha" type="email" placeholder="" required class="text captcha">
+                <div class="image">IMAGE</div>
+              </div>
+              <div class="form-row">
+                <input type="submit" value="Отправить заявку" class="submit button-sky">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-project" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade">
+      <div role="document" class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+            <div class="headling">
+              <h2>Запрос на стоимость проекта</h2>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="project-details">
+              <div class="image"><a href="#"><img src="../images/content/projects/1.jpg" alt=""></a></div>
+              <div class="desc"><span>Название проекта</span>
+                <div class="title"><a href="#">Итальянская ривьера</a></div>
+              </div>
+            </div>
+            <form class="modal-form">
+              <div class="form-row">
+                <label for="p-name">Имя:*</label>
+                <input id="p-name" type="text" placeholder="" required class="text">
+              </div>
+              <div class="form-row">
+                <label for="p-tel">Телефон:*</label>
+                <input id="p-tel" type="tel" placeholder="" required class="text">
+              </div>
+              <div class="form-row">
+                <label for="p-email">Эл. Почта:*</label>
+                <input id="p-email" type="email" placeholder="" required class="text">
+              </div>
+              <div class="form-row area">
+                <label for="p-question">Дополнительная информация</label>
+                <textarea id="p-question" placeholder="" class="textarea"></textarea>
+              </div>
+              <div class="form-row">
+                <input type="submit" value="Отправить заявку" class="submit button-sky">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header class="m_header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-5 col-lg-4">
+            <div class="menu-trigger"><span></span><span></span><span></span></div>
+            <div class="logo"><a href="/"></a></div>
+          </div>
+          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+            <div class="v-align-parent">
+              <div class="consultation v-align-child">
+                <div class="title visible-lg-block">Есть вопросы? Мы с радостью вам поможем!</div>
+                <button type="button" data-toggle="modal" data-target="#modal-consultation" class="btn btn-sky"><span class="hidden-xs">Получите бесплатную консультацию</span><span class="visible-xs-block">Бесплатная консультация</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 visible-lg-block">
+            <div class="v-align-parent">
+              <div class="locate v-align-child">
+                <div class="helper"><i class="icon-locate"></i>Санкт-Петербург,<br/> ул. Композиторов, д.5</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-lg-3 hidden-sm hidden-xs">
+            <div class="v-align-parent">
+              <div class="contacts text-right v-align-child">
+                <div class="tel"><i class="icon-tel"></i>+7 (812) 313 55 75</div>
+                <div class="email"><a href="mailto:pool@geliospark.com">pool@geliospark.com</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav class="m_main-nav">
+      <div class="container-fluid">
+        <ul class="nav nav-pills">
+          <li><a href="#"><span class="title">О компании<span class="line"></span></span></a></li>
+          <li class="current"><a href="#"><span class="title">Услуги<span class="line"></span></span></a></li>
+          <li><a href="#"><span class="title">Проекты<span class="line"></span></span></a></li>
+          <li><a href="#"><span class="title">Оборудование<span class="line"></span></span></a></li>
+          <li><a href="#"><span class="title">Контакты<span class="line"></span></span></a></li>
+          <li><a href="#"><span class="title">Статьи<span class="line"></span></span></a></li>
+          <li><a href="#"><span class="title">Вопрос-ответ<span class="line"></span></span></a></li>
+        </ul>
+        <div class="mobile-contacts visible-xs-block">
+          <div class="v-align-parent">
+            <div class="contacts v-align-child">
+              <div class="tel"><i class="icon-tel"></i>+7 (812) 313 55 75</div>
+              <div class="email"><a href="mailto:pool@geliospark.com">pool@geliospark.com</a></div>
+            </div>
+          </div>
+          <div class="v-align-parent text-right">
+            <div class="locate v-align-child text-left"><i class="icon-locate"></i>Санкт-Петербург,<br/> ул. Композиторов, д.5</div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="m_breadcrumbs">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12">
+            <ul class="normal hidden-xs">
+              <li><a href="#">Главная</a></li>
+              <li><span>Услуги</span></li>
+            </ul>
+            <ul class="mobile visible-xs">
+              <li><a href="#">Услуги</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-lg-9">
+            <div class="m_content">
+              <div class="headling">
+                <h2>Бассейн в европейских традициях</h2>
+              </div>
+              <article class="m_cases-inner"><img src="../images/content/carousel/2.jpg" alt="">
+                <div class="lead-paragraph">
+                  <p>Краткий подзаголовок раскрывающий суть кейса. Он же автоматически отображается в анонсе. Может содержать несколько абзацев текста.</p>
+                  <p>Отдельно стоящее здание бассейна построено в р.Карелия. Интерьер бассейна обыгрывает тему оазиса для отдыха в жарких странах на морском побережье с вечнозелеными субтропическими растениями и южным солнцем.</p>
+                </div>
+                <div class="details-table">
+                  <h3>Общая информация</h3>
+                  <ul class="list">
+                    <li><span>Место:</span> <span class="value">р. Карелия</span></li>
+                    <li><span>Тип дома:</span> <span class="value">Коттедж</span></li>
+                    <li><span>Метраж:</span> <span class="value">49 кв. м.</span></li>
+                    <li><span>Комнаты:</span> <span class="value">2</span></li>
+                    <li><span>Стиль:</span> <span class="value">Восточный</span></li>
+                    <li><span>Высота потолков:</span> <span class="value">3.9 метра</span></li>
+                    <li><span>Хозяева:</span> <span class="value">молодой человек</span></li>
+                    <li><span>Дизайн:</span> <span class="value">Иван Юнаков</span></li>
+                  </ul>
+                </div>
+                <h3>Задача:</h3>
+                <p>Структура кейса. Сперва идет вводная часть — краткий заголовок раскрывающий суть описываемого проекта. Далее идет общая информация, без привязки к конкретному заказчику (обезличенная).</p>
+                <p>Затем идет блок описывающий задачу, которая стояла перед компанией. Дальше мы все больше погружаем пользователя в особенности проекта.</p>
+                <p>Даем ему больше деталей. Так же мы можем выводить блок содержащий превью карточек оборудования. Оборудование, которое использовалось в проекте. Затем мы вновь погружаем пользователя в детали, обобенности проекта, позволяем ему ознакомиться с фотогалереей изображений — в виде слайдера.</p>
+                <p>И на последок выводим заключительный абзац текста  — вывод по проекту. К примеру: В результате произведенных работ получилось то то и то то.</p>
+                <h3>Особенности</h3>
+                <p>Интерьер бассейна обыгрывает тему оазиса для отдыха в жарких странах на морском побережье с вечнозелеными субтропическими растениями и южным солнцем.</p>
+                <p>Здание бассейна предназначено для приема гостей, отдыха и развлечений. Здесь можно не только проводить оздоровительные процедуры, чередуя плавание с посещением горячей парной, но и заниматься спортом, просто отдыхать.</p><img src="../images/content/carousel/4.jpg" alt="">
+                <p>Полная последовательность операций ,совершаемых при реконструкции, это своего рода, возвращение к стадиям строительства бассейна. Первым делом мы "сбили" старый облицовочный материал до бетона, далее произвели штукатурные и гидроизоляционные работы. Заменили износившееся оборудование на более технологичное. И облицевали чашу бассейна немецкой плиткой.</p>
+                <h3>Установленное оборудование</h3>
+                <p>Оборудование, установленное в переливном бассейне, отвечает современным стандартам. Бассейн оснащен противотоком Jet Swim 2000, с потоком 1300 л/мин, позволяющим значительно улучшить физическую подготовку и технику плавания. Установлен трамплин для прыжков. Смонтирован водопад "Кобра", поток воды которого позволяет массировать шею и плечи.</p>
+                <div class="case-items">
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                      <div class="m_product-item">
+                        <div class="image"><a href="#"><img src="../images/content/catalog/5.jpg" alt=""></a></div>
+                        <div class="title"><a href="#">Бассейны</a></div>
+                        <div class="description">Бассейны бывают разные. По своему назначению они делятся на две группы: бассейны для индивидуального пользования (их еще называют - частные) и бассейны общественные.</div>
+                        <div class="detail"><a href="#" class="button-border button-blue">Подробнее</a></div>
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                      <div class="m_product-item">
+                        <div class="image"><a href="#"><img src="../images/content/catalog/5.jpg" alt=""></a></div>
+                        <div class="title"><a href="#">Обработка и уход за водой</a></div>
+                        <div class="description">Важно помнить, что любой, даже самый маленький бассейн, требует постоянного внимания и ухода.</div>
+                        <div class="detail"><a href="#" class="button-border button-blue">Подробнее</a></div>
+                      </div>
+                    </div>
+                    <div class="clearfix visible-xs visible-sm"></div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                      <div class="m_product-item">
+                        <div class="image"><a href="#"><img src="../images/content/catalog/5.jpg" alt=""></a></div>
+                        <div class="title"><a href="#">Гидроизоляция и материалы для ремонта бассейнов</a></div>
+                        <div class="description">Надёжность бассейна зависит от многих показателей и один из них – это гидроизоляция.</div>
+                        <div class="detail"><a href="#" class="button-border button-blue">Подробнее</a></div>
+                      </div>
+                    </div>
+                    <div class="clearfix hidden-xs hidden-sm"></div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                      <div class="m_product-item">
+                        <div class="image"><a href="#"><img src="../images/content/catalog/6.jpg" alt=""></a></div>
+                        <div class="title"><a href="#">Автоматические подводные очистители/пылесосы</a></div>
+                        <div class="description">Приятный и полноценный отдых возможен только в чистом бассейне, поэтому за состоянием собственного водного объекта нужно следить. Для уборки загрязнений, осевших на дне и стенках бассейна, применяются специальные подводные пылесосы.</div>
+                        <div class="detail"><a href="#" class="button-border button-blue">Подробнее</a></div>
+                      </div>
+                    </div>
+                    <div class="clearfix visible-xs visible-sm"></div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                      <div class="m_product-item">
+                        <div class="image"><a href="#"><img src="../images/content/catalog/3.jpg" alt=""></a></div>
+                        <div class="title"><a href="#">Фильтровальное оборудование</a></div>
+                        <div class="description">Фильтровальное оборудование для бассейнов - это комплект из песочного фильтра, насоса, шестипозиционного клапана, манометра.</div>
+                        <div class="detail"><a href="#" class="button-border button-blue">Подробнее</a></div>
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                      <div class="m_product-item">
+                        <div class="image"><a href="#"><img src="../images/content/catalog/1.jpg" alt=""></a></div>
+                        <div class="title"><a href="#">Оборудование для отдыха и развлечения</a></div>
+                        <div class="description">Оборудование для отдыхаи развлечения</div>
+                        <div class="detail"><a href="#" class="button-border button-blue">Подробнее</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p>В оформлении облицовки бассейна использовалась итальянская мозаичная плитка. Основным декоративным элементом данного бассейна является мозаичное панно авторской работы. Идея по созданию панно "Золотая маска Италии" принадлежит владельцу бассейна.</p>
+                <p>Также проведена кропотливая работа в оформлении "барных столиков" в welleness-зоне, выполненных из мозайки темно-голубого цвета.</p>
+                <p>Оборудование, установленное в бассейне, отвечает современным стандартам. Бассейн оснащен противотоком Jet Swim 2000, с потоком 1300 л/мин, позволяющим значительно улучшить физическую подготовку и технику плавания. В зоне отдыха смонтирована подводная аэромассажная лежанка.</p>
+                <div class="m_product">
+                  <ul id="imageGallery">
+                    <li data-thumb="../images/content/build/1.jpg" data-src="../images/content/build/1.jpg"><img src="../images/content/build/1.jpg"></li>
+                    <li data-thumb="../images/content/build/2.jpg" data-src="../images/content/build/2.jpg"><img src="../images/content/build/2.jpg"></li>
+                    <li data-thumb="../images/content/build/3.jpg" data-src="../images/content/build/3.jpg"><img src="../images/content/build/3.jpg"></li>
+                    <li data-thumb="../images/content/build/4.jpg" data-src="../images/content/build/4.jpg"><img src="../images/content/build/4.jpg"></li>
+                    <li data-thumb="../images/content/build/5.jpg" data-src="../images/content/build/5.jpg"><img src="../images/content/build/5.jpg"></li>
+                    <li data-thumb="../images/content/build/6.jpg" data-src="../images/content/build/6.jpg"><img src="../images/content/build/6.jpg"></li>
+                    <li data-thumb="../images/content/build/7.jpg" data-src="../images/content/build/7.jpg"><img src="../images/content/build/7.jpg"></li>
+                    <li data-thumb="../images/content/build/8.jpg" data-src="../images/content/build/8.jpg"><img src="../images/content/build/8.jpg"></li>
+                    <li data-thumb="../images/content/build/9.jpg" data-src="../images/content/build/9.jpg"><img src="../images/content/build/9.jpg"></li>
+                    <li data-thumb="../images/content/build/6.jpg" data-src="../images/content/build/6.jpg"><img src="../images/content/build/6.jpg"></li>
+                    <li data-thumb="../images/content/build/7.jpg" data-src="../images/content/build/7.jpg"><img src="../images/content/build/7.jpg"></li>
+                    <li data-thumb="../images/content/build/8.jpg" data-src="../images/content/build/8.jpg"><img src="../images/content/build/8.jpg"></li>
+                    <li data-thumb="../images/content/build/9.jpg" data-src="../images/content/build/9.jpg"><img src="../images/content/build/9.jpg"></li>
+                  </ul>
+                </div>
+                <p>Однако этот вид очень вариативен – форма, глубина и дизайн зависят полностью от предпочтений заказчика. В относительно глубокий «взрослый» бассейн можно включить мелкую детскую зону с условным либо четким разделением.</p>
+                <p>При наличии серьезных средств можно оборудовать стационарный бассейн на нулевом этаже дома. В помещении без окон едва ли кому-то захочется жить, а вот зона отдыха с бассейном, сауной и шезлонгами будет здесь как нельзя кстати.</p>
+                <p>Сегодня мы предлагаем вам познакомиться с прекрасной каменной усадьбой, впитавшей в себя дух истории по-настоящему необыкновенного города на острове Испании Лас Пальмас де Гран Канария.</p>
+                <p>Лас Пальмас де Гран Канария – крупнейший остров во всем Канарском архипелаге, основанный испанцами в далеком 1478 году.</p>
+                <p>Сегодня это современный межнациональный город.</p>
+                <p>Кстати, спустя почти четверть века после основания город Лас Пальмас де Гран Канария посещал сам Христофор Колумб! В это время он совершал плавание к берегам Нового Света и останавливался на несколько дней в бывшей резиденции губернатора города. Впоследствии резиденцию переименовали в честь знаменитого путешественника.</p>
+                <div class="hook-form">
+                  <div class="text">
+                    <div class="vertical"><span>Вы можете запросить стоимость подобного проекта через форму запроса</span></div>
+                  </div>
+                  <div class="action"><a href="#" data-toggle="modal" data-target="#modal-project" class="button-sky">Запросить стоимость</a>
+                    <div class="details"><span>или связаться с нами по телефону:</span>
+                      <div class="tel">+7 (812) 313 55 75</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="shared">
+                  <div class="title">Рекомендовать друзьям:</div>
+                  <div class="yandex">
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="col-xs-12 visible-lg col-lg-3">
+            <div class="m_sidebar">
+              <div class="m_graphic-border">
+                <div class="border">
+                  <div class="wrap">
+                    <div class="small-title">Бесплатная брошюра</div>
+                    <div class="title"><a href="#">7 советов<br>при строительстве<br>бассейна</a></div>
+                    <button type="button" data-toggle="modal" data-target="#modal-free" class="btn button-sky">Получите бесплатную брошуру</button>
+                  </div>
+                </div>
+              </div>
+              <div class="m_graphic-border project">
+                <div class="border">
+                  <div class="wrap">
+                    <div class="small-title">Узнать стоимость проект</div>
+                    <div class="title"><a href="#">Вы можете запросить<br> стоимость подобного<br> проекта через форму</a></div>
+                    <button type="button" data-toggle="modal" data-target="#modal-project" class="btn button-sky">Запросить стоимость</button>
+                    <div class="contacts"><span>или связаться с нами по телефону:</span>
+                      <div class="tel">+7 (812) 313 55 75</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="m_similar-articles">
+        <div class="container-fluid">
+          <div class="headling">
+            <h2>Читайте также</h2>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12">
+              <div class="similar-carousel">
+                <div class="slide">
+                  <div class="image"><a href="#" style="background-image: url('../images/content/projects/1.jpg')"></a></div>
+                  <div class="desc">
+                    <div class="title"><a href="#">Бассейн в европейских традициях</a></div>
+                  </div>
+                </div>
+                <div class="slide">
+                  <div class="image"><a href="#" style="background-image: url('../images/content/projects/1.jpg')"></a></div>
+                  <div class="desc">
+                    <div class="title"><a href="#">Бассейн в европейских традициях</a></div>
+                  </div>
+                </div>
+                <div class="slide">
+                  <div class="image"><a href="#" style="background-image: url('../images/content/projects/2.jpg')"></a></div>
+                  <div class="desc">
+                    <div class="title"><a href="#">Бассейн в европейских традициях</a></div>
+                  </div>
+                </div>
+                <div class="slide">
+                  <div class="image"><a href="#" style="background-image: url('../images/content/projects/3.jpg')"></a></div>
+                  <div class="desc">
+                    <div class="title"><a href="#">Бассейн в европейских традициях</a></div>
+                  </div>
+                </div>
+                <div class="slide">
+                  <div class="image"><a href="#" style="background-image: url('../images/content/projects/4.jpg')"></a></div>
+                  <div class="desc">
+                    <div class="title"><a href="#">Бассейн в европейских традициях</a></div>
+                  </div>
+                </div>
+                <div class="slide">
+                  <div class="image"><a href="#" style="background-image: url('../images/content/projects/5.jpg')"></a></div>
+                  <div class="desc">
+                    <div class="title"><a href="#">Бассейн в европейских традициях</a></div>
+                  </div>
+                </div>
+                <div class="slide">
+                  <div class="image"><a href="#" style="background-image: url('../images/content/projects/6.jpg')"></a></div>
+                  <div class="desc">
+                    <div class="title"><a href="#">Бассейн в европейских традициях</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="m_footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-3">
+            <div class="copy">© 2016 «Gelios Park»<br/>Все права защищены</div>
+          </div>
+          <div class="col-xs-6 col-sm-6 col-md-3 visible-xs-block visible-sm-block">
+            <div class="socials pull-right"><a href="#" class="vk"></a><a href="#" class="fb"></a><a href="http://pikmedia.ru/" class="developed pull-right"></a></div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="menu">
+              <div class="row">
+                <div class="col-xs-4 col-sm-6">
+                  <div class="title">О компании</div>
+                  <ul>
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Статьи</a></li>
+                    <li><a href="#">Вопрос-ответ</a></li>
+                    <li><a href="#">Проекты</a></li>
+                    <li><a href="#">Оборудование</a></li>
+                    <li><a href="#">Контакты</a></li>
+                  </ul>
+                </div>
+                <div class="col-xs-8 col-sm-6">
+                  <div class="title">Услуги</div>
+                  <ul>
+                    <li><a href="#">Проектирование и строительство бассейнов</a></li>
+                    <li><a href="#">Сервисное обслуживание бассейнов</a></li>
+                    <li><a href="#">Строительство банных комплексов</a></li>
+                    <li><a href="#">Ландшафтный дизайн</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 visible-md-block visible-lg-block">
+            <div class="socials pull-right"><a href="#" class="vk"></a><a href="#" class="fb"></a><a href="http://pikmedia.ru/" class="developed pull-right"></a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../scripts/plugins.js"></script>
+    <script src="../scripts/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Коммерческое предложение</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../styles/app.css" rel="stylesheet" media="all">
+    <link href="../styles/styles.css" rel="stylesheet" media="all">
+  </head>
+  <body>
+    <div class="layout"></div>
+    <div id="modal-consultation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade">
+      <div role="document" class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+            <div class="headling">
+              <h2>Отправить запрос на консультацию</h2>
+            </div>
+          </div>
+          <div class="modal-body">
+            <form class="modal-form">
+              <div class="form-row">
+                <label for="c-name">Имя:*</label>
+                <input id="c-name" type="text" placeholder="" required class="text">
+              </div>
+              <div class="form-row">
+                <label for="c-tel">Телефон:*</label>
+                <input id="c-tel" type="tel" placeholder="" required class="text">
+              </div>
+              <div class="form-row">
+                <label for="c-email">Эл. Почта:*</label>
+                <input id="c-email" type="email" placeholder="" required class="text">
+              </div>
+              <div class="form-row area">
+                <label for="c-question">Вопрос:*</label>
+                <textarea id="c-question" placeholder="" required class="textarea"></textarea>
+              </div>
+              <div class="form-row captcha">
+                <label for="c-captcha">Введите текст на картинке:*</label>
+                <input id="c-captcha" type="email" placeholder="" required class="text captcha">
+                <div class="image">IMAGE</div>
+              </div>
+              <div class="form-row">
+                <input type="submit" value="Отправить заявку" class="submit button-sky">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-free" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade">
+      <div role="document" class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+            <div class="headling">
+              <h2>Получить бесплатную брошюру</h2>
+            </div>
+          </div>
+          <div class="modal-body">
+            <form class="modal-form">
+              <div class="form-row">
+                <label for="f-name">Имя:*</label>
+                <input id="f-name" type="text" placeholder="" required class="text">
+              </div>
+              <div class="form-row">
+                <label for="f-tel">Телефон:*</label>
+                <input id="f-tel" type="tel" placeholder="" required class="text">
+              </div>
+              <div class="form-row">
+                <label for="f-email">Эл. Почта:*</label>
+                <input id="f-email" type="email" placeholder="" required class="text">
+              </div>
+              <div class="form-row captcha">
+                <label for="f-captcha">Введите текст на картинке:*</label>
+                <input id="f-captcha" type="email" placeholder="" required class="text captcha">
+                <div class="image">IMAGE</div>
+              </div>
+              <div class="form-row">
+                <input type="submit" value="Отправить заявку" class="submit button-sky">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-project" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade">
+      <div role="document" class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+            <div class="headling">
+              <h2>Запрос на стоимость проекта</h2>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="project-details">
+              <div class="image"><a href="#"><img src="../images/content/projects/1.jpg" alt=""></a></div>
+              <div class="desc"><span>Название проекта</span>
+                <div class="title"><a href="#">Итальянская ривьера</a></div>
+              </div>
+            </div>
+            <form class="modal-form">
+              <div class="form-row">
+                <label for="p-name">Имя:*</label>
+                <input id="p-name" type="text" placeholder="" required class="text">
+              </div>
+              <div class="form-row">
+                <label for="p-tel">Телефон:*</label>
+                <input id="p-tel" type="tel" placeholder="" required class="text">
+              </div>
+              <div class="form-row">
+                <label for="p-email">Эл. Почта:*</label>
+                <input id="p-email" type="email" placeholder="" required class="text">
+              </div>
+              <div class="form-row area">
+                <label for="p-question">Дополнительная информация</label>
+                <textarea id="p-question" placeholder="" class="textarea"></textarea>
+              </div>
+              <div class="form-row">
+                <input type="submit" value="Отправить заявку" class="submit button-sky">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header class="m_header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-5 col-lg-4">
+            <div class="menu-trigger"><span></span><span></span><span></span></div>
+            <div class="logo"><a href="/"></a></div>
+          </div>
+          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+            <div class="v-align-parent">
+              <div class="consultation v-align-child">
+                <div class="title visible-lg-block">Есть вопросы? Мы с радостью вам поможем!</div>
+                <button type="button" data-toggle="modal" data-target="#modal-consultation" class="btn btn-sky"><span class="hidden-xs">Получите бесплатную консультацию</span><span class="visible-xs-block">Бесплатная консультация</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 visible-lg-block">
+            <div class="v-align-parent">
+              <div class="locate v-align-child">
+                <div class="helper"><i class="icon-locate"></i>Санкт-Петербург,<br/> ул. Композиторов, д.5</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-lg-3 hidden-sm hidden-xs">
+            <div class="v-align-parent">
+              <div class="contacts text-right v-align-child">
+                <div class="tel"><i class="icon-tel"></i>+7 (812) 313 55 75</div>
+                <div class="email"><a href="mailto:pool@geliospark.com">pool@geliospark.com</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav class="m_main-nav">
+      <div class="container-fluid">
+        <ul class="nav nav-pills">
+          <li><a href="#"><span class="title">О компании<span class="line"></span></span></a></li>
+          <li><a href="#"><span class="title">Услуги<span class="line"></span></span></a></li>
+          <li><a href="#"><span class="title">Проекты<span class="line"></span></span></a></li>
+          <li><a href="#"><span class="title">Оборудование<span class="line"></span></span></a></li>
+          <li><a href="#"><span class="title">Контакты<span class="line"></span></span></a></li>
+          <li><a href="#"><span class="title">Статьи<span class="line"></span></span></a></li>
+          <li><a href="#"><span class="title">Вопрос-ответ<span class="line"></span></span></a></li>
+        </ul>
+        <div class="mobile-contacts visible-xs-block">
+          <div class="v-align-parent">
+            <div class="contacts v-align-child">
+              <div class="tel"><i class="icon-tel"></i>+7 (812) 313 55 75</div>
+              <div class="email"><a href="mailto:pool@geliospark.com">pool@geliospark.com</a></div>
+            </div>
+          </div>
+          <div class="v-align-parent text-right">
+            <div class="locate v-align-child text-left"><i class="icon-locate"></i>Санкт-Петербург,<br/> ул. Композиторов, д.5</div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="main">
+      <div class="m_kp">
+        <div class="lead">
+          <div style="background-image: url('../images/kp/bg.jpg')" class="image"></div>
+          <div class="wrapper">
+            <div class="vertical">
+              <div class="title">Коммерческое предложение</div>
+              <div class="date">17 апреля 2017 года</div>
+              <div class="mouse"></div>
+            </div>
+          </div>
+        </div>
+        <section id="s0" class="intro">
+          <div class="wrapper">
+            <div class="section-title">
+              <h2 class="border">Уважаемый Владислав!</h2>
+            </div>
+            <p>Компания «Гелиос Парк» предлагает Вам комплекс услуг по строительству композитного бассейна «под ключ». Как это принято, позвольте кратко представить нашу компанию.</p>
+            <div class="list">
+              <div class="item">
+                <div class="icon"><img src="../images/kp/icon-1.png" alt=""></div>
+                <p>«Гелиос Парк» строит бассейны уже 13 лет. За это время мы заслужили репутацию надежной и профессиональной компании.</p>
+              </div>
+              <div class="item">
+                <div class="icon"><img src="../images/kp/icon-2.png" alt=""></div>
+                <p>Выполняем все работы «под ключ» - от дизайна до строительства бассейна и ландшафтных работ.</p>
+              </div>
+              <div class="item">
+                <div class="icon"><img src="../images/kp/icon-3.png" alt=""></div>
+                <p>Создаем проекты любого уровня сложности – от профессионального спортивного бассейна до небольшого СПА-комлекса.</p>
+              </div>
+              <div class="item">
+                <div class="icon"><img src="../images/kp/icon-4.png" alt=""></div>
+                <p>Собственное строительное подразделение – гарантия высокого качества работ на всех этапах (от проекта до монтажа)</p>
+              </div>
+              <div class="item">
+                <div class="icon"><img src="../images/kp/icon-5.png" alt=""></div>
+                <p>Наши сотрудники прошли стажировку в Германии и получают награды в области проектирования и дизайна.</p>
+              </div>
+              <div class="item">
+                <div class="icon"><img src="../images/kp/icon-6.png" alt=""></div>
+                <p>Собственное сервисное подразделение обеспечивает беспребойное и быстрое обслуживание бассейнов и СПА комплексов.</p>
+              </div>
+              <div class="item">
+                <div class="icon"><img src="../images/kp/icon-7.png" alt=""></div>
+                <p>Предлагаем широкий выбор бассейнов, оборудования и сопутствующей продукции. Мы подбираем самую качественную и технологичную продукцию ведущих производителей.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="kp-nav">
+          <div class="wrapper">
+            <div class="section-title">
+              <h2>Предварительная смета</h2>
+            </div>
+            <ul>
+              <li><a href="#s1">Пример бассейна</a></li>
+              <li><a href="#s2">Параметры бассейна</a></li>
+              <li><a href="#s3">Смета на работы с чашей бассейна</a></li>
+              <li><a href="#s4">Смета на Оборудование и монтаж<br>Вариант №1</a></li>
+              <li><a href="#s5">Смета на Оборудование и монтаж<br>Вариант №2</a></li>
+            </ul>
+          </div>
+        </section>
+        <section id="s1" class="expamle-work">
+          <div class="wrapper">
+            <div class="section-title">
+              <h2>Пример бассейна</h2>
+            </div>
+            <div class="m_product">
+              <ul id="imageGallery">
+                <li data-thumb="../images/content/build/1.jpg" data-src="../images/content/build/1.jpg"><img src="../images/content/build/1.jpg"></li>
+                <li data-thumb="../images/content/build/2.jpg" data-src="../images/content/build/2.jpg"><img src="../images/content/build/2.jpg"></li>
+                <li data-thumb="../images/content/build/3.jpg" data-src="../images/content/build/3.jpg"><img src="../images/content/build/3.jpg"></li>
+                <li data-thumb="../images/content/build/4.jpg" data-src="../images/content/build/4.jpg"><img src="../images/content/build/4.jpg"></li>
+                <li data-thumb="../images/content/build/5.jpg" data-src="../images/content/build/5.jpg"><img src="../images/content/build/5.jpg"></li>
+                <li data-thumb="../images/content/build/6.jpg" data-src="../images/content/build/6.jpg"><img src="../images/content/build/6.jpg"></li>
+                <li data-thumb="../images/content/build/7.jpg" data-src="../images/content/build/7.jpg"><img src="../images/content/build/7.jpg"></li>
+                <li data-thumb="../images/content/build/8.jpg" data-src="../images/content/build/8.jpg"><img src="../images/content/build/8.jpg"></li>
+                <li data-thumb="../images/content/build/9.jpg" data-src="../images/content/build/9.jpg"><img src="../images/content/build/9.jpg"></li>
+                <li data-thumb="../images/content/build/6.jpg" data-src="../images/content/build/6.jpg"><img src="../images/content/build/6.jpg"></li>
+                <li data-thumb="../images/content/build/7.jpg" data-src="../images/content/build/7.jpg"><img src="../images/content/build/7.jpg"></li>
+                <li data-thumb="../images/content/build/8.jpg" data-src="../images/content/build/8.jpg"><img src="../images/content/build/8.jpg"></li>
+                <li data-thumb="../images/content/build/9.jpg" data-src="../images/content/build/9.jpg"><img src="../images/content/build/9.jpg"></li>
+              </ul>
+            </div>
+            <div id="s2" class="details">
+              <div class="title">Параметры бассейна</div>
+              <ul>
+                <li><span class="d-label">Предназначение:</span><span class="d-value">Для использования всей семьей</span></li>
+                <li><span class="d-label">Тип:</span><span class="d-value">Скиммерный</span></li>
+                <li><span class="d-label">Вид:</span><span class="d-value">Закрытый</span></li>
+                <li><span class="d-label">Форма:</span><span class="d-value">Прямоугольная l – 8 м, b – 4 м, H – 1.2 – 1.7</span></li>
+                <li><span class="d-label">Вид отделки:</span><span class="d-value">Мозайка</span></li>
+                <li><span class="d-label">Тип воды:</span><span class="d-value">Пресная</span></li>
+                <li><span class="d-label">Обеззараживание воды:</span><span class="d-value">Автоматическое (Ph-Rx)</span></li>
+                <li><span class="d-label">Аттракционы:</span><span class="d-value">Противоток</span></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section id="s3">
+          <div class="wrapper">
+            <div class="section-title">
+              <h2 class="border">Смета на штукатырные гидроизоляционные работы чаши бассейна</h2>
+              <div class="responsive-table">
+                <table>
+                  <tr>
+                    <th rowspan="2">#</th>
+                    <th rowspan="2">Наименование</th>
+                    <th rowspan="2">Ед. изм.</th>
+                    <th rowspan="2">Кол-во</th>
+                    <th colspan="2">Стоимость работ</th>
+                    <th colspan="2">Стоимость мат-лов</th>
+                    <th rowspan="2">Общая<br> стоимость<br> раздела</th>
+                  </tr>
+                  <tr>
+                    <th>Стоим. у.е.</th>
+                    <th>Сумма у.е.</th>
+                    <th>Стоим. у.е.</th>
+                    <th>Сумма у.е.</th>
+                  </tr>
+                  <tr class="table-section">
+                    <th colspan="9">Штукатурные работы</th>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td colspan="8">На стенку бетонного бассейна пристреливается оцинкованная сетка и обрабатывается (наносится жесткой кистью) страто 4900, разбавленной водой и цементом в пропорции 1:1:1, при штукатурке бассейна применяется, эластичные добавки для улучшения свойств штукатурной смеси.</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td><b>Расчистка поверхности подготовка основания</b></td>
+                    <td>кв. м.</td>
+                    <td>68</td>
+                    <td>0.00</td>
+                    <td>0.00</td>
+                    <td></td>
+                    <td></td>
+                    <td>0.00</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td><b>Монтаж сетки на стену</b></td>
+                    <td>кв. м.</td>
+                    <td>68</td>
+                    <td>2.73</td>
+                    <td>185.16</td>
+                    <td></td>
+                    <td></td>
+                    <td>185.16</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td><b>Обработка страто 4900</b></td>
+                    <td>кв. м.</td>
+                    <td>68</td>
+                    <td>2.60</td>
+                    <td>176.80</td>
+                    <td></td>
+                    <td></td>
+                    <td>176.80</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td><b>Штукатурка с гидро добавками</b></td>
+                    <td>кв. м.</td>
+                    <td>68</td>
+                    <td>11.70</td>
+                    <td>795.60</td>
+                    <td></td>
+                    <td></td>
+                    <td>795.60</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td><b>Выравнивание бортика скимерного бассейна</b></td>
+                    <td>м. п.</td>
+                    <td>24</td>
+                    <td>0.00</td>
+                    <td>0.00</td>
+                    <td></td>
+                    <td></td>
+                    <td>0.00</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>Сетка оцинкованная</td>
+                    <td>кв. м.</td>
+                    <td>75</td>
+                    <td></td>
+                    <td></td>
+                    <td>10.78</td>
+                    <td>806.34</td>
+                    <td>806.34</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>Смесь штукатруная</td>
+                    <td>меш.</td>
+                    <td>116</td>
+                    <td></td>
+                    <td></td>
+                    <td>5.00</td>
+                    <td>578.00</td>
+                    <td>578.00</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>Латексная добавка Planikrit, канистра  25 кг</td>
+                    <td>шт.</td>
+                    <td>2</td>
+                    <td></td>
+                    <td></td>
+                    <td>200.00</td>
+                    <td>400.00</td>
+                    <td>400.00</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>Крепеж</td>
+                    <td>компл.</td>
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+                    <td>70.00</td>
+                    <td>70.00</td>
+                    <td>70.00</td>
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td>Гидростяжка Topcem Pronto</td>
+                    <td>меш.</td>
+                    <td>146</td>
+                    <td></td>
+                    <td></td>
+                    <td>6.35</td>
+                    <td>927.10</td>
+                    <td>927.10</td>
+                  </tr>
+                  <tr>
+                    <td>12</td>
+                    <td>Фиброволокно</td>
+                    <td>уп.</td>
+                    <td>12</td>
+                    <td></td>
+                    <td></td>
+                    <td>4.20</td>
+                    <td>51.41</td>
+                    <td>51.41</td>
+                  </tr>
+                  <tr>
+                    <td>13</td>
+                    <td>Страто 4900</td>
+                    <td>кг.</td>
+                    <td>20</td>
+                    <td></td>
+                    <td></td>
+                    <td>6.20</td>
+                    <td>126.48</td>
+                    <td>126.48</td>
+                  </tr>
+                  <tr>
+                    <td>14</td>
+                    <td colspan="7">Итого по разделу</td>
+                    <td><b>4 111.37</b></td>
+                  </tr>
+                  <tr>
+                    <td>15</td>
+                    <td colspan="7">Итого по работам</td>
+                    <td><b>1 155.23</b></td>
+                  </tr>
+                  <tr>
+                    <td>16</td>
+                    <td colspan="7">Итого по материалам</td>
+                    <td><b>2 233.23</b></td>
+                  </tr>
+                  <tr class="table-section">
+                    <th colspan="9">Работы по гидроизоляции стен и потолка</th>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td colspan="8">На стенку бетонного бассейна пристреливается оцинкованная сетка и обрабатывается (наносится жесткой кистью) страто 4900, разбавленной водой и цементом в пропорции 1:1:1, при штукатурке бассейна применяется, эластичные добавки для улучшения свойств штукатурной смеси.</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td><b>Расчистка поверхности подготовка основания</b></td>
+                    <td>кв. м.</td>
+                    <td>68</td>
+                    <td>0.00</td>
+                    <td>0.00</td>
+                    <td></td>
+                    <td></td>
+                    <td>0.00</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td><b>Монтаж сетки на стену</b></td>
+                    <td>кв. м.</td>
+                    <td>68</td>
+                    <td>2.73</td>
+                    <td>185.16</td>
+                    <td></td>
+                    <td></td>
+                    <td>185.16</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td><b>Обработка страто 4900</b></td>
+                    <td>кв. м.</td>
+                    <td>68</td>
+                    <td>2.60</td>
+                    <td>176.80</td>
+                    <td></td>
+                    <td></td>
+                    <td>176.80</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td><b>Штукатурка с гидро добавками</b></td>
+                    <td>кв. м.</td>
+                    <td>68</td>
+                    <td>11.70</td>
+                    <td>795.60</td>
+                    <td></td>
+                    <td></td>
+                    <td>795.60</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td><b>Выравнивание бортика скимерного бассейна</b></td>
+                    <td>м. п.</td>
+                    <td>24</td>
+                    <td>0.00</td>
+                    <td>0.00</td>
+                    <td></td>
+                    <td></td>
+                    <td>0.00</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>Сетка оцинкованная</td>
+                    <td>кв. м.</td>
+                    <td>75</td>
+                    <td></td>
+                    <td></td>
+                    <td>10.78</td>
+                    <td>806.34</td>
+                    <td>806.34</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>Смесь штукатруная</td>
+                    <td>меш.</td>
+                    <td>116</td>
+                    <td></td>
+                    <td></td>
+                    <td>5.00</td>
+                    <td>578.00</td>
+                    <td>578.00</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>Латексная добавка Planikrit, канистра  25 кг</td>
+                    <td>шт.</td>
+                    <td>2</td>
+                    <td></td>
+                    <td></td>
+                    <td>200.00</td>
+                    <td>400.00</td>
+                    <td>400.00</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>Крепеж</td>
+                    <td>компл.</td>
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+                    <td>70.00</td>
+                    <td>70.00</td>
+                    <td>70.00</td>
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td>Гидростяжка Topcem Pronto</td>
+                    <td>меш.</td>
+                    <td>146</td>
+                    <td></td>
+                    <td></td>
+                    <td>6.35</td>
+                    <td>927.10</td>
+                    <td>927.10</td>
+                  </tr>
+                  <tr>
+                    <td>12</td>
+                    <td>Фиброволокно</td>
+                    <td>уп.</td>
+                    <td>12</td>
+                    <td></td>
+                    <td></td>
+                    <td>4.20</td>
+                    <td>51.41</td>
+                    <td>51.41</td>
+                  </tr>
+                  <tr>
+                    <td>13</td>
+                    <td>Страто 4900</td>
+                    <td>кг.</td>
+                    <td>20</td>
+                    <td></td>
+                    <td></td>
+                    <td>6.20</td>
+                    <td>126.48</td>
+                    <td>126.48</td>
+                  </tr>
+                  <tr>
+                    <td>14</td>
+                    <td colspan="7">Итого по разделу</td>
+                    <td><b>4 111.37</b></td>
+                  </tr>
+                  <tr>
+                    <td>15</td>
+                    <td colspan="7">Итого по работам</td>
+                    <td><b>1 155.23</b></td>
+                  </tr>
+                  <tr>
+                    <td>16</td>
+                    <td colspan="7">Итого по материалам</td>
+                    <td><b>2 233.23</b></td>
+                  </tr>
+                  <tr class="table-section">
+                    <th colspan="9">Поклейка мозаики</th>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td colspan="8">На стенку бетонного бассейна пристреливается оцинкованная сетка и обрабатывается (наносится жесткой кистью) страто 4900, разбавленной водой и цементом в пропорции 1:1:1, при штукатурке бассейна применяется, эластичные добавки для улучшения свойств штукатурной смеси.</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td><b>Расчистка поверхности подготовка основания</b></td>
+                    <td>кв. м.</td>
+                    <td>68</td>
+                    <td>0.00</td>
+                    <td>0.00</td>
+                    <td></td>
+                    <td></td>
+                    <td>0.00</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td><b>Монтаж сетки на стену</b></td>
+                    <td>кв. м.</td>
+                    <td>68</td>
+                    <td>2.73</td>
+                    <td>185.16</td>
+                    <td></td>
+                    <td></td>
+                    <td>185.16</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td><b>Обработка страто 4900</b></td>
+                    <td>кв. м.</td>
+                    <td>68</td>
+                    <td>2.60</td>
+                    <td>176.80</td>
+                    <td></td>
+                    <td></td>
+                    <td>176.80</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td><b>Штукатурка с гидро добавками</b></td>
+                    <td>кв. м.</td>
+                    <td>68</td>
+                    <td>11.70</td>
+                    <td>795.60</td>
+                    <td></td>
+                    <td></td>
+                    <td>795.60</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td><b>Выравнивание бортика скимерного бассейна</b></td>
+                    <td>м. п.</td>
+                    <td>24</td>
+                    <td>0.00</td>
+                    <td>0.00</td>
+                    <td></td>
+                    <td></td>
+                    <td>0.00</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>Сетка оцинкованная</td>
+                    <td>кв. м.</td>
+                    <td>75</td>
+                    <td></td>
+                    <td></td>
+                    <td>10.78</td>
+                    <td>806.34</td>
+                    <td>806.34</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>Смесь штукатруная</td>
+                    <td>меш.</td>
+                    <td>116</td>
+                    <td></td>
+                    <td></td>
+                    <td>5.00</td>
+                    <td>578.00</td>
+                    <td>578.00</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>Латексная добавка Planikrit, канистра  25 кг</td>
+                    <td>шт.</td>
+                    <td>2</td>
+                    <td></td>
+                    <td></td>
+                    <td>200.00</td>
+                    <td>400.00</td>
+                    <td>400.00</td>
+                  </tr>
+                  <tr>
+                    <td>14</td>
+                    <td colspan="7">Итого по разделу</td>
+                    <td><b>4 111.37</b></td>
+                  </tr>
+                  <tr>
+                    <td>15</td>
+                    <td colspan="7">Итого по работам</td>
+                    <td><b>1 155.23</b></td>
+                  </tr>
+                  <tr>
+                    <td>16</td>
+                    <td colspan="7">Итого по материалам</td>
+                    <td><b>2 233.23</b></td>
+                  </tr>
+                  <tr class="table-section">
+                    <th colspan="9">Общий итог</th>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Итого по смете</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>4 117.37</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Из них работа</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>1 157.33</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Из них материалы</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>2 966.23</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Транспортные расходы</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>4 117.21</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Накладные раскоды</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>1 158.00</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>Непредвиденные расходы</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>2959.22</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>Уборка за собой на территории</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>2 765.21</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>Всего по смете</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>33 233.25</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="s4">
+          <div class="wrapper">
+            <div class="section-title">
+              <h2 class="border">Смета на оборудование и монтаж<br>Вариант №1</h2>
+            </div>
+            <div class="tables">
+              <h3>Фильтровальное оборудование</h3>
+              <div class="devices-table">
+                <table>
+                  <tr>
+                    <td><a href="#"><img src="../images/content/product/5.jpg" alt=""></a></td>
+                    <td><a href="#">Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978</a></td>
+                    <td>
+                      <div class="t-label">Кол-во</div>
+                      <div class="t-value">2</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Цена</div>
+                      <div class="t-value">2 000 EUR</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Итого</div>
+                      <div class="t-value">4 000 EUR</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"><img src="../images/content/product/6.jpg" alt=""></a></td>
+                    <td><a href="#">Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978</a></td>
+                    <td>
+                      <div class="t-label">Кол-во</div>
+                      <div class="t-value">2</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Цена</div>
+                      <div class="t-value">2 000 EUR</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Итого</div>
+                      <div class="t-value">4 000 EUR</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"><img src="../images/content/product/4.jpg" alt=""></a></td>
+                    <td><a href="#">Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978</a></td>
+                    <td>
+                      <div class="t-label">Кол-во</div>
+                      <div class="t-value">2</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Цена</div>
+                      <div class="t-value">2 000 EUR</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Итого</div>
+                      <div class="t-value">4 000 EUR</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"><img src="../images/content/product/7.jpg" alt=""></a></td>
+                    <td><a href="#">Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978</a></td>
+                    <td>
+                      <div class="t-label">Кол-во</div>
+                      <div class="t-value">2</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Цена</div>
+                      <div class="t-value">2 000 EUR</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Итого</div>
+                      <div class="t-value">4 000 EUR</div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <h3>Нагрев воды</h3>
+              <div class="devices-table">
+                <table>
+                  <tr>
+                    <td><a href="#"><img src="../images/content/product/5.jpg" alt=""></a></td>
+                    <td><a href="#">Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978</a></td>
+                    <td>
+                      <div class="t-label">Кол-во</div>
+                      <div class="t-value">2</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Цена</div>
+                      <div class="t-value">2 000 EUR</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Итого</div>
+                      <div class="t-value">4 000 EUR</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"><img src="../images/content/product/6.jpg" alt=""></a></td>
+                    <td><a href="#">Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978</a></td>
+                    <td>
+                      <div class="t-label">Кол-во</div>
+                      <div class="t-value">2</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Цена</div>
+                      <div class="t-value">2 000 EUR</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Итого</div>
+                      <div class="t-value">4 000 EUR</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"><img src="../images/content/product/4.jpg" alt=""></a></td>
+                    <td><a href="#">Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978</a></td>
+                    <td>
+                      <div class="t-label">Кол-во</div>
+                      <div class="t-value">2</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Цена</div>
+                      <div class="t-value">2 000 EUR</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Итого</div>
+                      <div class="t-value">4 000 EUR</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"><img src="../images/content/product/7.jpg" alt=""></a></td>
+                    <td><a href="#">Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978</a></td>
+                    <td>
+                      <div class="t-label">Кол-во</div>
+                      <div class="t-value">2</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Цена</div>
+                      <div class="t-value">2 000 EUR</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Итого</div>
+                      <div class="t-value">4 000 EUR</div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <h3>Подача и слив воды</h3>
+              <div class="devices-table">
+                <table>
+                  <tr>
+                    <td><a href="#"><img src="../images/content/product/5.jpg" alt=""></a></td>
+                    <td><a href="#">Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978</a></td>
+                    <td>
+                      <div class="t-label">Кол-во</div>
+                      <div class="t-value">2</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Цена</div>
+                      <div class="t-value">2 000 EUR</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Итого</div>
+                      <div class="t-value">4 000 EUR</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"><img src="../images/content/product/6.jpg" alt=""></a></td>
+                    <td><a href="#">Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978</a></td>
+                    <td>
+                      <div class="t-label">Кол-во</div>
+                      <div class="t-value">2</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Цена</div>
+                      <div class="t-value">2 000 EUR</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Итого</div>
+                      <div class="t-value">4 000 EUR</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"><img src="../images/content/product/4.jpg" alt=""></a></td>
+                    <td><a href="#">Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978</a></td>
+                    <td>
+                      <div class="t-label">Кол-во</div>
+                      <div class="t-value">2</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Цена</div>
+                      <div class="t-value">2 000 EUR</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Итого</div>
+                      <div class="t-value">4 000 EUR</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"><img src="../images/content/product/7.jpg" alt=""></a></td>
+                    <td><a href="#">Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978</a></td>
+                    <td>
+                      <div class="t-label">Кол-во</div>
+                      <div class="t-value">2</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Цена</div>
+                      <div class="t-value">2 000 EUR</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Итого</div>
+                      <div class="t-value">4 000 EUR</div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <h3>Прочее</h3>
+              <div class="devices-table">
+                <table>
+                  <tr>
+                    <td><a href="#"><img src="../images/content/product/5.jpg" alt=""></a></td>
+                    <td><a href="#">Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978</a></td>
+                    <td>
+                      <div class="t-label">Кол-во</div>
+                      <div class="t-value">2</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Цена</div>
+                      <div class="t-value">2 000 EUR</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Итого</div>
+                      <div class="t-value">4 000 EUR</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"><img src="../images/content/product/6.jpg" alt=""></a></td>
+                    <td><a href="#">Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978</a></td>
+                    <td>
+                      <div class="t-label">Кол-во</div>
+                      <div class="t-value">2</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Цена</div>
+                      <div class="t-value">2 000 EUR</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Итого</div>
+                      <div class="t-value">4 000 EUR</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"><img src="../images/content/product/4.jpg" alt=""></a></td>
+                    <td><a href="#">Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978</a></td>
+                    <td>
+                      <div class="t-label">Кол-во</div>
+                      <div class="t-value">2</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Цена</div>
+                      <div class="t-value">2 000 EUR</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Итого</div>
+                      <div class="t-value">4 000 EUR</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"><img src="../images/content/product/7.jpg" alt=""></a></td>
+                    <td><a href="#">Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978</a></td>
+                    <td>
+                      <div class="t-label">Кол-во</div>
+                      <div class="t-value">2</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Цена</div>
+                      <div class="t-value">2 000 EUR</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Итого</div>
+                      <div class="t-value">4 000 EUR</div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="devices-total">Итого 23 025 EUR</div>
+            </div>
+          </div>
+        </section>
+        <section id="s5">
+          <div class="wrapper">
+            <div class="section-title">
+              <h2 class="border">Смета на оборудование и монтаж<br>Вариант №2</h2>
+            </div>
+            <div class="tables">
+              <h3>Фильтровальное оборудование</h3>
+              <div class="devices-table">
+                <table>
+                  <tr>
+                    <td><a href="#"><img src="../images/content/product/5.jpg" alt=""></a></td>
+                    <td><a href="#">Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978</a></td>
+                    <td>
+                      <div class="t-label">Кол-во</div>
+                      <div class="t-value">2</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Цена</div>
+                      <div class="t-value">2 000 EUR</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Итого</div>
+                      <div class="t-value">4 000 EUR</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"><img src="../images/content/product/6.jpg" alt=""></a></td>
+                    <td><a href="#">Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978</a></td>
+                    <td>
+                      <div class="t-label">Кол-во</div>
+                      <div class="t-value">2</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Цена</div>
+                      <div class="t-value">2 000 EUR</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Итого</div>
+                      <div class="t-value">4 000 EUR</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"><img src="../images/content/product/4.jpg" alt=""></a></td>
+                    <td><a href="#">Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978</a></td>
+                    <td>
+                      <div class="t-label">Кол-во</div>
+                      <div class="t-value">2</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Цена</div>
+                      <div class="t-value">2 000 EUR</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Итого</div>
+                      <div class="t-value">4 000 EUR</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"><img src="../images/content/product/7.jpg" alt=""></a></td>
+                    <td><a href="#">Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978</a></td>
+                    <td>
+                      <div class="t-label">Кол-во</div>
+                      <div class="t-value">2</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Цена</div>
+                      <div class="t-value">2 000 EUR</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Итого</div>
+                      <div class="t-value">4 000 EUR</div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <h3>Нагрев воды</h3>
+              <div class="devices-table">
+                <table>
+                  <tr>
+                    <td><a href="#"><img src="../images/content/product/5.jpg" alt=""></a></td>
+                    <td><a href="#">Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978</a></td>
+                    <td>
+                      <div class="t-label">Кол-во</div>
+                      <div class="t-value">2</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Цена</div>
+                      <div class="t-value">2 000 EUR</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Итого</div>
+                      <div class="t-value">4 000 EUR</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"><img src="../images/content/product/6.jpg" alt=""></a></td>
+                    <td><a href="#">Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978</a></td>
+                    <td>
+                      <div class="t-label">Кол-во</div>
+                      <div class="t-value">2</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Цена</div>
+                      <div class="t-value">2 000 EUR</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Итого</div>
+                      <div class="t-value">4 000 EUR</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"><img src="../images/content/product/4.jpg" alt=""></a></td>
+                    <td><a href="#">Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978</a></td>
+                    <td>
+                      <div class="t-label">Кол-во</div>
+                      <div class="t-value">2</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Цена</div>
+                      <div class="t-value">2 000 EUR</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Итого</div>
+                      <div class="t-value">4 000 EUR</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"><img src="../images/content/product/7.jpg" alt=""></a></td>
+                    <td><a href="#">Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978</a></td>
+                    <td>
+                      <div class="t-label">Кол-во</div>
+                      <div class="t-value">2</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Цена</div>
+                      <div class="t-value">2 000 EUR</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Итого</div>
+                      <div class="t-value">4 000 EUR</div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <h3>Подача и слив воды</h3>
+              <div class="devices-table">
+                <table>
+                  <tr>
+                    <td><a href="#"><img src="../images/content/product/5.jpg" alt=""></a></td>
+                    <td><a href="#">Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978</a></td>
+                    <td>
+                      <div class="t-label">Кол-во</div>
+                      <div class="t-value">2</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Цена</div>
+                      <div class="t-value">2 000 EUR</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Итого</div>
+                      <div class="t-value">4 000 EUR</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"><img src="../images/content/product/6.jpg" alt=""></a></td>
+                    <td><a href="#">Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978</a></td>
+                    <td>
+                      <div class="t-label">Кол-во</div>
+                      <div class="t-value">2</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Цена</div>
+                      <div class="t-value">2 000 EUR</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Итого</div>
+                      <div class="t-value">4 000 EUR</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"><img src="../images/content/product/4.jpg" alt=""></a></td>
+                    <td><a href="#">Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978</a></td>
+                    <td>
+                      <div class="t-label">Кол-во</div>
+                      <div class="t-value">2</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Цена</div>
+                      <div class="t-value">2 000 EUR</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Итого</div>
+                      <div class="t-value">4 000 EUR</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"><img src="../images/content/product/7.jpg" alt=""></a></td>
+                    <td><a href="#">Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978</a></td>
+                    <td>
+                      <div class="t-label">Кол-во</div>
+                      <div class="t-value">2</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Цена</div>
+                      <div class="t-value">2 000 EUR</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Итого</div>
+                      <div class="t-value">4 000 EUR</div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <h3>Прочее</h3>
+              <div class="devices-table">
+                <table>
+                  <tr>
+                    <td><a href="#"><img src="../images/content/product/5.jpg" alt=""></a></td>
+                    <td><a href="#">Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978</a></td>
+                    <td>
+                      <div class="t-label">Кол-во</div>
+                      <div class="t-value">2</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Цена</div>
+                      <div class="t-value">2 000 EUR</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Итого</div>
+                      <div class="t-value">4 000 EUR</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"><img src="../images/content/product/6.jpg" alt=""></a></td>
+                    <td><a href="#">Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978</a></td>
+                    <td>
+                      <div class="t-label">Кол-во</div>
+                      <div class="t-value">2</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Цена</div>
+                      <div class="t-value">2 000 EUR</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Итого</div>
+                      <div class="t-value">4 000 EUR</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"><img src="../images/content/product/4.jpg" alt=""></a></td>
+                    <td><a href="#">Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978</a></td>
+                    <td>
+                      <div class="t-label">Кол-во</div>
+                      <div class="t-value">2</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Цена</div>
+                      <div class="t-value">2 000 EUR</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Итого</div>
+                      <div class="t-value">4 000 EUR</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"><img src="../images/content/product/7.jpg" alt=""></a></td>
+                    <td><a href="#">Насосно-фильтрующая установка AQUARIUS PLUS Q=14 м3/ч, 100100978</a></td>
+                    <td>
+                      <div class="t-label">Кол-во</div>
+                      <div class="t-value">2</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Цена</div>
+                      <div class="t-value">2 000 EUR</div>
+                    </td>
+                    <td>
+                      <div class="t-label">Итого</div>
+                      <div class="t-value">4 000 EUR</div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="devices-total">Итого 23 025 EUR</div>
+            </div>
+          </div>
+          <div class="kp-options">
+            <div class="wrapper">
+              <div id="sticky-anchor"></div>
+              <div id="sticky" class="buttons"><a href="#" class="button-sky">Распечатать</a><a href="#" class="button-sky">Сохранить в PDF</a></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <footer class="m_footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-3">
+            <div class="copy">© 2016 «Gelios Park»<br/>Все права защищены</div>
+          </div>
+          <div class="col-xs-6 col-sm-6 col-md-3 visible-xs-block visible-sm-block">
+            <div class="socials pull-right"><a href="#" class="vk"></a><a href="#" class="fb"></a><a href="http://pikmedia.ru/" class="developed pull-right"></a></div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="menu">
+              <div class="row">
+                <div class="col-xs-4 col-sm-6">
+                  <div class="title">О компании</div>
+                  <ul>
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Статьи</a></li>
+                    <li><a href="#">Вопрос-ответ</a></li>
+                    <li><a href="#">Проекты</a></li>
+                    <li><a href="#">Оборудование</a></li>
+                    <li><a href="#">Контакты</a></li>
+                  </ul>
+                </div>
+                <div class="col-xs-8 col-sm-6">
+                  <div class="title">Услуги</div>
+                  <ul>
+                    <li><a href="#">Проектирование и строительство бассейнов</a></li>
+                    <li><a href="#">Сервисное обслуживание бассейнов</a></li>
+                    <li><a href="#">Строительство банных комплексов</a></li>
+                    <li><a href="#">Ландшафтный дизайн</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 visible-md-block visible-lg-block">
+            <div class="socials pull-right"><a href="#" class="vk"></a><a href="#" class="fb"></a><a href="http://pikmedia.ru/" class="developed pull-right"></a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../scripts/plugins.js"></script>
+    <script src="../scripts/app.js"></script>
+  </body>
+</html>
